@@ -1,0 +1,2 @@
+/*! For license information please see square-chevron-left.js.LICENSE.txt */
+const SquareChevronLeft=[["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2"}],["path",{d:"m14 16-4-4 4-4"}]];export{SquareChevronLeft as default};

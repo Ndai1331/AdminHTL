@@ -1,0 +1,2 @@
+/*! For license information please see a-arrow-up.js.LICENSE.txt */
+const AArrowUp=[["path",{d:"M3.5 13h6"}],["path",{d:"m2 16 4.5-9 4.5 9"}],["path",{d:"M18 16V7"}],["path",{d:"m14 11 4-4 4 4"}]];export{AArrowUp as default};

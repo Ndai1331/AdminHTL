@@ -1,0 +1,2 @@
+/*! For license information please see circle-arrow-left.js.LICENSE.txt */
+const CircleArrowLeft=[["circle",{cx:"12",cy:"12",r:"10"}],["path",{d:"M16 12H8"}],["path",{d:"m12 8-4 4 4 4"}]];export{CircleArrowLeft as default};

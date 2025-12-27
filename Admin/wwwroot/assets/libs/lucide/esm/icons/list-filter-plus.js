@@ -1,0 +1,2 @@
+/*! For license information please see list-filter-plus.js.LICENSE.txt */
+const ListFilterPlus=[["path",{d:"M10 18h4"}],["path",{d:"M11 6H3"}],["path",{d:"M15 6h6"}],["path",{d:"M18 9V3"}],["path",{d:"M7 12h8"}]];export{ListFilterPlus as default};

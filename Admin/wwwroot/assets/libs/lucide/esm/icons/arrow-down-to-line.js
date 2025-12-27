@@ -1,0 +1,2 @@
+/*! For license information please see arrow-down-to-line.js.LICENSE.txt */
+const ArrowDownToLine=[["path",{d:"M12 17V3"}],["path",{d:"m6 11 6 6 6-6"}],["path",{d:"M19 21H5"}]];export{ArrowDownToLine as default};

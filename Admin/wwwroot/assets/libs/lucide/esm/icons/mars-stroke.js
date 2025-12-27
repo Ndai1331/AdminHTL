@@ -1,0 +1,2 @@
+/*! For license information please see mars-stroke.js.LICENSE.txt */
+const MarsStroke=[["path",{d:"m14 6 4 4"}],["path",{d:"M17 3h4v4"}],["path",{d:"m21 3-7.75 7.75"}],["circle",{cx:"9",cy:"15",r:"6"}]];export{MarsStroke as default};

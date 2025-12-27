@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "gridjs";
+    ViewBag.pTitle = "Tables";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- Grid CSS -->
+    <link rel="stylesheet" href="~/assets/libs/gridjs/theme/mermaid.min.css">
+}
+
+
+<div class="row">
+
+    <div class="col-12">
+        <div class="card">
+            <!--start::card-->
+            <div class="card-header">
+                <h5 class="card-title"> Basic Table </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">Create a responsive table using <code>Grid.js</code>, offering sorting, pagination, and search features with minimal setup.</p>
+                <!-- start:: Default Navbar -->
+
+                <div id="gridjs_basic-table"></div>
+
+                <!-- end:: Default Navbar -->
+
+            </div>
+        </div>
+        <!--end::card-->
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <!--start::card-->
+            <div class="card-header">
+                <h5 class="card-title"> Table With Sorting </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">Enable column-based sorting in your table using <code>Grid.js</code>, allowing users to sort data in ascending or descending order effortlessly.</p>
+                <!-- start:: Default Navbar -->
+
+                <div id="gridjs_sort-table"></div>
+
+                <!-- end:: Default Navbar -->
+
+            </div>
+        </div>
+        <!--end::card-->
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <!--start::card-->
+            <div class="card-header">
+                <h5 class="card-title"> Table With Pagination </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">Display large datasets efficiently using <code>Grid.js</code> with built-in pagination support to navigate through table rows across multiple pages.</p>
+                <!-- start:: Default Navbar -->
+
+                <div id="gridjs_pagination-table"></div>
+
+                <!-- end:: Default Navbar -->
+
+            </div>
+        </div>
+        <!--end::card-->
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <!--start::card-->
+            <div class="card-header">
+                <h5 class="card-title"> Table With Search </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">Enable dynamic search functionality within your data table using <code>Grid.js</code> to help users quickly filter and locate specific entries.</p>
+                <!-- start:: Default Navbar -->
+
+                <div id="gridjs_search-table"></div>
+
+                <!-- end:: Default Navbar -->
+
+            </div>
+        </div>
+        <!--end::card-->
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <!--start::card-->
+            <div class="card-header">
+                <h5 class="card-title"> Table Loading </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">Display a loading state while asynchronously fetching and rendering table data using <code>Grid.js</code> to enhance user experience.</p>
+                <!-- start:: Default Navbar -->
+
+                <div id="gridjs_loading-table"></div>
+
+                <!-- end:: Default Navbar -->
+
+            </div>
+        </div>
+        <!--end::card-->
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <!--start::card-->
+            <div class="card-header">
+                <h5 class="card-title"> Fixed Header </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-4">Display large datasets with ease by using a fixed header table powered by <code>Grid.js</code>, ensuring table headers stay visible while scrolling.</p>
+                <!-- start:: Default Navbar -->
+
+                <div id="gridjs_fixed-header-table"></div>
+
+                <!-- end:: Default Navbar -->
+
+            </div>
+        </div>
+        <!--end::card-->
+    </div>
+
+</div>
+
+@section scripts{
+
+    <!-- Grid JS -->
+    <script src="~/assets/libs/gridjs/gridjs.umd.js" type="text/javascript"></script>
+
+    <!-- Grid init -->
+    <script src="~/assets/js/ui/gridjs.init.js" type="text/javascript"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

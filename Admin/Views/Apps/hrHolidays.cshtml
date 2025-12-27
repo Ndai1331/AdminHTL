@@ -1,0 +1,231 @@
+﻿
+@{
+    ViewBag.Title = "hrHolidays";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.pTitle = "Apps";
+}
+
+@section styles{
+    <!-- choices -->
+    <link rel="stylesheet" href="~/assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- air-datepicker -->
+    <link rel="stylesheet" href="~/assets/libs/air-datepicker/air-datepicker.css">
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Holidays List</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-box">
+            <table class="table mb-0 text-nowrap">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Holiday</th>
+                        <th scope="col">Short Description</th>
+                        <th scope="col">Type</th>
+                        <th scope="col" class="text-end">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1 Jan 2025</td>
+                        <td>Wednesday</td>
+                        <td>New Year's Day</td>
+                        <td class="text-muted">Celebration of the new calendar year</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>26 Jan 2025</td>
+                        <td>Sunday</td>
+                        <td>Republic Day</td>
+                        <td class="text-muted">Marks the adoption of the Indian Constitution</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>17 Mar 2025</td>
+                        <td>Monday</td>
+                        <td>Holi</td>
+                        <td class="text-muted">Festival of colors and the arrival of spring</td>
+                        <td>Optional</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>18 Apr 2025</td>
+                        <td>Friday</td>
+                        <td>Good Friday</td>
+                        <td class="text-muted">Commemorates the crucifixion of Jesus Christ</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>1 May 2025</td>
+                        <td>Thursday</td>
+                        <td>Labor Day</td>
+                        <td class="text-muted">Celebration of workers' rights and achievements</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>15 Aug 2025</td>
+                        <td>Friday</td>
+                        <td>Independence Day</td>
+                        <td class="text-muted">India’s independence from British rule</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2 Oct 2025</td>
+                        <td>Thursday</td>
+                        <td>Gandhi Jayanti</td>
+                        <td class="text-muted">Birth anniversary of Mahatma Gandhi</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>23 Oct 2025</td>
+                        <td>Thursday</td>
+                        <td>Diwali</td>
+                        <td class="text-muted">Festival of lights celebrating victory of good over evil</td>
+                        <td>Optional</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>25 Dec 2025</td>
+                        <td>Thursday</td>
+                        <td>Christmas Day</td>
+                        <td class="text-muted">Celebration of the birth of Jesus Christ</td>
+                        <td>Public</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#editModal" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex flex-wrap gap-4 align-items-center mt-6">
+            <p class="fw-medium mb-0"> Showing 1 - 9 of 25 Entries</p>
+            <div class="ms-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-primary mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                <i class="ri-arrow-left-double-line"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="javascript:voide(0)">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                <i class="ri-arrow-right-double-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Holiday</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="holidayDate">Date</label>
+                        <input type="text" class="form-control" id="holidayDate" value="01/01/2025" placeholder="Select a date">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="holidayDay">Day</label>
+                        <input type="text" class="form-control" id="holidayDay" value="Wednesday">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="holidayName">Holiday</label>
+                        <input type="text" class="form-control" id="holidayName" value="New Year's Day">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="holidayDescription">Short Description</label>
+                        <input type="text" class="form-control" id="holidayDescription" value="Celebration of the new calendar year">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="holidayType">Type</label>
+                        <select class="form-select" id="holidayType">
+                            <option selected>Public</option>
+                            <option>Optional</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Picker Js -->
+    <script src="~/assets/libs/air-datepicker/air-datepicker.js"></script>
+
+    <!-- Selector Js -->
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/hr-holidays.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+}

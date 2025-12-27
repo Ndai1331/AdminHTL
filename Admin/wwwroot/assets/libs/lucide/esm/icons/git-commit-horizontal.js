@@ -1,0 +1,2 @@
+/*! For license information please see git-commit-horizontal.js.LICENSE.txt */
+const GitCommitHorizontal=[["circle",{cx:"12",cy:"12",r:"3"}],["line",{x1:"3",x2:"9",y1:"12",y2:"12"}],["line",{x1:"15",x2:"21",y1:"12",y2:"12"}]];export{GitCommitHorizontal as default};

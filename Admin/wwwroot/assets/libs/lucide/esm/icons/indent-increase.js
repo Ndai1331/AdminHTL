@@ -1,0 +1,2 @@
+/*! For license information please see indent-increase.js.LICENSE.txt */
+const IndentIncrease=[["path",{d:"M21 12H11"}],["path",{d:"M21 18H11"}],["path",{d:"M21 6H11"}],["path",{d:"m3 8 4 4-4 4"}]];export{IndentIncrease as default};

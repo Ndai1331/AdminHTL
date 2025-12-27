@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "tour";
+    ViewBag.pTitle = "Ui";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- shepherd -->
+    <link rel="stylesheet" href="~/assets/libs/shepherd.js/css/shepherd.css">
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Shepherdjs</h5>
+    </div>
+    <div class="card-body">
+        <div class="row justify-content-center">
+            <div class="col-xxl-8">
+                <section>
+                    <div class="d-flex flex-column justify-content-center align-items-center pb-5 mb-5 tour-title">
+                        <h2 class="fw-semibold mb-2">Welcome to <span class="text-primary">Menilo</span></h2>
+                        <p class="text-muted max-w-420px text-center">Discover our advanced SCSS admin template with flexible structure and clean code.</p>
+                        <a href="javascript:void(0)" class="btn btn-primary fw-semibold" id="start-tour">Get Started</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card card-body d-flex align-items-center text-center gap-5 card-h-100">
+                                <div class="avatar-item h-56px w-56px rounded-2 avatar-title text-primary bg-primary-subtle">
+                                    <i class="ri-briefcase-line fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-semibold mb-3"><a href="javascript:void(0)" class="text-body">Project Management</a></h5>
+                                    <p class="text-muted mb-0">Expert guidance and tools for effective project management.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card card-body d-flex align-items-center text-center gap-5 card-h-100">
+                                <div class="avatar-item h-56px w-56px rounded-2 avatar-title text-success bg-success-subtle">
+                                    <i class="ri-clipboard-line fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-semibold mb-3"><a href="javascript:void(0)" class="text-body">Task Automation</a></h5>
+                                    <p class="text-muted mb-0">Streamline your workflow with our automation solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card card-body d-flex align-items-center text-center gap-5 card-h-100">
+                                <div class="avatar-item h-56px w-56px rounded-2 avatar-title text-danger bg-danger-subtle">
+                                    <i class="ri-bar-chart-line fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-semibold mb-3"><a href="javascript:void(0)" class="text-body">Data Analysis</a></h5>
+                                    <p class="text-muted mb-0">Turn data into actionable insights with our analytics services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div><!--End row-->
+    </div>
+</div>
+
+@section scripts{
+
+
+    <!-- Tour js -->
+    <script type="module" src="~/assets/js/ui/tour.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

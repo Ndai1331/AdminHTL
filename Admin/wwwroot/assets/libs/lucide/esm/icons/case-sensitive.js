@@ -1,0 +1,2 @@
+/*! For license information please see case-sensitive.js.LICENSE.txt */
+const CaseSensitive=[["path",{d:"m3 15 4-8 4 8"}],["path",{d:"M4 13h6"}],["circle",{cx:"18",cy:"12",r:"3"}],["path",{d:"M21 9v6"}]];export{CaseSensitive as default};

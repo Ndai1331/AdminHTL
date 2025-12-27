@@ -1,0 +1,52 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: real estate dashboard scss
+*/
+
+.realestate-premium-card {
+  background-color: #d5e2f2;
+  border-color: #bccfe6;
+  min-height: 377px;
+  color: #0058c2;
+
+  .realestate-analytics-card {
+    @include media-breakpoint-up(xxl) {
+      width: 450px;
+    }
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      border-right: 20px solid var(--#{$prefix}body-bg);
+      border-bottom: 20px solid var(--#{$prefix}body-bg);
+    }
+  }
+
+  h1 {
+    @include media-breakpoint-up(xxl) {
+      font-size: 40px;
+    }
+
+    color: #0058c2;
+  }
+
+  .premium-pattern {
+    width: 520px;
+    height: 186px;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .home-light {
+    display: block !important;
+  }
+}
+
+[data-bs-theme="light"] {
+  .home-light {
+    display: none !important;
+  }
+}

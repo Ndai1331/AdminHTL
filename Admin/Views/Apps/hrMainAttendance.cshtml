@@ -1,0 +1,571 @@
+﻿
+@{
+    ViewBag.Title = "hrMainAttendance";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <!-- air-datepicker -->
+    <link rel="stylesheet" href="~/assets/libs/air-datepicker/air-datepicker.css">
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+            <span class="badge bg-success-subtle text-success"><i class="ri-check-line me-1"></i>Present</span>
+            <span class="badge bg-warning-subtle text-warning"><i class="ri-time-line me-1"></i>Half Day</span>
+            <span class="badge bg-danger-subtle text-danger"><i class="ri-close-line me-1"></i>Absence</span>
+        </div>
+        <div class="d-flex flex-md-nowrap flex-wrap gap-2 align-items-center">
+            <input type="text" class="form-control" id="main-picker" placeholder="Select a date">
+            <div class="form-icon right w-100">
+                <input type="text" class="form-control form-control-icon" id="iconSearch" placeholder="Type to search ...">
+                <i class="ri-search-2-line text-muted"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-box">
+            <table class="table align-middle text-nowrap">
+                <thead class="table-light">
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>01</th>
+                        <th>02</th>
+                        <th>03</th>
+                        <th>04</th>
+                        <th>05</th>
+                        <th>06</th>
+                        <th>07</th>
+                        <th>08</th>
+                        <th>09</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                        <th>19</th>
+                        <th>20</th>
+                        <th>21</th>
+                        <th>22</th>
+                        <th>23</th>
+                        <th>24</th>
+                        <th>25</th>
+                        <th>26</th>
+                        <th>27</th>
+                        <th>28</th>
+                        <th>29</th>
+                        <th>30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-semibold">James Robinson</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Isabella Garcia</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">William Thompson</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Sophia Martinez</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">David Anderson</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Olivia Wilson</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Robert Brown</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Emily Davis</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Michael Johnson</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold">Jane Smith</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td>-</td>
+                        <td><i class="ri-close-line fs-5 text-danger"></i></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#halfDayAttendanceModal" aria-label="Mark Half-Day Attendance"><i class="ri-time-line fs-5 text-warning"></i></a></td>
+                        <td><a href="#!" data-bs-toggle="modal" data-bs-target="#attendanceModal" aria-label="Mark Attendance"><i class="ri-check-line fs-5 text-success"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex flex-wrap gap-4 align-items-center mt-6">
+            <p class="fw-medium mb-0"> Showing 1 - 10 of 17 Entries</p>
+            <div class="ms-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-primary mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous page">
+                                <i class="ri-arrow-left-double-line"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="javascript:voide(0)">1</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:voide(0)">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next page">
+                                <i class="ri-arrow-right-double-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Full Day Report Modal -->
+<div class="modal fade" id="attendanceModal" tabindex="-1" aria-labelledby="attendanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createPayslipModalLabel">Attendance Report</h5>
+                <button type="button" class="btn-close icon-btn-sm" data-bs-dismiss="modal" aria-label="Close"><i class="ri-close-large-line fw-semibold"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex gap-2 align-items-center mb-5">
+                    <input type="text" class="form-control" id="modal-picker" placeholder="Select a date">
+                    <button type="button" class="btn btn-dark">Filter</button>
+                </div>
+                <div class="card mb-0 ">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h6 class="mb-0"><span class="text-muted">Date:</span> 07 April, 2025</h6>
+                            <h6 class="mb-0"><span class="text-muted">Day:</span> Monday</h6>
+                        </div>
+                        <div class="mt-8 mb-10">
+                            <div class="h-112px w-112px avatar-item fw-semibold mx-auto rounded-circle avatar-title text-body bg-light-subtle fs-16 attendance-info">
+                                <div class="d-flex align-items-end gap-1">
+                                    <p class="mb-0 fs-18 fw-semibold lh-base">8:15</p>
+                                    <span class="fs-13 text-muted">Hrs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-0">
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="text-center">
+                                            <div class="avatar-item mx-auto mb-4 avatar-md border-0 rounded avatar-title text-success bg-success-subtle fs-5">
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                            </div>
+                                            <h6 class="fs-15 mb-1">09:00 AM</h6>
+                                            <p class="text-muted mb-0 fs-12">Check In</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="text-center">
+                                            <div class="avatar-item mx-auto mb-4 avatar-md border-0 rounded avatar-title text-danger bg-danger-subtle fs-5">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </div>
+                                            <h6 class="fs-15 mb-1">6:15 PM</h6>
+                                            <p class="text-muted mb-0 fs-12">Check Out</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="text-center">
+                                            <div class="avatar-item mx-auto mb-4 avatar-md border-0 rounded avatar-title text-primary bg-primary-subtle fs-5">
+                                                <i class="bi bi-clock"></i>
+                                            </div>
+                                            <h6 class="fs-15 mb-1">8:15 Hrs</h6>
+                                            <p class="text-muted mb-0 fs-12">Working Hrs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Half Day Report Modal -->
+<div class="modal fade" id="halfDayAttendanceModal" tabindex="-1" aria-labelledby="halfDayAttendanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createPayslipModalLabel">Attendance Report</h5>
+                <button type="button" class="btn-close icon-btn-sm" data-bs-dismiss="modal" aria-label="Close"><i class="ri-close-large-line fw-semibold"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex gap-2 align-items-center mb-5">
+                    <input type="text" class="form-control" id="modal-picker" placeholder="Select a date">
+                    <button type="button" class="btn btn-dark">Filter</button>
+                </div>
+                <div class="card mb-0 ">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h6 class="mb-0"><span class="text-muted">Date:</span> 07 April, 2025</h6>
+                            <h6 class="mb-0"><span class="text-muted">Day:</span> Monday</h6>
+                        </div>
+                        <div class="mt-8 mb-10">
+                            <div class="h-112px w-112px avatar-item fw-semibold mx-auto rounded-circle avatar-title text-body bg-light-subtle attendance-info">
+                                <div class="d-flex align-items-end gap-1">
+                                    <p class="mb-0 fs-18 fw-semibold lh-base">4:15</p>
+                                    <span class="fs-13 text-muted">Hrs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-0">
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="text-center">
+                                            <div class="avatar-item mx-auto mb-4 avatar-md border-0 rounded avatar-title text-success bg-success-subtle fs-5">
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                            </div>
+                                            <h6 class="fs-15 mb-1">09:00 AM</h6>
+                                            <p class="text-muted mb-0 fs-12">Check In</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="text-center">
+                                            <div class="avatar-item mx-auto mb-4 avatar-md border-0 rounded avatar-title text-danger bg-danger-subtle fs-5">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </div>
+                                            <h6 class="fs-15 mb-1">1:15 PM</h6>
+                                            <p class="text-muted mb-0 fs-12">Check Out</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="text-center">
+                                            <div class="avatar-item mx-auto mb-4 avatar-md border-0 rounded avatar-title text-primary bg-primary-subtle fs-5">
+                                                <i class="bi bi-clock"></i>
+                                            </div>
+                                            <h6 class="fs-15 mb-1">4:15 Hrs</h6>
+                                            <p class="text-muted mb-0 fs-12">Working Hrs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+
+    <!-- Picker Js -->
+    <script src="~/assets/libs/air-datepicker/air-datepicker.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/main-attendance.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+}

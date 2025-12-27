@@ -1,0 +1,2 @@
+/*! For license information please see move-horizontal.js.LICENSE.txt */
+const MoveHorizontal=[["path",{d:"m18 8 4 4-4 4"}],["path",{d:"M2 12h20"}],["path",{d:"m6 8-4 4 4 4"}]];export{MoveHorizontal as default};

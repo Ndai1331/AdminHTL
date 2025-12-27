@@ -1,0 +1,549 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Menilo
+build_property.RootNamespace = Menilo
+build_property.ProjectDir = /Users/admin/Documents/Projects/AdminHTL/Admin/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/admin/Documents/Projects/AdminHTL/Admin
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9jYWxlbmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9jaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9lbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrAddLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ockFkZExlYXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrAttendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ockF0dGVuZGFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrEmployeeLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ockVtcGxveWVlTGVhdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrEmployeeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ockVtcGxveWVlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrHolidays.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ockhvbGlkYXlzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ockxlYXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrMainAttendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9ock1haW5BdHRlbmRhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrPayrollEmployeeSalary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9oclBheXJvbGxFbXBsb3llZVNhbGFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrPayrollPayslip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9oclBheXJvbGxQYXlzbGlwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/hrPerformance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9oclBlcmZvcm1hbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/kanban.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9rYW5iYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/prodcastAudienceAnalytics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9wcm9kY2FzdEF1ZGllbmNlQW5hbHl0aWNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/prodcastEpisodeManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9wcm9kY2FzdEVwaXNvZGVNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/prodcastList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9wcm9kY2FzdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/realEstateAddProperty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9yZWFsRXN0YXRlQWRkUHJvcGVydHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/realEstateAgents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9yZWFsRXN0YXRlQWdlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/realEstateClinets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9yZWFsRXN0YXRlQ2xpbmV0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/realEstatePropertyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9yZWFsRXN0YXRlUHJvcGVydHlEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Apps/realEstatePropertyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwcy9yZWFsRXN0YXRlUHJvcGVydHlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/comingSoon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9jb21pbmdTb29uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/emailVerify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9lbWFpbFZlcmlmeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/forgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9mb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/notAuthorize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9ub3RBdXRob3JpemUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/resetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9yZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/signin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9zaWduaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/signout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9zaWdub3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9zaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/twoStepVerify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC90d29TdGVwVmVyaWZ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Auth/underMaintenance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC91bmRlck1haW50ZW5hbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Chart/apexline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhcnQvYXBleGxpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Chart/echartChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhcnQvZWNoYXJ0Q2hhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Chart/jsChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhcnQvanNDaGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Dashboard/fitness.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL2ZpdG5lc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Dashboard/prodcast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL3Byb2RjYXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Dashboard/realEstate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL3JlYWxFc3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/advanced.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9hZHZhbmNlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/checkboxsRadios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9jaGVja2JveHNSYWRpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/editor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9lZGl0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/elements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9lbGVtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/fileUploads.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9maWxlVXBsb2Fkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/inputGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9pbnB1dEdyb3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/inputMasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9pbnB1dE1hc2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/inputSpin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9pbnB1dFNwaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9sYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/range.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9yYW5nZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS9zZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/validation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS92YWxpZGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Form/wizards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybS93aXphcmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Icons/bootstrap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWNvbnMvYm9vdHN0cmFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Icons/lucide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWNvbnMvbHVjaWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Icons/remix.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWNvbnMvcmVtaXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Maps/google.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFwcy9nb29nbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Maps/leaflet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFwcy9sZWFmbGV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Maps/vector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFwcy92ZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/billingSubscription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9iaWxsaW5nU3Vic2NyaXB0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/blogCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9ibG9nQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/blogDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9ibG9nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/blogList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9ibG9nTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/faqs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9mYXFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/pricing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9wcmljaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/privacyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9wcml2YWN5UG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9wcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/starter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy9zdGFydGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/termsConditions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy90ZXJtc0NvbmRpdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/OtherPages/timeline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3RoZXJQYWdlcy90aW1lbGluZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/AuthBackground.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0F1dGhCYWNrZ3JvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/AuthHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0F1dGhIZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/HeadCss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0hlYWRDc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/Horizontal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0hvcml6b250YWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/PageTitle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhZ2VUaXRsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/ScrolltoTop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1Njcm9sbHRvVG9wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NpZGViYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/Switcher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N3aXRjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/TitleMeta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1RpdGxlTWV0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/VendorScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1ZlbmRvclNjcmlwdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/_Blanklayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19CbGFua2xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Tables/basic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVzL2Jhc2ljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Tables/datatables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVzL2RhdGF0YWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Tables/gridjs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVzL2dyaWRqcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Tables/listjs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVzL2xpc3Rqcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/accordions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYWNjb3JkaW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/advanceSwiper.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYWR2YW5jZVN3aXBlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/alerts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYWxlcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/avatars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYXZhdGFycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/badges.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYmFkZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/block.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYmxvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/breadcrumbs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYnJlYWRjcnVtYnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/buttonGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYnV0dG9uR3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/buttons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvYnV0dG9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/card.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvY2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/carousel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvY2Fyb3VzZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/cookie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvY29va2llLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/countup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvY291bnR1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/datePicker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvZGF0ZVBpY2tlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/draggableCards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvZHJhZ2dhYmxlQ2FyZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/dropdowns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvZHJvcGRvd25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/floatingLabels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvZmxvYXRpbmdMYWJlbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/imagesFigures.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvaW1hZ2VzRmlndXJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/links.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvbGlua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/mediaPlayer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvbWVkaWFQbGF5ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvbW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/offcanvas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvb2ZmY2FudmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvcGFnaW5hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/placeholders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvcGxhY2Vob2xkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/popover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvcG9wb3Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/progress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvcHJvZ3Jlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/ratings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvcmF0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/ribbons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvcmliYm9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/scrollspy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvc2Nyb2xsc3B5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/separator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvc2VwYXJhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/sortablejs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvc29ydGFibGVqcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/spinner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvc3Bpbm5lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/sweetalert2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvc3dlZXRhbGVydDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/tabs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdGFicy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/toast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdG9hc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/tooltips.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdG9vbHRpcHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/tour.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdG91ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/treeview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdHJlZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/typography.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdHlwb2dyYXBoeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/Ui/utilities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVWkvdXRpbGl0aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/Documents/Projects/AdminHTL/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,606 @@
+﻿
+@{
+    ViewBag.Title = "realEstateClinets";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+
+    <!-- choices -->
+    <link rel="stylesheet" href="~/assets/libs/choices.js/public/assets/styles/choices.min.css">
+}
+
+
+<div class="card">
+    <div class="card-body d-flex justify-content-between">
+        <div class="form-icon right">
+            <input type="text" class="form-control form-control-icon" id="iconSearch" placeholder="Type to search ...">
+            <i class="ri-search-2-line text-muted"></i>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClientModal"><i class="ri-add-fill me-1"></i>Add Client</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-5.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Sarah Johnson <span class="badge bg-success-subtle text-success ms-2">Available</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL001</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn p-0 text-body" data-bs-toggle="dropdown" aria-label="More options">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address :</span><a href="#!" class="text-muted"> daavidnumminen@teleworm.us</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number :</span> +1 (555) 123-4567</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location :</span> New York, NY - Manhattan District</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Villa</span>
+                            <span class="badge bg-primary-subtle text-primary">Penthouse</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">3</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$2.1M</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">2</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-2.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">James Lee <span class="badge bg-success-subtle text-success ms-2">Available</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL002</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> jameslee@fakemail.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 234-5678</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Los Angeles, CA</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Townhouse</span>
+                            <span class="badge bg-primary-subtle text-primary">Villa</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">5</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$1.5M</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">1</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-3.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Olivia Martinez <span class="badge bg-danger-subtle text-danger ms-2">Unavailable</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL003</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> olivia.martinez@mail.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 987-6543</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Miami, FL</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Studio</span>
+                            <span class="badge bg-primary-subtle text-primary">Loft</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">4</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$850K</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">1</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-5.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Ethan Wright <span class="badge bg-success-subtle text-success ms-2">Active</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL004</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="text-body" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> ethanwright@mail.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 765-4321</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Austin, TX</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Villa</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">6</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$2.2M</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">2</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-4.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Sophia Brown <span class="badge bg-success-subtle text-success ms-2">Available</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL005</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="text-body" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> sophia.b@mail.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 112-2334</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Chicago, IL</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Apartment</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">2</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$600K</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">0</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-6.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Liam Johnson <span class="badge bg-success-subtle text-success ms-2">Available</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL006</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="text-body" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> liam.johnson@domain.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 556-9988</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> San Diego, CA</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Condo</span>
+                            <span class="badge bg-primary-subtle text-primary">Studio</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">3</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$780K</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">1</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-7.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Amelia Davis <span class="badge bg-success-subtle text-success ms-2">Available</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL007</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="text-body" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> amelia.davis@mail.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 334-6655</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Seattle, WA</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Duplex</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">7</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$1.8M</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">2</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-8.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Noah Miller <span class="badge bg-danger-subtle text-danger ms-2">Unavailable</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL008</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="text-body" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> noahmiller@company.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 223-9981</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Phoenix, AZ</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Studio</span>
+                            <span class="badge bg-primary-subtle text-primary">Duplex</span>
+                            <span class="badge bg-primary-subtle text-primary">Villa</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">1</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$320K</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">3</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <img src="~/assets/images/avatar/avatar-9.jpg" alt="Client" class="avatar-lg rounded-circle me-3">
+                        <div>
+                            <a href="#!" class="text-body fw-medium">Olivia Taylor <span class="badge bg-success-subtle text-success ms-2">Available</span></a>
+                            <p class="text-muted mb-0 fs-13">Client ID: #CL009</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="text-body" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="client-info">
+                    <p class="fs-14 mb-2"><span class="text-body fw-medium me-1">Email Address:</span><a href="#!" class="text-muted"> olivia.taylor@mail.com</a></p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Phone Number:</span> +1 (555) 882-4477</p>
+                    <p class="text-muted fs-14 mb-2"><span class="text-body fw-medium me-1">Location:</span> Seattle, WA</p>
+                    <div class="my-6 d-flex justify-content-between align-items-center gap-4">
+                        <div>
+                            <span class="me-1 fs-13">Interested In :</span>
+                            <span class="badge bg-primary-subtle text-primary">Penthouse</span>
+                            <span class="badge bg-primary-subtle text-primary">Villa</span>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm"><i class="ri-add-line me-1"></i>Connect</button>
+                    </div>
+                    <div class="bg-light-subtle border rounded p-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="mb-1">7</h6>
+                                <p class="text-muted fs-12 mb-0">View</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">$1.3M</h6>
+                                <p class="text-muted fs-12 mb-0">Budget Range</p>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mb-1">1</h6>
+                                <p class="text-muted fs-12 mb-0">Active Deals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex flex-wrap gap-4 align-items-center">
+            <p class="fw-medium mb-0"> Showing 1 - 10 of 18 Entries</p>
+            <div class="ms-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-primary mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                <i class="ri-arrow-left-double-line"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">1</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="javascript:voide(0)">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">4</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                <i class="ri-arrow-right-double-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addClientModal" tabindex="-1" aria-labelledby="addClientModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addClientModalLabel">Add Client</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-2">
+                        <div class="col-12">
+                            <div class="d-flex flex-column align-items-center justify-content-center p-2 rounded">
+                                <div class="avatar-item avatar-xxl avatar-title bg-light-subtle shadow-sm border position-relative">
+                                    <i class="ri-upload-cloud-line fs-2 text-muted"></i>
+                                    <div class="h-28px w-28px rounded-pill d-flex justify-content-center align-items-center text-muted bg-body-secondary shadow-sm border position-absolute top-0 end-0">
+                                        <i class="ri-image-add-line"></i>
+                                    </div>
+                                    <input type="file" class="position-absolute top-0 end-0 w-100 h-100 opacity-0 form-control" id="employeeAvatar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="clientName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="clientName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="clientEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="clientEmail" placeholder="Enter email" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="clientPhone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="clientPhone" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="clientLocation" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="clientLocation" placeholder="City, State" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="clientStatus" class="form-label">Status</label>
+                            <select class="form-select" id="clientStatus">
+                                <option selected>Choose...</option>
+                                <option value="Verified">Verified</option>
+                                <option value="On Hold">On Hold</option>
+                                <option value="Blocked">Blocked</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="clientType" class="form-label">Property Type</label>
+                            <select class="form-select" id="clientType">
+                                <option selected>Choose...</option>
+                                <option value="Apartment">Apartment</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Office">Office</option>
+                                <option value="Penthouse">Penthouse</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Client</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Selector Js -->
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/real-estate-clients.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+}

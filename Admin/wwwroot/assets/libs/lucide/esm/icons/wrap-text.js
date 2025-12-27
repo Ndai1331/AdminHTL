@@ -1,0 +1,2 @@
+/*! For license information please see wrap-text.js.LICENSE.txt */
+const WrapText=[["path",{d:"m16 16-2 2 2 2"}],["path",{d:"M3 12h15a3 3 0 1 1 0 6h-4"}],["path",{d:"M3 18h7"}],["path",{d:"M3 6h18"}]];export{WrapText as default};

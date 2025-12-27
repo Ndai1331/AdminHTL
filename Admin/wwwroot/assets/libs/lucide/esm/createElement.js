@@ -1,0 +1,2 @@
+/*! For license information please see createElement.js.LICENSE.txt */
+import defaultAttributes from"./defaultAttributes.js";const createSVGElement=([t,e,r])=>{const n=document.createElementNS("http://www.w3.org/2000/svg",t);return Object.keys(e).forEach((t=>{n.setAttribute(t,String(e[t]))})),r?.length&&r.forEach((t=>{const e=createSVGElement(t);n.appendChild(e)})),n},createElement=(t,e={})=>{const r={...defaultAttributes,...e};return createSVGElement(["svg",r,t])};export{createElement as default};

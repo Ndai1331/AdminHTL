@@ -1,0 +1,2 @@
+/*! For license information please see indent-decrease.js.LICENSE.txt */
+const IndentDecrease=[["path",{d:"M21 12H11"}],["path",{d:"M21 18H11"}],["path",{d:"M21 6H11"}],["path",{d:"m7 8-4 4 4 4"}]];export{IndentDecrease as default};

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @Html.Partial("~/Views/Shared/TitleMeta.cshtml")
+    @RenderSection("styles", false)
+    @Html.Partial("~/Views/Shared/HeadCSS.cshtml")
+</head>
+<body>
+
+    <div id="layout-wrapper">
+
+        @Html.Partial("~/Views/Shared/header.cshtml")
+
+        @Html.Partial("~/Views/Shared/sidebar.cshtml")
+
+        @Html.Partial("~/Views/Shared/horizontal.cshtml")
+
+        <main class="app-wrapper">
+            <div class="container-fluid">
+
+                @RenderBody()
+            </div><!--End container-fluid-->
+        </main><!--End app-wrapper-->
+        @Html.Partial("~/Views/Shared/switcher.cshtml")
+        @Html.Partial("~/Views/Shared/scrolltotop.cshtml")
+        @Html.Partial("~/Views/Shared/footer.cshtml")
+
+    </div>
+
+    @Html.Partial("~/Views/Shared/vendorscripts.cshtml")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

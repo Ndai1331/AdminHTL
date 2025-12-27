@@ -1,0 +1,2 @@
+/*! For license information please see message-circle-more.js.LICENSE.txt */
+const MessageCircleMore=[["path",{d:"M7.9 20A9 9 0 1 0 4 16.1L2 22Z"}],["path",{d:"M8 12h.01"}],["path",{d:"M12 12h.01"}],["path",{d:"M16 12h.01"}]];export{MessageCircleMore as default};

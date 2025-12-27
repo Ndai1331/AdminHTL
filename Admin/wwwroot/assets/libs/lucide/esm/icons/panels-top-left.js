@@ -1,0 +1,2 @@
+/*! For license information please see panels-top-left.js.LICENSE.txt */
+const PanelsTopLeft=[["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2"}],["path",{d:"M3 9h18"}],["path",{d:"M9 21V9"}]];export{PanelsTopLeft as default};

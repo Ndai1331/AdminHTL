@@ -1,0 +1,2 @@
+/*! For license information please see clock-alert.js.LICENSE.txt */
+const ClockAlert=[["path",{d:"M12 6v6l4 2"}],["path",{d:"M16 21.16a10 10 0 1 1 5-13.516"}],["path",{d:"M20 11.5v6"}],["path",{d:"M20 21.5h.01"}]];export{ClockAlert as default};

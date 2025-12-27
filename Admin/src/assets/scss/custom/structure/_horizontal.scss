@@ -1,0 +1,288 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: horizontal layout scss
+*/
+
+[data-layout="horizontal"] {
+  .app-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 197px;
+    display: inline-block;
+    background-color: #082f49be;
+
+    @include media-breakpoint-down(xl) {
+      height: 250px;
+    }
+  }
+
+  body {
+    background: url("/src/assets/images/photo-1549346964-5c345703d10d.avif")
+      no-repeat center top;
+    object-fit: cover;
+    background-size: 100% 320px;
+    background-color: var(--#{$prefix}body-bg);
+  }
+
+  .signin-page {
+    background-image: none !important;
+  }
+
+  .app-header.sticky-scroll {
+    background-color: #082f49;
+  }
+
+  .#{$customPrefix}-app-sidebar {
+    background-color: #082f49be;
+    right: 0;
+    top: var(--#{$prefix}app-header-height);
+    bottom: auto;
+    border-right: 0;
+    width: auto;
+    display: none;
+
+    &.horizontal-sidebar {
+      @include media-breakpoint-up(xl) {
+        position: absolute;
+        border-bottom: 1px solid rgba(var(--#{$prefix}white-rgb), 0.4);
+        display: block;
+      }
+
+      &.show {
+        display: block;
+        background-color: #082f49;
+      }
+
+      &.show ~ .sidebar-backdrop {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .#{$customPrefix}-app-sidebar-menu {
+        padding: 1.25rem;
+
+        @include media-breakpoint-up(xl) {
+          .#{$customPrefix}-nav-link {
+            border-radius: var(--#{$prefix}border-radius)
+              var(--#{$prefix}border-radius) 0 0;
+          }
+        }
+
+        @include media-breakpoint-down(xl) {
+          &.nav {
+            display: block;
+          }
+
+          overflow-y: scroll;
+        }
+
+        @include media-breakpoint-up(xl) {
+          padding: 0.5rem 5.125rem 0;
+        }
+
+        .#{$customPrefix}-horizontal-menu {
+          .#{$customPrefix}-menu-title {
+            display: none;
+          }
+
+          @include media-breakpoint-down(xl) {
+            .#{$customPrefix}-slide {
+              &.#{$customPrefix}-has-sub {
+                > .#{$customPrefix}-nav-link {
+                  color: var(--#{$prefix}white);
+                }
+              }
+            }
+          }
+
+          @include media-breakpoint-up(xl) {
+            display: flex;
+            gap: 0.375rem;
+
+            .#{$customPrefix}-slide {
+              position: relative;
+
+              &:hover {
+                .#{$customPrefix}-slide-menu {
+                  display: block;
+                  height: auto;
+                }
+              }
+
+              &.#{$customPrefix}-has-sub {
+                > .#{$customPrefix}-nav-link {
+                  color: var(--#{$prefix}white);
+                  margin-bottom: 0;
+
+                  @include media-breakpoint-up(xl) {
+                    gap: 0.625rem;
+                  }
+
+                  &:hover,
+                  &.active {
+                    background-color: rgba(var(--#{$prefix}white-rgb), 0.1);
+                    border-bottom: 2px solid
+                      var(--#{$prefix}app-sidebar-menu-item-color-hover);
+
+                    .#{$customPrefix}-nav-arrow {
+                      transform: rotate(180deg);
+                    }
+                  }
+                }
+              }
+
+              .#{$customPrefix}-slide-menu {
+                position: absolute;
+                z-index: 1006;
+                top: 42px;
+                left: 0;
+                width: 11.7rem;
+                background: var(--#{$prefix}secondary-bg);
+                border-radius: var(--#{$prefix}border-radius);
+                border: 1px solid var(--#{$prefix}border-color);
+                box-shadow: var(--#{$prefix}box-shadow-sm);
+                list-style: none;
+                transition: $transition-base;
+
+                .#{$customPrefix}-slide-item {
+                  position: relative;
+
+                  &.#{$customPrefix}-has-sub {
+                    .#{$customPrefix}-slide-menu {
+                      position: absolute;
+                      left: 100%;
+                      top: 0.625rem;
+                      opacity: 0;
+                      visibility: hidden;
+                      padding-left: 0;
+                    }
+
+                    &:hover {
+                      > .#{$customPrefix}-slide-menu {
+                        opacity: 1;
+                        visibility: visible;
+                      }
+
+                      > .#{$customPrefix}-nav-link .#{$customPrefix}-nav-arrow {
+                        transform: rotate(180deg);
+                      }
+                    }
+
+                    .#{$customPrefix}-slide-menu
+                      .#{$customPrefix}-slide-item:hover {
+                      > .#{$customPrefix}-slide-menu {
+                        opacity: 1;
+                        visibility: visible;
+                      }
+
+                      > .#{$customPrefix}-nav-link .#{$customPrefix}-nav-arrow {
+                        transform: rotate(180deg);
+                      }
+                    }
+                  }
+                }
+
+                .#{$customPrefix}-menu-title {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-breadcrumb {
+    margin-bottom: 18px !important;
+    @include media-breakpoint-up(xl) {
+      margin-top: 40px !important;
+    }
+    .breadcrumb-title {
+      font-size: 16px !important;
+    }
+    .breadcrumb-title,
+    .breadcrumb a {
+      color: var(--#{$prefix}white);
+    }
+
+    .breadcrumb-item {
+      &.active {
+        color: rgba(var(--#{$prefix}white-rgb), 0.7);
+      }
+    }
+    
+  }
+
+  .app-header {
+    left: 0;
+    z-index: 1006;
+    background-color: #082f49be;
+    border: 0;
+
+    .vertical-toggle {
+      display: none;
+    }
+
+    @include media-breakpoint-down(xl) {
+      .horizontal-toggle {
+        display: block !important;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 0 4.375rem;
+    }
+  }
+
+  .app-wrapper {
+    margin-inline-start: auto;
+
+    @include media-breakpoint-up(xl) {
+      padding: 0 4.375rem;
+      margin-block-start: calc(var(--#{$prefix}app-header-height) * 1.66);
+    }
+  }
+
+  .footer {
+    margin-inline-start: auto;
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 4.375rem;
+      padding-right: 4.375rem;
+    }
+  }
+
+  .sidebar-color-theme {
+    display: none;
+  }
+
+  &[data-sidebar-color="dark"] {
+    .#{$customPrefix}-app-sidebar {
+      .#{$customPrefix}-app-sidebar-menu {
+        .#{$customPrefix}-slide {
+          .#{$customPrefix}-nav-link {
+
+            &.active,
+            &:hover {
+              background-color: #222831 !important;
+              border-color: rgba(var(--#{$prefix}white-rgb), 0.1) !important;
+            }
+          }
+
+          &:hover {
+            .#{$customPrefix}-slide-menu {
+              background: #222831 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

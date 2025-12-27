@@ -1,0 +1,2 @@
+/*! For license information please see step-forward.js.LICENSE.txt */
+const StepForward=[["line",{x1:"6",x2:"6",y1:"4",y2:"20"}],["polygon",{points:"10,4 20,12 10,20"}]];export{StepForward as default};

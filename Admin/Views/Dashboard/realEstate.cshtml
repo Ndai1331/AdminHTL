@@ -1,0 +1,805 @@
+﻿
+@{
+    ViewBag.Title = "realEstate";
+    ViewBag.pTitle = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-xl-5 col-xxl-6">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="avatar-lg border rounded-2 d-flex justify-content-center align-items-center mb-5">
+                            <i class="ri-money-dollar-circle-line fs-4"></i>
+                        </div>
+                        <h3 class="mb-2" data-target="45.7" data-duration="5" data-prefix="$" data-suffix="k">$45.7k</h3>
+                        <p class="text-muted mb-0">Total Revenue</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="avatar-lg border rounded-2 d-flex justify-content-center align-items-center mb-5">
+                            <i class="ri-group-line fs-4"></i>
+                        </div>
+                        <h3 class="mb-2" data-target="230" data-duration="5">230</h3>
+                        <p class="text-muted mb-0">Total Visitors</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="avatar-lg border rounded-2 d-flex justify-content-center align-items-center mb-5">
+                            <i class="ri-building-line fs-4"></i>
+                        </div>
+                        <h3 class="mb-2" data-target="4645" data-duration="5">4645</h3>
+                        <p class="text-muted mb-0">Total Property</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-5">
+                            <div class="col-md-4">
+                                <h5>Properties for:</h5>
+                                <div class="d-none d-md-block">
+                                    <img src="~/assets/images/dashboard/real-estate/home.png" alt="Home Dark" class="position-absolute bottom-0 start-0 home-dark d-block w-128px">
+                                    <img src="~/assets/images/dashboard/real-estate/home-light.png" alt="Home Light" class="position-absolute bottom-0 start-0 home-light d-none w-128px">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="py-4 px-5 bg-light-subtle rounded">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-uppercase text-muted bg-body-secondary px-3 rounded-pill py-1">RENT</span>
+                                        <div class="dropdown">
+                                            <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-muted" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h2 class="mb-0 mt-12 fs-1" data-target="115" data-duration="5">115</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="py-4 px-5 bg-light-subtle rounded">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-uppercase text-muted bg-body-secondary px-3 rounded-pill py-1">SELL</span>
+                                        <div class="dropdown">
+                                            <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-muted" aria-label="More options"><i class="bi bi-three-dots-vertical"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h2 class="mb-0 mt-12 fs-1" data-target="46" data-duration="5">46</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-7 col-xxl-6">
+        <div class="card realestate-premium-card card-h-100">
+            <div class="realestate-analytics-card">
+                <div class="card mb-0 shadow-none">
+                    <div class="card-body px-4 py-3">
+                        <div class="row align-items-center">
+                            <div class="col-7">
+                                <div id="gradient_donut_chart"></div>
+                            </div>
+                            <div class="col-5">
+                                <div class="d-flex align-items-center gap-4 mb-3">
+                                    <span class="bullet bg-danger"></span>
+                                    <div>
+                                        <h5 class="mb-0" data-target="45.8" data-duration="5" data-prefix="$" data-suffix="k">$45.8K</h5>
+                                        <p class="mb-0 text-muted">Rent</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-4 mb-3">
+                                    <span class="bullet bg-warning"></span>
+                                    <div>
+                                        <h5 class="mb-0" data-target="225.5" data-duration="5" data-prefix="$" data-suffix="k">$225.5K</h5>
+                                        <p class="mb-0 text-muted">Sales</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="bullet bg-primary"></span>
+                                    <div>
+                                        <h5 class="mb-0" data-target="105.00" data-duration="5" data-prefix="$">$105.00</h5>
+                                        <p class="mb-0 text-muted">Others</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body d-none d-md-block">
+                <div class="text-end">
+                    <h1 class="fw-bold mb-1">GET 5.0 % OFF</h1>
+                    <p class="fs-18 fw-medium">On Premium Apartments</p>
+                </div>
+                <img src="~/assets/images/dashboard/real-estate/building.png" alt="Building" class="position-absolute bottom-0 end-0">
+                <img src="~/assets/images/dashboard/real-estate/pattern.png" alt="Building" class="position-absolute bottom-0 start-0 premium-pattern">
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Sales Analytics</h5>
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-outline-light dropdown-toggle btn-sm">This Week</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="sales-analytics"></div>
+                <div class="bg-light-subtle p-4 rounded mt-4">
+                    <div class="row g-5">
+                        <div class="col-md-4 border-end-md border-end-0">
+                            <div class="text-center">
+                                <p class="text-muted mb-8 fs-16">Income</p>
+                                <p class="fw-semibold d-flex align-items-center justify-content-center gap-1 mb-0 fs-20">
+                                    $27,367.00 <span class="badge bg-success-subtle text-success fw-medium ms-1">+5.6%</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 border-end-md border-end-0">
+                            <div class="text-center">
+                                <p class="text-muted mb-8 fs-16">Expense</p>
+                                <p class="fw-semibold d-flex align-items-center justify-content-center gap-1 mb-0 fs-20">
+                                    $11562.02 <span class="badge bg-danger-subtle text-danger fw-medium ms-1">-4.6%</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <p class="text-muted mb-8 fs-16">Balance</p>
+                                <p class="fw-semibold d-flex align-items-center justify-content-center gap-1 mb-0 fs-20">
+                                    $67,375.00 <span class="badge bg-danger-subtle text-danger fw-medium ms-1">-3.2%</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xxl-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Recent Sales</h5>
+                        <div class="dropdown">
+                            <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                <img src="~/assets/images/dashboard/real-estate1.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-medium fs-15">Urban Loft Studio</a>
+                                    <p class="mb-0 text-muted fs-13"><i class="ri-time-line"></i> Austin, TX</p>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <h5 class="fw-medium fs-16">$1,250</h5>
+                                <p class="text-success fw-semibold fs-13 mb-0">+12.50%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                <img src="~/assets/images/dashboard/real-estate2.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-medium fs-15">Lakeview Condo</a>
+                                    <p class="mb-0 text-muted fs-13"><i class="ri-time-line"></i> Chicago, IL</p>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <h5 class="fw-medium fs-16">$2,400</h5>
+                                <p class="text-success fw-semibold fs-13 mb-0">+8.75%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                <img src="~/assets/images/dashboard/real-estate3.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-medium fs-15">Palm Springs Villa</a>
+                                    <p class="mb-0 text-muted fs-13">
+                                        <i class="ri-time-line"></i> Palm Springs, CA
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <h5 class="fw-medium fs-16">$3,600</h5>
+                                <p class="text-success fw-semibold fs-13 mb-0">+18.90%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Top Properties</h5>
+                        <div class="dropdown">
+                            <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="px-5 mx-n5" data-simplebar style="max-height: 248px;">
+                            <div class="d-flex justify-content-between align-items-center py-2">
+                                <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                    <img src="~/assets/images/dashboard/real-estate5.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                    <div>
+                                        <a href="#!" class="mb-1 text-body fw-medium fs-15">Sunset Villa</a>
+                                        <p class="mb-0 text-muted fs-13">Miami, USA</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center text-danger">
+                                    <i class="ri-arrow-right-down-line"></i>
+                                    <h6 class="text-danger fw-semibold mb-0">8%</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-2">
+                                <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                    <img src="~/assets/images/dashboard/real-estate6.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                    <div>
+                                        <a href="#!" class="mb-1 text-body fw-medium fs-15">City Heights</a>
+                                        <p class="mb-0 text-muted fs-13">San Diego, USA</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center text-success">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                    <h6 class="text-success fw-semibold mb-0">14%</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-2">
+                                <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                    <img src="~/assets/images/dashboard/real-estate7.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                    <div>
+                                        <a href="#!" class="mb-1 text-body fw-medium fs-15">Greenwood Estate</a>
+                                        <p class="mb-0 text-muted fs-13">Denver, USA</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center text-danger">
+                                    <i class="ri-arrow-right-down-line"></i>
+                                    <h6 class="text-danger fw-semibold mb-0">5%</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-2">
+                                <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                    <img src="~/assets/images/dashboard/real-estate4.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                    <div>
+                                        <a href="#!" class="mb-1 text-body fw-medium fs-15">Oceanview Homes</a>
+                                        <p class="mb-0 text-muted fs-13">Santa Monica, USA</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center text-success">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                    <h6 class="text-success fw-semibold mb-0">11%</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-2">
+                                <div class="d-flex justify-content-center align-items-center border-2 rounded-circle gap-3">
+                                    <img src="~/assets/images/dashboard/real-estate2.png" class="img-fluid avatar-lg rounded-2" alt="Property Image">
+                                    <div>
+                                        <a href="#!" class="mb-1 text-body fw-medium fs-15">Lakeside Villas</a>
+                                        <p class="mb-0 text-muted fs-13">Austin, Texas</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center text-danger">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                    <h6 class="text-danger fw-semibold mb-0">5%</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xxl-3">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Details</h5>
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-outline-light dropdown-toggle btn-sm">This Week</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="border rounded-3 p-3 mb-4">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="avatar-lg border rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="ri-home-2-line fs-3"></i>
+                            </div>
+                            <div>
+                                <a href="#!" class="mb-1 text-body fw-medium fs-15">Property Sales</a>
+                                <p class="text-muted mb-0">Increased By 18%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0">$540.8K</h6>
+                        </div>
+                    </div>
+                    <div class="progress progress-xs mt-1">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="border rounded-3 p-3 mb-4">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="avatar-lg border rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="ri-bank-line fs-3"></i>
+                            </div>
+                            <div>
+                                <a href="#!" class="mb-1 text-body fw-medium fs-15">Mortgage Approvals</a>
+                                <p class="text-muted mb-0">Decreased By 5%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0">$312.0K</h6>
+                        </div>
+                    </div>
+                    <div class="progress progress-xs mt-1">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="border rounded-3 p-3 mb-4">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="avatar-lg border rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="ri-money-dollar-circle-line fs-3"></i>
+                            </div>
+                            <div>
+                                <a href="#!" class="mb-1 text-body fw-medium fs-15">Rental Revenue</a>
+                                <p class="text-muted mb-0">Increased By 10%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0">$225.5K</h6>
+                        </div>
+                    </div>
+                    <div class="progress progress-xs mt-1">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="border rounded-3 p-3 mb-4">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="avatar-lg border rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="ri-bar-chart-2-line fs-3"></i>
+                            </div>
+                            <div>
+                                <a href="#!" class="mb-1 text-body fw-medium fs-15">Market Growth</a>
+                                <p class="text-muted mb-0">Increased By 12%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0">$640.2K</h6>
+                        </div>
+                    </div>
+                    <div class="progress progress-xs mt-1">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="border rounded-3 p-3">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="avatar-lg border rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="ri-building-line fs-3"></i>
+                            </div>
+                            <div>
+                                <a href="#!" class="mb-1 text-body fw-medium fs-15">Commercial Leases</a>
+                                <p class="text-muted mb-0">Decreased By 8%</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0">$185.0K</h6>
+                        </div>
+                    </div>
+                    <div class="progress progress-xs mt-1">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Social Source</h5>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-expanded="false" aria-label="More options">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="social-source"></div>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="ri-group-fill me-2"></i>
+                    <h6 class="mb-0">Buyers : <span class="text-primary">70</span></h6>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center px-0 pb-0">
+                    <h6 class="mb-0">See More Statistics</h6>
+                    <a class="btn btn-light" href="#!">See Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-9">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title">Most Sales Location</h5>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-expanded="false" aria-label="More options">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row g-5 align-items-center h-100">
+                    <div class="col-xl-3 col-xxl-2">
+                        <div class="d-flex gap-5 flex-xl-column flex-wrap">
+                            <div class="card mb-0">
+                                <div class="card-body bg-light">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="text-muted mb-0">Canada</h6>
+                                        <h6 class="text-muted mb-0">-</h6>
+                                        <h5 class="mb-0">71%</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body bg-light">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="text-muted mb-0">USA</h6>
+                                        <h6 class="text-muted mb-0">-</h6>
+                                        <h5 class="mb-0">23%</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body bg-light">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="text-muted mb-0">Brazil</h6>
+                                        <h6 class="text-muted mb-0">-</h6>
+                                        <h5 class="mb-0">49%</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body bg-light">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="text-muted mb-0">Russia</h6>
+                                        <h6 class="text-muted mb-0">-</h6>
+                                        <h5 class="mb-0">60%</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-xxl-10">
+                        <div id="world-map" class="min-h-350px position-relative"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Property List</h5>
+                <a href="/apps/realestateaddproperty" class="btn btn-primary"><i class="ri-add-line me-1"></i>Add Property</a>
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-3 mb-5">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light">Any Status</button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">For Sale</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">For Rent</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Sold</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light">Any Type</button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">Apartment</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">House</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Studio</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Villa</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light">All Countries</button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">United States</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Canada</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">United Kingdom</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Australia</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light">All States</button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">California</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">New York</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Texas</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Florida</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-light" type="button">More<i class="ri-equalizer-2-line ms-3"></i></button>
+                </div>
+                <div class="swiper property-list" dir="ltr">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="position-relative h-200px overflow-hidden rounded">
+                                        <a href="#!"><img src="~/assets/images/apps/real-eastate/property-1.jpg" alt="Modern Villa in Beverly Hills" class="object-fit-cover w-100 h-100"></a>
+                                        <span class="badge bg-success position-absolute top-0 start-0 mt-3 ms-3">For Sale</span>
+                                        <span class="badge bg-dark bg-opacity-80 position-absolute top-0 end-0 mt-3 me-3">Australia</span>
+                                    </div>
+                                    <div class="mt-5">
+                                        <h5 class="text-success mb-3">$1,250,000</h5>
+                                        <a href="/apps/realestatepropertydetails" class="fw-medium text-body fs-15">Modern Villa in Beverly Hills</a>
+                                        <p class="text-muted mt-1">1234 Sunset Blvd, Beverly Hills, CA 90210</p>
+                                        <div class="d-flex gap-4">
+                                            <div class="feature">
+                                                <i class="ri-hotel-bed-line text-primary fs-16"></i>
+                                                <span class="text-muted ">4</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-water-flash-line text-primary fs-16"></i>
+                                                <span class="text-muted">3</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-layout-4-line text-primary fs-16"></i>
+                                                <span class="text-muted">2,500 sqft</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 pt-4 border-top">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="~/assets/images/avatar/avatar-1.jpg" alt="Agent" class="rounded-circle avatar-md">
+                                                <a href="#!" class="fw-medium text-body">Mia Davis</a>
+                                            </div>
+                                            <a href="/apps/realestatepropertydetails" class="fw-medium">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="position-relative h-200px overflow-hidden rounded">
+                                        <a href="#!"><img src="~/assets/images/apps/real-eastate/property-2.jpg" alt="Luxury Apartment in New York" class="object-fit-cover w-100 h-100"></a>
+                                        <span class="badge bg-warning position-absolute top-0 start-0 mt-3 ms-3">For Rent</span>
+                                        <span class="badge bg-dark bg-opacity-80 position-absolute top-0 end-0 mt-3 me-3">NewYork</span>
+                                    </div>
+                                    <div class="mt-5">
+                                        <h5 class="text-success mb-3">$4,500 / month</h5>
+                                        <a href="/apps/realestatepropertydetails" class="fw-medium text-body fs-15">Luxury Apartment in New York</a>
+                                        <p class="text-muted mt-1">5678 Madison Ave, New York, NY 10022</p>
+                                        <div class="d-flex gap-4">
+                                            <div class="feature">
+                                                <i class="ri-hotel-bed-line text-primary fs-16"></i>
+                                                <span class="text-muted">3 Beds</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-water-flash-line text-primary fs-16"></i>
+                                                <span class="text-muted">2 Baths</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-layout-4-line text-primary fs-16"></i>
+                                                <span class="text-muted">1,800 sqft</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 pt-4 border-top">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="~/assets/images/avatar/avatar-10.jpg" alt="Agent" class="rounded-circle avatar-md">
+                                                <a href="#!" class="fw-medium text-body">Jane Smith</a>
+                                            </div>
+                                            <a href="/apps/realestatepropertydetails" class="fw-medium">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="position-relative h-200px overflow-hidden rounded">
+                                        <a href="#!"><img src="~/assets/images/apps/real-eastate/property-3.jpg" alt="Cozy Cottage in the Countryside" class="object-fit-cover w-100 h-100"></a>
+                                        <span class="badge bg-success position-absolute top-0 start-0 mt-3 ms-3">For Sale</span>
+                                        <span class="badge bg-dark bg-opacity-80 position-absolute top-0 end-0 mt-3 me-3">Colorado</span>
+                                    </div>
+                                    <div class="mt-5">
+                                        <h5 class="text-success mb-3">$850,000</h5>
+                                        <a href="/apps/realestatepropertydetails" class="fw-medium text-body fs-15">Cozy Cottage in the Countryside</a>
+                                        <p class="text-muted mt-1">789 Country Rd, Boulder, CO 80301</p>
+                                        <div class="d-flex gap-4">
+                                            <div class="feature">
+                                                <i class="ri-hotel-bed-line text-primary fs-16"></i>
+                                                <span class="text-muted">3 Beds</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-water-flash-line text-primary fs-16"></i>
+                                                <span class="text-muted">2 Baths</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-layout-4-line text-primary fs-16"></i>
+                                                <span class="text-muted">1,400 sqft</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 pt-4 border-top">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="~/assets/images/avatar/avatar-11.jpg" alt="Agent" class="rounded-circle avatar-md">
+                                                <a href="#!" class="fw-medium text-body">Michael Brown</a>
+                                            </div>
+                                            <a href="/apps/realestatepropertydetails" class="fw-medium">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="position-relative h-200px overflow-hidden rounded">
+                                        <a href="#!"><img src="~/assets/images/apps/real-eastate/property-4.jpg" alt="Modern Apartment Downtown" class="object-fit-cover w-100 h-100"></a>
+                                        <span class="badge bg-danger position-absolute top-0 start-0 mt-3 ms-3">Sold</span>
+                                        <span class="badge bg-dark bg-opacity-80 position-absolute top-0 end-0 mt-3 me-3">SanFrancisco</span>
+                                    </div>
+                                    <div class="mt-5">
+                                        <h5 class="text-success mb-3">$950,000</h5>
+                                        <a href="/apps/realestatepropertydetails" class="fw-medium text-body fs-15">Modern Apartment Downtown</a>
+                                        <p class="text-muted mt-1">321 Market St, San Francisco, CA 94105</p>
+                                        <div class="d-flex gap-4">
+                                            <div class="feature">
+                                                <i class="ri-hotel-bed-line text-primary fs-16"></i>
+                                                <span class="text-muted">2 Beds</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-water-flash-line text-primary fs-16"></i>
+                                                <span class="text-muted">1 Bath</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-layout-4-line text-primary fs-16"></i>
+                                                <span class="text-muted">1,000 sqft</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 pt-4 border-top">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Agent" class="rounded-circle avatar-md">
+                                                <a href="#!" class=" fw-medium text-body">Emily Wilson</a>
+                                            </div>
+                                            <a href="/apps/realestatepropertydetails" class="fw-medium">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="position-relative h-200px overflow-hidden rounded">
+                                        <a href="#!"><img src="~/assets/images/apps/real-eastate/property-5.jpg" alt="Beachfront House" class="object-fit-cover w-100 h-100"></a>
+                                        <span class="badge bg-success position-absolute top-0 start-0 mt-3 ms-3">For Sale</span>
+                                        <span class="badge bg-dark bg-opacity-80 position-absolute top-0 end-0 mt-3 me-3">Florida</span>
+                                    </div>
+                                    <div class="mt-5">
+                                        <h5 class="text-success mb-3">$2,100,000</h5>
+                                        <a href="/apps/realestatepropertydetails" class="fw-medium text-body fs-15">Beachfront House</a>
+                                        <p class="text-muted mt-1">987 Ocean Dr, Miami, FL 33139</p>
+                                        <div class="d-flex gap-4">
+                                            <div class="feature">
+                                                <i class="ri-hotel-bed-line text-primary fs-16"></i>
+                                                <span class="text-muted">5 Beds</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-water-flash-line text-primary fs-16"></i>
+                                                <span class="text-muted">4 Baths</span>
+                                            </div>
+                                            <div class="feature">
+                                                <i class="ri-layout-4-line text-primary fs-16"></i>
+                                                <span class="text-muted">3,200 sqft</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 pt-4 border-top">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="~/assets/images/avatar/avatar-12.jpg" alt="Agent" class="rounded-circle avatar-md">
+                                                <a href="#!" class="fw-medium text-body">Sophia Lee</a>
+                                            </div>
+                                            <a href="/apps/realestatepropertydetails" class="fw-medium">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Swiper js -->
+    <script src="~/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Vector map-->
+    <script src="~/assets/libs/jsvectormap/jsvectormap.min.js"></script>
+
+    <!-- Vector map world map -->
+    <script src="~/assets/libs/jsvectormap/maps/world.js"></script>
+
+    <!-- apexcharts -->
+    <script src="~/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- real-estate init -->
+    <script src="~/assets/js/dashboard/real-estate.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

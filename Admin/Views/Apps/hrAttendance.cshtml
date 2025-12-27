@@ -1,0 +1,340 @@
+﻿
+@{
+    ViewBag.Title = "hrAttendance";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- air-datepicker -->
+    <link rel="stylesheet" href="~/assets/libs/air-datepicker/air-datepicker.css">
+}
+
+<div class="row">
+    <div class="col-xl-8 col-xxl-9">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Analytics</h5>
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-outline-light dropdown-toggle btn-sm">This Week</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row g-5 text-center">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="border rounded p-4">
+                            <div class="avatar-item avatar-lg rounded avatar-title fs-4 text-warning bg-warning-subtle mx-auto mb-4">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <h4 class="mb-1 fw-semibold">8.36 <span class="text-muted fs-14 fw-normal">/ Out of 9</span></h4>
+                            <p class="fs-13 mb-2">Total Hours Today</p>
+                            <div class="mt-3">
+                                <span class="badge bg-success-subtle text-success">
+                                    <i class="ri-arrow-up-s-fill align-middle"></i> 5% This Week
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="border rounded p-4">
+                            <div class="avatar-item avatar-lg rounded avatar-title fs-4 text-primary bg-primary-subtle mx-auto mb-4">
+                                <i class="ri-calendar-2-line"></i>
+                            </div>
+                            <h4 class="mb-1 fw-semibold">10 <span class="text-muted text-muted fs-14 fw-normal">/ out of 40</span></h4>
+                            <p class="fs-13 mb-2">Total Hours Week</p>
+                            <div class="mt-3">
+                                <span class="badge bg-success-subtle text-success">
+                                    <i class="ri-arrow-up-s-fill align-middle"></i> 7% Last Week
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="border rounded p-4">
+                            <div class="avatar-item avatar-lg rounded avatar-title fs-4 text-success bg-success-subtle mx-auto mb-4">
+                                <i class="ri-calendar-event-line"></i>
+                            </div>
+                            <h4 class="mb-1 fw-semibold">75 <span class="text-muted text-muted fs-14 fw-normal">/ out of 98</span></h4>
+                            <p class="fs-13 mb-2">Total Hours Month</p>
+                            <div class="mt-3">
+                                <span class="badge bg-danger-subtle text-danger">
+                                    <i class="ri-arrow-down-s-fill align-middle"></i> 8% Last Month
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="border rounded p-4">
+                            <div class="avatar-item avatar-lg rounded avatar-title fs-4 text-danger bg-danger-subtle mx-auto mb-4">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <h4 class="mb-1 fw-semibold">16 <span class="text-muted text-muted fs-14 fw-normal">/ out of 28</span></h4>
+                            <p class="fs-13 mb-2">Overtime this Month</p>
+                            <div class="mt-3">
+                                <span class="badge bg-danger-subtle text-danger">
+                                    <i class="ri-arrow-down-s-fill align-middle"></i> 6% Last Month
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex gap-2 align-items-center">
+                    <div class="form-icon right w-100">
+                        <input type="text" class="form-control form-control-icon" id="iconSearch" placeholder="Type to search ...">
+                        <i class="ri-search-2-line text-muted"></i>
+                    </div>
+                    <input type="text" class="form-control" id="basic-picker" placeholder="Select a date">
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <button type="button" class="btn btn-light-danger">Rejected All</button>
+                    <button type="button" class="btn btn-success">Approve</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-box">
+                    <table class="table align-middle text-nowrap mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Date</th>
+                                <th>Check In</th>
+                                <th>Late (min)</th>
+                                <th>Check Out</th>
+                                <th>Break</th>
+                                <th>Work Hours</th>
+                                <th>Production Hours</th>
+                                <th>Overtime</th>
+                                <th class="text-end">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>24 May 2025 - <span class="text-muted">(Sat)</span></td>
+                                <td>08:25 AM</td>
+                                <td class="text-muted">10 min</td>
+                                <td>05:45 PM</td>
+                                <td>1.00 Hrs</td>
+                                <td>8.00 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>6.50 Hrs</span></td>
+                                <td class="text-muted">-</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>23 May 2025 - <span class="text-muted">(Fri)</span></td>
+                                <td>08:20 AM</td>
+                                <td class="text-muted">5 min</td>
+                                <td>05:40 PM</td>
+                                <td>0.45 Hrs</td>
+                                <td>8.00 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>.00 Hrs</span></td>
+                                <td class="text-muted">0.15 Hrs</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>22 May 2025 - <span class="text-muted">(Thu)</span></td>
+                                <td>09:00 AM</td>
+                                <td class="text-muted">-</td>
+                                <td>06:00 PM</td>
+                                <td>0.50 Hrs</td>
+                                <td>8.00 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>6.75 Hrs</span></td>
+                                <td class="text-muted">0.35 Hrs</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>21 May 2025 - <span class="text-muted">(Wed)</span></td>
+                                <td>09:15 AM</td>
+                                <td class="text-muted">-</td>
+                                <td>05:00 PM</td>
+                                <td>0.35 Hrs</td>
+                                <td>7.55 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>6.25 Hrs</span></td>
+                                <td class="text-muted">0.15 Hrs</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20 May 2025 - <span class="text-muted">(Tue)</span></td>
+                                <td>08:10 AM</td>
+                                <td class="text-muted">-</td>
+                                <td>05:30 PM</td>
+                                <td>1.00 Hrs</td>
+                                <td>8.00 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>7.00 Hrs</span></td>
+                                <td class="text-muted">-</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>19 May 2025 - <span class="text-muted">(Mon)</span></td>
+                                <td>08:35 AM</td>
+                                <td class="text-muted">20 min</td>
+                                <td>05:55 PM</td>
+                                <td>0.45 Hrs</td>
+                                <td>8.00 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>6.90 Hrs</span></td>
+                                <td class="text-muted">0.25 Hrs</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17 May 2025 - <span class="text-muted">(Sat)</span></td>
+                                <td>09:05 AM</td>
+                                <td class="text-muted">50 min</td>
+                                <td>06:10 PM</td>
+                                <td>0.30 Hrs</td>
+                                <td>8.00 Hrs</td>
+                                <td><span class="badge bg-primary-subtle text-primary"><i class="ri-time-line me-1"></i>6.70 Hrs</span></td>
+                                <td class="text-muted">0.40 Hrs</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-light-success icon-btn-sm" aria-label="Approve"><i class="ri-check-line fs-6"></i></button>
+                                    <button type="button" class="btn btn-light-danger icon-btn-sm" aria-label="Reject"><i class="ri-close-line fs-6"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex flex-wrap gap-4 align-items-center mt-6">
+                    <p class="fw-medium mb-0">Showing 1 - 7 of 24 Entries</p>
+                    <div class="ms-auto">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination pagination-primary mb-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:void(0)" aria-label="Previous page">
+                                        <i class="ri-arrow-left-s-line fw-semibold"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:void(0)" aria-label="Next page">
+                                        <i class="ri-arrow-right-s-line fw-semibold"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-xxl-3">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Clock In</h5>
+                <button id="punchBtn" type="button" class="btn btn-danger btn-sm">
+                    <i class="ri-square-fill"></i> Punch Out
+                </button>
+            </div>
+            <div class="card-body mt-2">
+                <div class="d-flex justify-content-between align-items-center gap-2">
+                    <div class="w-100 h-80px rounded bg-light-subtle d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="fw-medium mb-1" id="hours">00</h3>
+                        <p class="text-muted fs-12 mb-0">Hours</p>
+                    </div>
+                    <span>:</span>
+                    <div class="w-100 h-80px rounded bg-light-subtle d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="fw-medium mb-1" id="minutes">00</h3>
+                        <p class="text-muted fs-12 mb-0">Minutes</p>
+                    </div>
+                    <span>:</span>
+                    <div class="w-100 h-80px rounded bg-light-subtle d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="fw-medium mb-1" id="seconds">00</h3>
+                        <p class="text-muted fs-12 mb-0">Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Employee Details</h5>
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-outline-light dropdown-toggle btn-sm">Options</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0)">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">View Full Report</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Export Data</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-5">
+                    <img src="~/assets/images/avatar/avatar-5.jpg" alt="Avatar Image" class="rounded-circle avatar-xxl mb-4">
+                    <h5 class="mb-1">Sarah Johnson</h5>
+                    <p class="text-muted fs-13 mb-0">Senior Frontend Developer</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-borderless text-nowrap mb-0">
+                        <tbody>
+                            <tr>
+                                <td class="text-muted">Employee ID</td>
+                                <td class="fw-semibold">EMP002</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Email</td>
+                                <td class="fw-semibold"><a href="javascript:void(0)" class="text-body">sarah.johnson@company.com</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted w-50">Phone</td>
+                                <td class="fw-semibold">+1 (555) 123-4567</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Location</td>
+                                <td class="fw-semibold">New York, NY</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Joining Date</td>
+                                <td class="fw-semibold">Jan 15, 2022</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Experience</td>
+                                <td class="fw-semibold">3.4 Years</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Department</td>
+                                <td class="fw-semibold">IT Development</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Picker Js -->
+    <script src="~/assets/libs/air-datepicker/air-datepicker.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/hr-attendance.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

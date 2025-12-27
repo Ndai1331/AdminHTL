@@ -1,0 +1,2 @@
+/*! For license information please see text-quote.js.LICENSE.txt */
+const TextQuote=[["path",{d:"M17 6H3"}],["path",{d:"M21 12H8"}],["path",{d:"M21 18H8"}],["path",{d:"M3 12v6"}]];export{TextQuote as default};

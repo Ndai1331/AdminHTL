@@ -1,0 +1,1046 @@
+﻿
+@{
+    ViewBag.Title = "pagination";
+    ViewBag.pTitle = "Ui";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section styles{
+    <!-- prism css -->
+    <link rel="stylesheet" href="~/assets/libs/prismjs/themes/prism-coy.min.css" />
+}
+
+<div class="row">
+
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title flex-grow-1">Default Pagination</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="default-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-default-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-default-pagination" type="button" role="tab" aria-controls="html-default-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-default-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-default-pagination" type="button" role="tab" aria-controls="preview-default-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Use <code>pagination-*</code> class to ul element to indicate a series of related content exists across multiple pages.</p>
+                <div class="tab-content" id="default-paginationContent">
+                    <div class="tab-pane fade show active" id="html-default-pagination" role="tabpanel" aria-labelledby="html-default-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-primary mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-default-pagination" role="tabpanel" aria-labelledby="preview-default-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-primary mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title flex-grow-1">Disabled Pagination</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="disabled-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-disabled-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-disabled-pagination" type="button" role="tab" aria-controls="html-disabled-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-disabled-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-disabled-pagination" type="button" role="tab" aria-controls="preview-disabled-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Use <code>disabled</code> class to ul element to indicate a series of related content exists across multiple pages.</p>
+                <div class="tab-content" id="disabled-paginationContent">
+                    <div class="tab-pane fade show active" id="html-disabled-pagination" role="tabpanel" aria-labelledby="html-disabled-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-primary mb-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item disabled"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-disabled-pagination" role="tabpanel" aria-labelledby="preview-disabled-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-primary mb-0&quot;&gt;
+        &lt;li class=&quot;page-item disabled&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item disabled&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title flex-grow-1">Custom Arrow Pagination</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="subtle-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-subtle-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-subtle-pagination" type="button" role="tab" aria-controls="html-subtle-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-subtle-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-subtle-pagination" type="button" role="tab" aria-controls="preview-subtle-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Easily create custom arrow-based pagination using <code>pagination</code> and icon classes. Customize the arrows with different icon styles to enhance navigation between pages.</p>
+                <div class="tab-content" id="subtle-paginationContent">
+                    <div class="tab-pane fade show active" id="html-subtle-pagination" role="tabpanel" aria-labelledby="html-subtle-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-s-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-s-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-subtle-pagination" role="tabpanel" aria-labelledby="preview-subtle-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-s-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-s-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title flex-grow-1">Custom Pagination</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="disabled-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-subtle-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-subtle-pagination" type="button" role="tab" aria-controls="html-subtle-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-subtle-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-subtle-pagination" type="button" role="tab" aria-controls="preview-subtle-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Customize your pagination using different contextual classes such as <code>.pagination-primary</code>, <code>.pagination-info</code>, and <code>.pagination-secondary</code> to visually distinguish navigation controls across multiple pages.</p>
+                <div class="tab-content" id="subtle-paginationContent">
+                    <div class="tab-pane fade show active" id="html-subtle-pagination" role="tabpanel" aria-labelledby="html-subtle-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-primary mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-info mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-secondary mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-subtle-pagination" role="tabpanel" aria-labelledby="preview-subtle-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-primary mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-info mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-secondary mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title flex-grow-1">Subtle Pagination</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="subtle-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-subtle-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-subtle-pagination" type="button" role="tab" aria-controls="html-subtle-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-subtle-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-subtle-pagination" type="button" role="tab" aria-controls="preview-subtle-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Use <code>pagination-*-light</code> class to ul element to indicate a series of related content exists across multiple pages.</p>
+                <div class="tab-content" id="subtle-paginationContent">
+                    <div class="tab-pane fade show active" id="html-subtle-pagination" role="tabpanel" aria-labelledby="html-subtle-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-primary-light mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-info-light mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-secondary-light mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-subtle-pagination" role="tabpanel" aria-labelledby="preview-subtle-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-primary-light mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-info-light mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-secondary-light mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title">Rounded Pagination</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="rounded-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-rounded-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-rounded-pagination" type="button" role="tab" aria-controls="html-rounded-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-rounded-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-rounded-pagination" type="button" role="tab" aria-controls="preview-rounded-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Use <code>.pagination-rounded</code> class to ul element to indicate a series of related content exists across multiple pages.</p>
+                <div class="tab-content" id="rounded-paginationContent">
+                    <div class="tab-pane fade show active" id="html-rounded-pagination" role="tabpanel" aria-labelledby="html-rounded-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded pagination-primary mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded pagination-info mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded pagination-secondary mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-rounded-pagination" role="tabpanel" aria-labelledby="preview-rounded-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-rounded pagination-primary mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-rounded pagination-info mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-rounded pagination-secondary mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title flex-grow-1">Rounded Pagination light</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="rounded-light-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-rounded-light-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-rounded-light-pagination" type="button" role="tab" aria-controls="html-rounded-light-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-rounded-light-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-rounded-light-pagination" type="button" role="tab" aria-controls="preview-rounded-light-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Use <code>.pagination-rounded</code> class to ul element to indicate a series of related content exists across multiple pages.</p>
+                <div class="tab-content" id="rounded-light-paginationContent">
+                    <div class="tab-pane fade show active" id="html-rounded-light-pagination" role="tabpanel" aria-labelledby="html-rounded-light-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded pagination-primary-light mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded pagination-info-light mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded pagination-secondary-light mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-rounded-light-pagination" role="tabpanel" aria-labelledby="preview-rounded-light-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-rounded pagination-primary-light mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-rounded pagination-info-light mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-rounded pagination-secondary-light mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+    <div class="col-12 col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title">Pagination Sizes</h5>
+                <ul class="nav nav-pills nav-preview nav-primary mb-0" id="sizes-pagination" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-sizes-pagination-tab" data-bs-toggle="pill" data-bs-target="#html-sizes-pagination" type="button" role="tab" aria-controls="html-sizes-pagination" aria-selected="true">HTML</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preview-sizes-pagination-tab" data-bs-toggle="pill" data-bs-target="#preview-sizes-pagination" type="button" role="tab" aria-controls="preview-sizes-pagination" aria-selected="false">Preview</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Use <code>.pagination-sm</code> class to ul element to indicate a series of related content exists across multiple pages.</p>
+                <div class="tab-content" id="sizes-paginationContent">
+                    <div class="tab-pane fade show active" id="html-sizes-pagination" role="tabpanel" aria-labelledby="html-sizes-pagination-tab" tabindex="0">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-sm mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-md mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-lg mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-left-double-line"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            <i class="ri-arrow-right-double-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="preview-sizes-pagination" role="tabpanel" aria-labelledby="preview-sizes-pagination-tab" tabindex="0">
+                        <pre class="language-html"><code>&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-sm mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-md mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Pagination --&gt;
+&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
+    &lt;ul class=&quot;pagination pagination-lg mb-0&quot;&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-left-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item active&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;page-item&quot;&gt;
+            &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;ri-arrow-right-double-line&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End col-->
+
+</div>
+
+@section scripts{
+
+    <!-- Prism js -->
+    <script src="~/assets/libs/prismjs/prism.js"></script>
+
+    <!--App js-->
+    <script src="~/assets/js/app.js"></script>
+}

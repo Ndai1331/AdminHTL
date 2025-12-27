@@ -1,0 +1,2 @@
+/*! For license information please see layout-template.js.LICENSE.txt */
+const LayoutTemplate=[["rect",{width:"18",height:"7",x:"3",y:"3",rx:"1"}],["rect",{width:"9",height:"7",x:"3",y:"14",rx:"1"}],["rect",{width:"5",height:"7",x:"16",y:"14",rx:"1"}]];export{LayoutTemplate as default};

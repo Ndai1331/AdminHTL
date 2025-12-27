@@ -1,0 +1,2 @@
+/*! For license information please see arrow-up-narrow-wide.js.LICENSE.txt */
+const ArrowUpNarrowWide=[["path",{d:"m3 8 4-4 4 4"}],["path",{d:"M7 4v16"}],["path",{d:"M11 12h4"}],["path",{d:"M11 16h7"}],["path",{d:"M11 20h10"}]];export{ArrowUpNarrowWide as default};

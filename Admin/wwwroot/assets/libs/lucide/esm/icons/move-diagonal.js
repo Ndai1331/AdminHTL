@@ -1,0 +1,2 @@
+/*! For license information please see move-diagonal.js.LICENSE.txt */
+const MoveDiagonal=[["path",{d:"M11 19H5v-6"}],["path",{d:"M13 5h6v6"}],["path",{d:"M19 5 5 19"}]];export{MoveDiagonal as default};

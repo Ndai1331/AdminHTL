@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "hrPayrollPayslip";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-xxl-10 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <a href="/" class="d-flex align-items-end logo-main mb-2">
+                            <img height="35" width="34" class="logo-dark" alt="Dark Logo" src="~/assets/images/logo-md.png">
+                            <h3 class="text-body fw-bolder mb-0 ms-1">Menilo</h3>
+                        </a>
+                        <p class="mb-1 text-muted fs-13">123 Business Street, Tech City, TC 12345</p>
+                        <p class="mb-0 text-muted fs-13">Phone: +1 (123) 456 7890</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p class="mb-2 text-muted">Payslip No: <a href="#!" class="fw-semibold">#PS202405</a></p>
+                        <p class="mb-1 text-muted">Pay Period: <span class="text-body fw-semibold">March 2024</span></p>
+                        <p class="mb-1 text-muted">Pay Date: <span class="text-body fw-semibold">March 31, 2024</span></p>
+                    </div>
+                </div>
+                <div class="py-5 mt-5 mb-3 border-top">
+                    <div class="row g-5">
+                        <div class="col-md-6">
+                            <p class="text-muted mb-4">From:</p>
+                            <h6 class="mb-2 fs-16">Pixeleyez Infotech LLP</h6>
+                            <p class="mb-2 text-muted">123 Business Street New York, 10001</p>
+                            <p class="mb-2 text-muted">Email: <a href="mailto:contact@pixeleyezinfotech.com" class="text-body fw-medium">contact@pixeleyezinfotech.com</a></p>
+                            <p class="mb-0 text-muted">Phone: <span class="text-body fw-medium">+1 (123) 456 7890</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-muted mb-4">To:</p>
+                            <h6 class="mb-2 fs-16">John Smith</h6>
+                            <p class="mb-2 text-muted">Senior Developer</p>
+                            <p class="mb-2 text-muted">Email: <a href="mailto:john.smith@example.com" class="text-body fw-medium">john.smith@example.com</a></p>
+                            <p class="mb-0 text-muted">Phone: <span class="text-body fw-medium">+1 (652) 985 7598</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item bg-light-subtle d-flex justify-content-between align-items-center py-3" aria-current="true">
+                                <h6 class="mb-0">Earnings</h6>
+                                <h6 class="mb-0">Amount</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Basic Salary</span>
+                                <h6 class="mb-0">$3,500.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">House Rent Allowance</span>
+                                <h6 class="mb-0">$1,400.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Transport Allowance</span>
+                                <h6 class="mb-0">$300.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Medical Allowance</span>
+                                <h6 class="mb-0">$200.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Performance Bonus</span>
+                                <h6 class="mb-0">$500.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold">Total Earnings</span>
+                                <h6 class="mb-0">$5,900.00</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item bg-light-subtle py-3 d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0">Deductions</h6>
+                                <h6 class="mb-0">Amount</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Income Tax</span>
+                                <h6 class="mb-0">$450.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Provident Fund</span>
+                                <h6 class="mb-0">$420.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Professional Tax</span>
+                                <h6 class="mb-0">$200.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Health Insurance</span>
+                                <h6 class="mb-0">$150.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">ESI</span>
+                                <h6 class="mb-0">$75.00</h6>
+                            </li>
+                            <li class="list-group-item py-3 d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold">Total Deductions</span>
+                                <h6 class="mb-0">$1,295.00</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-muted my-6 text-center">Net Salary : <span class="text-body fw-semibold">$4,605.00(Four Thousand Six Hundred and Five Dollars Only)</span></p>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-6 text-start">
+                        <p class="mb-1 text-muted"><i class="ri-information-line me-1"></i>This is a computer-generated payslip</p>
+                        <p class="mb-2 text-muted"><i class="ri-shield-keyhole-line me-1"></i>Confidential Document</p>
+                        <p class="mb-0 text-muted">Generated by: <span class="text-body fw-semibold">HR System</span></p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <img src="~/assets/images/signature.png" alt="Signature" class="img-fluid w-100px mb-2">
+                        <h6>Authorized Sign</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

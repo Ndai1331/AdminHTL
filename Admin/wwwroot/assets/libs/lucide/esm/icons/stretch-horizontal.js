@@ -1,0 +1,2 @@
+/*! For license information please see stretch-horizontal.js.LICENSE.txt */
+const StretchHorizontal=[["rect",{width:"20",height:"6",x:"2",y:"4",rx:"2"}],["rect",{width:"20",height:"6",x:"2",y:"14",rx:"2"}]];export{StretchHorizontal as default};

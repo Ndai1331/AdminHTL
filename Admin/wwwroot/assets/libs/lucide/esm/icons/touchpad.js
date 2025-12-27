@@ -1,0 +1,2 @@
+/*! For license information please see touchpad.js.LICENSE.txt */
+const Touchpad=[["rect",{width:"20",height:"16",x:"2",y:"4",rx:"2"}],["path",{d:"M2 14h20"}],["path",{d:"M12 20v-6"}]];export{Touchpad as default};

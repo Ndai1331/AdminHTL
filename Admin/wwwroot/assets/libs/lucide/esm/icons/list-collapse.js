@@ -1,0 +1,2 @@
+/*! For license information please see list-collapse.js.LICENSE.txt */
+const ListCollapse=[["path",{d:"M10 12h11"}],["path",{d:"M10 18h11"}],["path",{d:"M10 6h11"}],["path",{d:"m3 10 3-3-3-3"}],["path",{d:"m3 20 3-3-3-3"}]];export{ListCollapse as default};

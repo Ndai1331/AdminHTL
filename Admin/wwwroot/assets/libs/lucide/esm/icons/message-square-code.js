@@ -1,0 +1,2 @@
+/*! For license information please see message-square-code.js.LICENSE.txt */
+const MessageSquareCode=[["path",{d:"M10 7.5 8 10l2 2.5"}],["path",{d:"m14 7.5 2 2.5-2 2.5"}],["path",{d:"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"}]];export{MessageSquareCode as default};

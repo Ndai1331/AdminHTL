@@ -1,0 +1,211 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: header layout scss
+*/
+
+.app-header {
+  height: var(--#{$prefix}app-header-height);
+  background-color: var(--#{$prefix}secondary-bg);
+  transition: none;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--#{$prefix}border-color);
+  z-index: 1001;
+  position: fixed;
+  left: var(--#{$prefix}app-sidebar-width);
+  right: 0;
+  top: 0;
+  padding: 0 0.75rem;
+
+  .logo-main {
+    h3 {
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .form-icon {
+    .form-control-icon {
+      padding-right: calc(#{$input-padding-x} * 3);
+      padding-left: $input-padding-x;
+    }
+
+    .header-search-btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+
+      i {
+        position: static;
+      }
+    }
+  }
+
+  .icon-dot {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    height: 13px;
+    width: 13px;
+    background-color: var(--#{$prefix}danger);
+    border: 3px solid var(--#{$prefix}light-border-subtle);
+    @include border-radius(100%);
+  }
+
+  @include media-breakpoint-down(xl) {
+    .header-dropdown {
+      display: none !important;
+    }
+  }
+
+  &.sticky-scroll {
+    background-color: var(--#{$prefix}secondary-bg);
+  }
+
+  .pe-dropdown-mega {
+    .pe-dropdown-button {
+      height: var(--#{$prefix}app-header-height);
+    }
+
+    :is(.dropdown-menu.dropdown-mega-xl,
+      .dropdown-menu.dropdown-mega-lg,
+      .dropdown-menu.dropdown-mega-md,
+      .dropdown-menu,
+      .dropdown-mega-sm) {
+      --#{$prefix}dropdown-item-padding-x: 1rem;
+      --#{$prefix}dropdown-item-padding-y: 0.45rem;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+
+      .dropdown-item {
+        border-radius: $border-radius;
+      }
+    }
+
+    .header-dropdown-menu {
+      top: 15px !important;
+    }
+
+    .dropdown-menu.dropdown-mega-xl {
+      width: 52rem;
+    }
+
+    .dropdown-menu.dropdown-mega-lg {
+      width: 28.5rem;
+    }
+
+    .dropdown-menu.dropdown-mega-md {
+      width: 24.5rem;
+    }
+
+    .dropdown-menu.dropdown-mega-sm {
+      width: 18rem;
+    }
+
+    .dropdown-menu.dropdown-mega-xs {
+      width: 12rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &.pe-dropdown-hover:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .pe-noti-dropdown-menu {
+    .noti-item {
+      cursor: pointer;
+      transition: $transition-base;
+      position: relative;
+      display: flex;
+      gap: 16px;
+      border-bottom: 1px solid var(--#{$prefix}border-color);
+      padding: 16px;
+
+      &:hover {
+        background-color: var(--#{$prefix}light-bg-subtle);
+      }
+    }
+  }
+
+  .cart-item {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--#{$prefix}border-color);
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: var(--#{$prefix}light-bg-subtle);
+      @include border-radius($border-radius);
+    }
+  }
+
+  .offcanvas {
+    .card-radio {
+      padding: 0;
+
+      .form-check-input {
+        display: none;
+      }
+    }
+  }
+}
+
+.search-modal {
+  .modal-body {
+    max-height: 400px;
+
+    .suggestion-title {
+      color: $text-muted;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .search-icon {
+      rotate: 45deg;
+      font-size: 10px;
+      color: $gray-500;
+    }
+
+    .suggestion-item {
+      transition: $transition-base;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include border-radius($border-radius);
+
+      .right-arrow {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:hover {
+        background-color: var(--#{$prefix}light-bg-subtle);
+
+        .right-arrow {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+[data-sidebar="icon"] {
+  .toggle-right-arrow {
+    display: block !important;
+  }
+
+  .toggle-left-arrow {
+    display: none !important;
+  }
+}

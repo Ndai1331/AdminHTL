@@ -1,0 +1,161 @@
+﻿
+@{
+    ViewBag.pTitle = "Apps";
+    ViewBag.Title = "hrAddLeave";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- choices -->
+    <link rel="stylesheet" href="~/assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- air-datepicker -->
+    <link rel="stylesheet" href="~/assets/libs/air-datepicker/air-datepicker.css">
+
+}
+
+<div class="row">
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Add Leave</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row g-5 align-items-center">
+                        <div class="col-12">
+                            <label for="leaveType" class="form-label">Leave Type</label>
+                            <select id="leaveType" class="form-select">
+                                <option>Casual Leave</option>
+                                <option>Medical Leave</option>
+                                <option>Sick Leave</option>
+                                <option>Emergency Leave</option>
+                                <option>Study Leave</option>
+                                <option>Compensatory Leave</option>
+                                <option>Bereavement Leave</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fromDate-picker" class="form-label">From Date</label>
+                            <input type="text" id="fromDate-picker" class="form-control" placeholder="Select a date" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="toDate-picker" class="form-label">To Date</label>
+                            <input type="text" id="toDate-picker" class="form-control" placeholder="Select a date" required>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center gap-8">
+                                <div class="form-check form-check-primary">
+                                    <input class="form-check-input" type="radio" id="fullday">
+                                    <label class="form-check-label" for="fullday">Full Day</label>
+                                </div>
+                                <div class="form-check form-check-primary">
+                                    <input class="form-check-input" type="radio" id="halfday">
+                                    <label class="form-check-label" for="halfday">Half Day</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="days" class="form-label">Total Days</label>
+                            <input type="number" id="days" class="form-control" placeholder="Enter total days" min="1" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="reason" class="form-label">Reason</label>
+                            <input type="text" id="reason" class="form-control" placeholder="Enter reason for leave..." required>
+                        </div>
+                        <div class="col-12">
+                            <label for="detail" class="form-label">Details Note</label>
+                            <textarea id="detail" class="form-control" rows="3" placeholder="Enter detail for leave..." required></textarea>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end mt-4">
+                            <button type="reset" class="btn btn-light me-2">Reset</button>
+                            <button type="submit" class="btn btn-primary">Submit Leave</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Leave Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-box">
+                    <table class="table table-borderless text-nowrap mb-0">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Total</th>
+                                <th>Used</th>
+                                <th>UnPaid</th>
+                                <th>Remaining</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Casual Leave</td>
+                                <td class="text-muted">5</td>
+                                <td class="text-muted">2</td>
+                                <td class="text-muted">0</td>
+                                <td class="text-muted">3</td>
+                            </tr>
+                            <tr>
+                                <td>Sick Leave</td>
+                                <td class="text-muted">10</td>
+                                <td class="text-muted">4</td>
+                                <td class="text-muted">0</td>
+                                <td class="text-muted">6</td>
+                            </tr>
+                            <tr>
+                                <td>Emergency Leave</td>
+                                <td class="text-muted">3</td>
+                                <td class="text-muted">1</td>
+                                <td class="text-muted">0</td>
+                                <td class="text-muted">2</td>
+                            </tr>
+                            <tr>
+                                <td>Vacation Leave</td>
+                                <td class="text-muted">15</td>
+                                <td class="text-muted">5</td>
+                                <td class="text-muted">0</td>
+                                <td class="text-muted">10</td>
+                            </tr>
+                            <tr>
+                                <td>Leave Without Pay</td>
+                                <td class="text-muted">0</td>
+                                <td class="text-muted">0</td>
+                                <td class="text-muted">5</td>
+                                <td class="text-muted">0</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Max Leave</td>
+                                <td class="text-muted">33</td>
+                                <td class="text-muted">12</td>
+                                <td class="text-muted">5</td>
+                                <td class="text-muted">21</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <!-- Picker Js -->
+    <script src="~/assets/libs/air-datepicker/air-datepicker.js"></script>
+
+    <!-- Selector Js -->
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/add-leave-list.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

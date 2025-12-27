@@ -1,0 +1,323 @@
+﻿
+@{
+    ViewBag.Title = "realEstateAgents";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- choices -->
+    <link rel="stylesheet" href="~/assets/libs/choices.js/public/assets/styles/choices.min.css">
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Agents</h5>
+        <div class="d-flex flex-wrap align-items-center gap-3">
+            <div class="form-icon right">
+                <input type="text" class="form-control form-control-icon" id="iconSearch" placeholder="Type to search ...">
+                <i class="ri-search-2-line text-muted"></i>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">This Week</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAgentModal"><i class="ri-add-fill me-1"></i>Add Agent</button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-box">
+            <table class="table table-hover text-nowrap align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Agent</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Experience</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-2.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">John Doe</a>
+                            </div>
+                        </td>
+                        <td>1432 Ocean Dr, Apt 402, Miami Beach, FL 33139</td>
+                        <td>+93 84597-24523</td>
+                        <td class="text-muted">john.doe@example.com</td>
+                        <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                        <td>7 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-1.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">Emily Clark</a>
+                            </div>
+                        </td>
+                        <td>771 5th Ave, Suite 1002, New York, NY 10022</td>
+                        <td>+1 212-555-0192</td>
+                        <td class="text-muted">emily.clark@example.com</td>
+                        <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                        <td>4 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-3.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">Michael Lee</a>
+                            </div>
+                        </td>
+                        <td>2339 Sunset Blvd, Unit 9B, Los Angeles, CA 90026</td>
+                        <td>+1 310-555-8742</td>
+                        <td class="text-muted">michael.lee@example.com</td>
+                        <td><span class="badge bg-danger-subtle text-danger">Inactive</span></td>
+                        <td>6 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-4.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">Sophia Turner</a>
+                            </div>
+                        </td>
+                        <td>500 Market St, Floor 3, San Francisco, CA 94105</td>
+                        <td>+1 415-555-8391</td>
+                        <td class="text-muted">sophia.turner@example.com</td>
+                        <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                        <td>8 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-5.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">David Kim</a>
+                            </div>
+                        </td>
+                        <td>129 King St, Richmond, VA 23220</td>
+                        <td>+1 804-555-1122</td>
+                        <td class="text-muted">david.kim@example.com</td>
+                        <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                        <td>5 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-6.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">Ava Martinez</a>
+                            </div>
+                        </td>
+                        <td>8231 W Sahara Ave, Las Vegas, NV 89117</td>
+                        <td>+1 702-555-6789</td>
+                        <td class="text-muted">ava.martinez@example.com</td>
+                        <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                        <td>3 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-7.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">James Parker</a>
+                            </div>
+                        </td>
+                        <td>3000 Lake Shore Dr, Chicago, IL 60657</td>
+                        <td>+1 773-555-3030</td>
+                        <td class="text-muted">james.parker@example.com</td>
+                        <td><span class="badge bg-secondary-subtle text-secondary">On Leave</span></td>
+                        <td>10 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-8.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">Liam Johnson</a>
+                            </div>
+                        </td>
+                        <td>455 Mission Bay Blvd S, San Francisco, CA 94158</td>
+                        <td>+1 628-555-9090</td>
+                        <td class="text-muted">liam.johnson@example.com</td>
+                        <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                        <td>2 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <td>
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="~/assets/images/avatar/avatar-9.jpg" class="rounded-circle avatar-md" alt="Agent Photo">
+                                <a href="#!" class="text-body fw-medium">Isabella Moore</a>
+                            </div>
+                        </td>
+                        <td>90210 Beverly Hills Blvd, Los Angeles, CA 90210</td>
+                        <td>+1 213-555-7777</td>
+                        <td class="text-muted">isabella.moore@example.com</td>
+                        <td><span class="badge bg-danger-subtle text-danger">Inactive</span></td>
+                        <td>11 Years</td>
+                        <td>
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex flex-wrap gap-4 align-items-center mt-6">
+            <p class="fw-medium mb-0"> Showing 1 - 9 of 27 Entries</p>
+            <div class="ms-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-primary mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                <i class="ri-arrow-left-double-line"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">1</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="javascript:voide(0)">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                <i class="ri-arrow-right-double-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Agent Modal -->
+<div class="modal fade" id="addAgentModal" tabindex="-1" aria-labelledby="addAgentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Add New Agent</h5>
+                <button type="button" class="btn-close icon-btn-sm" data-bs-dismiss="modal" aria-label="Close"><i class="ri-close-large-line fw-semibold"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row g-2">
+                        <div class="col-12">
+                            <div class="d-flex flex-column align-items-center justify-content-center p-2 rounded">
+                                <div class="avatar-item avatar-xxl avatar-title bg-light-subtle shadow-sm border position-relative">
+                                    <i class="ri-upload-cloud-line fs-2 text-muted"></i>
+                                    <div class="h-28px w-28px rounded-pill d-flex justify-content-center align-items-center text-muted bg-body-secondary shadow-sm border position-absolute top-0 end-0">
+                                        <i class="ri-image-add-line"></i>
+                                    </div>
+                                    <input type="file" class="position-absolute top-0 end-0 w-100 h-100 opacity-0 form-control" id="employeeAvatar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="Enter full name">
+                        </div>
+                        <div class="col-12">
+                            <label for="phoneNumber" class="form-label">Phone</label>
+                            <input type="text" id="phoneNumber" class="form-control" placeholder="+93 000-000000">
+                        </div>
+                        <div class="col-12">
+                            <label for="emailAddress" class="form-label">Email</label>
+                            <input type="email" id="emailAddress" class="form-control" placeholder="example@domain.com">
+                        </div>
+                        <div class="col-12">
+                            <label for="experienceYears" class="form-label">Experience (Years)</label>
+                            <input type="number" id="experienceYears" class="form-control" placeholder="Enter years">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea id="address" class="form-control" rows="2" placeholder="Enter address"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="ActiveagentStatus" class="form-label">Status</label>
+                            <select class="form-select" id="ActiveagentStatus">
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                                <option value="Pending">Pending</option>
+                                <option value="On Leave">On Leave</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer px-4 py-3">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Agent</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Selector Js -->
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/real-estate-agents.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

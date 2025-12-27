@@ -1,0 +1,15 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: real estate property details scss
+*/
+
+
+.property-img{
+  width: 100%;
+  height: auto;
+  @include media-breakpoint-up(xl){
+    height: 480px;
+  }
+}

@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "calendar";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body position-relative">
+                <div id="calendar"></div>
+                <div class="position-absolute top-0 end-50 mt-3">
+                    <button type="button" class="btn btn-primary w-100" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg> Create Event
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-header p-3">
+                <h5 class="modal-title">Add Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" id="form-event" novalidate>
+                    <input type="hidden" id="eventId">
+                    <div class="mb-3">
+                        <label for="eventTitle" class="form-label">Event Title:</label>
+                        <input type="text" class="form-control" id="eventTitle" placeholder="Enter Event Title" required>
+                        <div class="invalid-feedback">Please enter an event title.</div>
+                        <div class="text-danger mt-1" id="titleErr"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventLabel" class="form-label">Label:</label>
+                        <select class="form-select" id="eventLabel" name="eventLabel" required>
+                            <option value="">Open this select menu</option>
+                            <option value="bg-danger-subtle">Danger</option>
+                            <option value="bg-warning-subtle">Warning</option>
+                            <option value="bg-primary-subtle">Primary</option>
+                            <option value="bg-success-subtle">Success</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a label.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventFrom" class="form-label">From:</label>
+                        <input type="date" class="form-control" id="eventFrom" required>
+                        <div class="invalid-feedback">Please select a start date.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventTo" class="form-label">To:</label>
+                        <input type="date" class="form-control" id="eventTo" required>
+                        <div class="invalid-feedback">Please select an end date.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventDescription" class="form-label">Description:</label>
+                        <textarea class="form-control" id="eventDescription" placeholder="Enter a description" rows="3"></textarea>
+                    </div>
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="submit" class="btn btn-primary">Add Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Event Details Modal -->
+<div class="modal fade" id="eventDetailsModal" aria-hidden="true" aria-labelledby="eventDetailsModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-header p-3">
+                <h5 class="modal-title" id="eventDetailsTitle">Event Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <p id="eventDetailsTitleText"></p>
+                <p id="eventDetailsLabel"></p>
+                <p id="eventDetailsStart"></p>
+                <p id="eventDetailsEnd"></p>
+                <p id="eventDetailsDescription"></p>
+                <input type="hidden" id="eventId">
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="editEventBtn" class="btn btn-primary">Edit</button>
+                <button type="button" id="deleteEventBtn" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <!-- Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="~/assets/libs/sweetalert2/sweetalert2.all.js"></script>
+
+    <!-- Calendar -->
+    <script type="module" src="~/assets/js/app/apps-calendar.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

@@ -1,0 +1,2 @@
+/*! For license information please see minimize-2.js.LICENSE.txt */
+const Minimize2=[["path",{d:"m14 10 7-7"}],["path",{d:"M20 10h-6V4"}],["path",{d:"m3 21 7-7"}],["path",{d:"M4 14h6v6"}]];export{Minimize2 as default};

@@ -1,0 +1,179 @@
+﻿
+
+@{
+    ViewBag.Title = "realEstateAddProperty";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- dropzone -->
+    <link rel="stylesheet" href="~/assets/libs/dropzone/dropzone.css">
+
+    <!-- quill -->
+    <link rel="stylesheet" href="~/assets/libs/quill/quill.bubble.css">
+
+    <!-- choices -->
+    <link rel="stylesheet" href="~/assets/libs/choices.js/public/assets/styles/choices.min.css">
+}
+
+<div class="row">
+    <div class="col-xl-8 col-xxl-9">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="row g-5">
+                        <div class="col-12">
+                            <label for="propertyTitle" class="form-label">Property Title</label>
+                            <input type="text" class="form-control" id="propertyTitle" placeholder="e.g. Spacious 3-bedroom villa in Miami" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="bubbleEditor" class="form-label">Property Description</label>
+                            <div id="bubbleEditor">
+                                <p>Describe the property, features, neighborhood, etc.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="propertyType" class="form-label">Property Type</label>
+                            <select class="form-select" id="propertyType" required>
+                                <option>House</option>
+                                <option>Apartment</option>
+                                <option>Villa</option>
+                                <option>Condo</option>
+                                <option>Townhouse</option>
+                                <option>Studio</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="propertyStatus" class="form-label">Status</label>
+                            <select class="form-select" id="propertyStatus" required>
+                                <option>For Sale</option>
+                                <option>For Rent</option>
+                                <option>Sold</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="propertyPrice" class="form-label">Price ($)</label>
+                            <input type="number" class="form-control" id="propertyPrice" placeholder="e.g. 350000" min="0" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="propertyArea" class="form-label">Area (sq ft)</label>
+                            <input type="number" class="form-control" id="propertyArea" placeholder="e.g. 1200" min="0" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="propertyAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="propertyAddress" placeholder="Street, City, State, ZIP" required />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="bedrooms" class="form-label">Bedrooms</label>
+                            <input type="number" class="form-control" id="bedrooms" placeholder="e.g. 3" min="0" required />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="bathrooms" class="form-label">Bathrooms</label>
+                            <input type="number" class="form-control" id="bathrooms" placeholder="e.g. 2" min="0" required />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="garage" class="form-label">Garage Spaces</label>
+                            <input type="number" class="form-control" placeholder="e.g. 2" id="garage" min="0" />
+                        </div>
+                        <div class="col-12">
+                            <label for="my-dropzone" class="form-label">Upload Images</label>
+                            <div class="file-upload dropzone" id="my-dropzone"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-xxl-3">
+        <div class="row">
+            <div class="col-md-6 col-xl-12 order-last order-md-first">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="position-relative h-200px overflow-hidden rounded">
+                            <a href="#!">
+                                <img src="~/assets/images/apps/real-eastate/property-5.jpg" alt="Beachfront House" class="object-fit-cover w-100 h-100">
+                            </a>
+                            <span class="badge bg-success position-absolute top-0 start-0 mt-3 ms-3">For Sale</span>
+                            <span class="badge bg-dark bg-opacity-80 position-absolute top-0 end-0 mt-3 me-3">Florida</span>
+                        </div>
+                        <div class="mt-5">
+                            <h5 class="text-success mb-3">$2,100,000</h5>
+                            <a href="#!" class="fw-medium fs-15 text-body">Beachfront House</a>
+                            <p class="text-muted mt-1">987 Ocean Dr, Miami, FL 33139</p>
+                            <div class="d-flex gap-4">
+                                <div class="feature">
+                                    <i class="ri-hotel-bed-line text-primary fs-16"></i>
+                                    <span class="text-muted">5 Beds</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="ri-water-flash-line text-primary fs-16"></i>
+                                    <span class="text-muted">4 Baths</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="ri-layout-4-line text-primary fs-16"></i>
+                                    <span class="text-muted">3,200 sqft</span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 justify-content-between align-items-center mt-6">
+                                <button type="button" class="btn btn-primary w-100">Add Property</button>
+                                <button type="button" class="btn btn-light w-100">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row g-5">
+                                <div class="col-12">
+                                    <label for="contactName" class="form-label">Contact Name</label>
+                                    <input type="text" class="form-control" id="contactName" placeholder="Your full name" required />
+                                </div>
+                                <div class="col-12">
+                                    <label for="contactEmail" class="form-label">Contact Email</label>
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="you@example.com" required />
+                                </div>
+                                <div class="col-12">
+                                    <label for="contactPhone" class="form-label">Contact Phone</label>
+                                    <input type="tel" class="form-control" id="contactPhone" placeholder="+1 555-123-4567" />
+                                </div>
+                                <div class="col-12 d-flex gap-3 justify-content-end">
+                                    <button type="button" class="btn btn-light">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Add Property</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Selector Js -->
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Editor -->
+    <script src="~/assets/libs/quill/quill.js"></script>
+
+    <!-- Editor Init -->
+    <script src="~/assets/js/form/form-editor.init.js"></script>
+
+    <!-- File Upload -->
+    <script src="~/assets/libs/dropzone/dropzone-min.js"></script>
+
+    <!-- Form File Upload Init -->
+    <script src="~/assets/js/form/file-upload.init.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/real-estate-add-property.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+}

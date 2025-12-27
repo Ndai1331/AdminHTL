@@ -1,0 +1,93 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: fitness dashboard scss
+*/
+
+
+.latency-tab {
+  flex: 1;
+  padding-top: 10px;
+  border-top: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    border-top-color: var(--#{$prefix}body-color);
+    font-weight: 500;
+  }
+}
+
+.latency-tab:not(.active) {
+  border-top-color: var(--#{$prefix}light);
+}
+
+.run-img-detail {
+  background-color: rgba(var(--#{$prefix}secondary-bg-rgb), 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.fitness-activity-item {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 33px;
+    width: 3px;
+    @include border-radius(3px);
+  }
+
+  &.activity-success {
+    &::before {
+      background-color: var(--#{$prefix}success);
+    }
+  }
+
+  &.activity-danger {
+    &::before {
+      background-color: var(--#{$prefix}danger);
+    }
+  }
+
+  &.activity-primary {
+    &::before {
+      background-color: var(--#{$prefix}primary);
+    }
+  }
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: space-between;
+
+  .day-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-height: 120px;
+    justify-content: end;
+
+    .activity-bar {
+      width: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+
+    .day-label {
+      margin-top: 10px;
+    }
+  }
+}

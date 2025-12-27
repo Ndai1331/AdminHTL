@@ -1,0 +1,384 @@
+﻿
+@{
+    ViewBag.Title = "prodcast";
+    ViewBag.pTitle = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <link rel="stylesheet" href="~/assets/libs/swiper/swiper-bundle.min.css">
+
+}
+
+<div class="row">
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Out Now</h5>
+                <a href="#!" class="fw-medium">View all<i class="ri-arrow-right-line ms-1"></i></a>
+            </div>
+            <div class="card-body">
+                <div class="swiper out-now" dir="ltr">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="~/assets/images/dashboard/prodcast1.png" class="img-fluid rounded-3 h-320px w-100 object-fit-cover" alt="Prodcast Image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="~/assets/images/dashboard/prodcast2.png" class="img-fluid rounded-3 h-320px w-100 object-fit-cover" alt="Prodcast Image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="~/assets/images/dashboard/prodcast3.png" class="img-fluid rounded-3 h-320px w-100 object-fit-cover" alt="Prodcast Image">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title">Top best podcasters</h5>
+                <a href="#!" class="fw-medium">View all<i class="ri-arrow-right-line ms-1"></i></a>
+            </div>
+            <div class="card-body">
+                <div class="bg-light-subtle p-3 d-flex align-items-start justify-content-between rounded mb-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="~/assets/images/avatar/avatar-1.jpg" class="rounded avatar-lg" alt="Avatar">
+                        <div>
+                            <a href="#!" class="mb-1 d-block text-body fw-semibold">Legend Acothley</a>
+                            <small class="text-muted">128k followers • 23 podcasts</small>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-muted" aria-label="More options"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-light-subtle p-3 d-flex align-items-start justify-content-between rounded mb-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="~/assets/images/avatar/avatar-3.jpg" class="rounded avatar-lg" alt="Avatar">
+                        <div>
+                            <a href="#!" class="mb-1 d-block text-body fw-semibold">Legend Acothley</a>
+                            <small class="text-muted">14k followers • 41 podcasts</small>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-muted" aria-label="More options"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-light-subtle p-3 d-flex align-items-start justify-content-between rounded mb-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="~/assets/images/avatar/avatar-4.jpg" class="rounded avatar-lg" alt="Avatar">
+                        <div>
+                            <a href="#!" class="mb-1 d-block text-body fw-semibold">Legend Acothley</a>
+                            <small class="text-muted">174k followers • 52 podcasts</small>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-muted" aria-label="More options"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-light-subtle p-3 d-flex align-items-start justify-content-between rounded">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="~/assets/images/avatar/avatar-5.jpg" class="rounded avatar-lg" alt="Avatar">
+                        <div>
+                            <a href="#!" class="mb-1 d-block text-body fw-semibold">Legend Acothley</a>
+                            <small class="text-muted">14k followers • 41 podcasts</small>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-muted" aria-label="More options"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Week</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Month</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">This Year</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Recently Played</h5>
+                <a href="#!" class="fw-medium">View all<i class="ri-arrow-right-line ms-1"></i></a>
+            </div>
+            <div class="card-body">
+                <div class="row g-5">
+                    <div class="col-md-4 col-xl-2">
+                        <a href="#!">
+                            <img src="~/assets/images/dashboard/prodcast4.png" class="img-fluid rounded-2" alt="Prodcast">
+                            <h6 class="mt-4 mb-2 fs-16 text-truncate max-w-224px">Procrastination is it really that bad?</h6>
+                            <span class="text-muted">TOM HEART</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <a href="#!">
+                            <img src="~/assets/images/dashboard/prodcast5.png" class="img-fluid rounded-2" alt="Prodcast">
+                            <h6 class="mt-4 mb-2 fs-16 text-truncate max-w-224px">Is there life beyond earth?</h6>
+                            <span class="text-muted">JOANA HOPE</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <a href="#!">
+                            <img src="~/assets/images/dashboard/prodcast6.png" class="img-fluid rounded-2" alt="Prodcast">
+                            <h6 class="mt-4 mb-2 fs-16 text-truncate max-w-224px">Ready to rock concert tickets</h6>
+                            <span class="text-muted">ANDY WISE</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <a href="#!">
+                            <img src="~/assets/images/dashboard/prodcast7.png" class="img-fluid rounded-2" alt="Prodcast">
+                            <h6 class="mt-4 mb-2 fs-16 text-truncate max-w-224px">Pursue my childhood dreams</h6>
+                            <span class="text-muted">TONY SMART</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <a href="#!">
+                            <img src="~/assets/images/dashboard/prodcast8.png" class="img-fluid rounded-2" alt="Prodcast">
+                            <h6 class="mt-4 mb-2 fs-16 text-truncate max-w-224px">Talk show conversation with..</h6>
+                            <span class="text-muted">JOEY HIGHT</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <a href="#!">
+                            <img src="~/assets/images/dashboard/prodcast9.png" class="img-fluid rounded-2 border" alt="Prodcast">
+                            <h6 class="mt-4 mb-2 fs-16 text-truncate max-w-224px">View All Recent Played</h6>
+                            <span class="text-muted">62 PODCASTS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-7 col-xxl--6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">You might like</h5>
+                <a href="#!" class="fw-medium">View all<i class="ri-arrow-right-line ms-1"></i></a>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-pills nav-pill-white d-inline-flex" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#psychology" role="tab" aria-selected="false" tabindex="-1">
+                            <span>Psychology</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#design" role="tab" aria-selected="true">
+                            <span>Design</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#business" role="tab" aria-selected="false" tabindex="-1">
+                            <span>Business</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#cooking" role="tab" aria-selected="false" tabindex="-1">
+                            <span>Cooking</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#healthy" role="tab" aria-selected="false" tabindex="-1">
+                            <span>Healthy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#insight" role="tab" aria-selected="false" tabindex="-1">
+                            <span>Insight</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="pt-5">
+                    <div class="border-bottom p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-wrap align-items-center gap-5">
+                                <img src="~/assets/images/apps/prodcast/poster-8.jpg" alt="Podcast" class="img-fluid w-80px h-64px object-fit-cover rounded-2">
+                                <div>
+                                    <a href="#!" class="fs-16 text-body fw-medium">The Psychology of First Impressions</a>
+                                    <div class="d-flex align-items-center text-muted mt-1">
+                                        <span>Brain Bytes</span>
+                                        <span class="mx-3">|</span>
+                                        <span>2 days ago</span>
+                                        <span class="mx-3">|</span>
+                                        <span>35min 12sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-light icon-btn" aria-label="Play"><i class="ri-play-large-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="border-bottom p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-wrap align-items-center gap-5">
+                                <img src="~/assets/images/apps/prodcast/poster-2.jpg" alt="Podcast" class="img-fluid w-80px h-64px object-fit-cover rounded-2">
+                                <div>
+                                    <a href="#!" class="fs-16 text-body fw-medium">Digital Habits and Attention Spans</a>
+                                    <div class="d-flex align-items-center text-muted mt-1">
+                                        <span>Focus Hour</span>
+                                        <span class="mx-3">|</span>
+                                        <span>4 days ago</span>
+                                        <span class="mx-3">|</span>
+                                        <span>42min 7sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-light icon-btn" aria-label="Play"><i class="ri-play-large-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="border-bottom p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-wrap align-items-center gap-5">
+                                <img src="~/assets/images/apps/prodcast/poster-3.jpg" alt="Podcast" class="img-fluid w-80px h-64px object-fit-cover rounded-2">
+                                <div>
+                                    <a href="#!" class="fs-16 text-body fw-medium">AI Ethics and Human Values</a>
+                                    <div class="d-flex align-items-center text-muted mt-1">
+                                        <span>Ethics Today</span>
+                                        <span class="mx-3">|</span>
+                                        <span>1 week ago</span>
+                                        <span class="mx-3">|</span>
+                                        <span>55min 10sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-light icon-btn" aria-label="Play"><i class="ri-play-large-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-wrap align-items-center gap-5">
+                                <img src="~/assets/images/apps/prodcast/poster-4.jpg" alt="Podcast" class="img-fluid w-80px h-64px object-fit-cover rounded-2">
+                                <div>
+                                    <a href="#!" class="fs-16 text-body fw-medium">Understanding Social Anxiety</a>
+                                    <div class="d-flex align-items-center text-muted mt-1">
+                                        <span>Mental Map</span>
+                                        <span class="mx-3">|</span>
+                                        <span>3 days ago</span>
+                                        <span class="mx-3">|</span>
+                                        <span>29min 45sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-light icon-btn" aria-label="Play"><i class="ri-play-large-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-5 col-xxl--6">
+        <div class="card">
+            <div class="card-body">
+                <img src="~/assets/images/dashboard/prodcast10.png" class="img-fluid rounded w-100 object-fit-cover prodcast-poster" alt="Prodcast">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Podcasts You Follow</h5>
+                <a href="#!" class="fw-medium">View All</a>
+            </div>
+            <div class="card-body">
+                <div class="row g-5">
+                    <div class="col-xl-6 col-xxl-4">
+                        <div class="card mb-0">
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap flex-md-nowrap gap-5">
+                                    <a href="#!" aria-label="View Churchome Podcast">
+                                        <img src="~/assets/images/dashboard/prodcast11.png" class="img-fluid h-176px min-w-176px object-fit-cover rounded-3 flex-shrink-0" alt="Churchome Podcast Image">
+                                    </a>
+                                    <div>
+                                        <p class="text-muted text-capitalize">Churchome</p>
+                                        <a href="#!" class="fw-medium text-body fs-17 mb-1" aria-label="Podcast: Who is sending you?">
+                                            300. Who is sending you? - The Last Conversation
+                                        </a>
+                                        <p class="text-muted">Often, people think communities like Churchome are just trying to...</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="javascript:void(0)" class="btn btn-primary rounded-pill" aria-label="Resume Podcast">
+                                                <i class="ri-play-large-fill me-1"></i>Resume
+                                            </a>
+                                            <p class="mb-0 text-muted">21 min left</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-xxl-4">
+                        <div class="card mb-0">
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap flex-md-nowrap gap-5">
+                                    <a href="#!" aria-label="View Mindful Talks Podcast">
+                                        <img src="~/assets/images/apps/prodcast/poster-10.jpg" class="img-fluid h-176px min-w-176px object-fit-cover rounded-3 flex-shrink-0" alt="Mindful Talks Podcast Image">
+                                    </a>
+                                    <div>
+                                        <p class="text-muted text-capitalize">Mindful Talks</p>
+                                        <a href="#!" class="fw-medium text-body fs-17 mb-1" aria-label="Podcast: Master Your Emotions">
+                                            142. How to Master Your Emotions
+                                        </a>
+                                        <p class="text-muted">Emotional intelligence is key to better relationships and decision-making...</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-0">November 15</p>
+                                            <p class="mb-0 text-muted">15 min left</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-xxl-4">
+                        <div class="card mb-0">
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap flex-md-nowrap gap-5">
+                                    <a href="#!" aria-label="View Science Daily Podcast">
+                                        <img src="~/assets/images/apps/prodcast/poster-6.jpg" class="img-fluid h-176px min-w-176px object-fit-cover rounded-3 flex-shrink-0" alt="Science Daily Podcast Image">
+                                    </a>
+                                    <div>
+                                        <p class="text-muted text-capitalize">Science Daily</p>
+                                        <a href="#!" class="fw-medium text-body fs-17 mb-1" aria-label="Podcast: Cosmos and Consciousness">
+                                            211. The Cosmos and Consciousness
+                                        </a>
+                                        <p class="text-muted">Explore how neuroscience and astrophs intersect in our universe...</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-0">December 07</p>
+                                            <p class="mb-0 text-muted">9 min left</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Prodcast init -->
+    <script src="~/assets/js/dashboard/prodcast.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

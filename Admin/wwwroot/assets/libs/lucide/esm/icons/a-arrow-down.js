@@ -1,0 +1,2 @@
+/*! For license information please see a-arrow-down.js.LICENSE.txt */
+const AArrowDown=[["path",{d:"M3.5 13h6"}],["path",{d:"m2 16 4.5-9 4.5 9"}],["path",{d:"M18 7v9"}],["path",{d:"m14 12 4 4 4-4"}]];export{AArrowDown as default};

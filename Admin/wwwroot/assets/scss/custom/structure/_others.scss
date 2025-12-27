@@ -1,0 +1,84 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: others layout scss
+*/
+
+:is([data-sidebar="icon"], [data-sidebar="icon-hover"]) {
+  .#{$customPrefix}-app-sidebar-logo {
+    .logo-main {
+      h3 {
+        display: none;
+      }
+    }
+  }
+}
+
+:is([data-layout="horizontal"]) {
+  @include media-breakpoint-up(lg) {
+    .logo-main {
+      display: flex !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  :is([data-layout="semibox"]) {
+    .#{$customPrefix}-app-sidebar-logo {
+      .logo-main {
+        h3 {
+          color: var(--#{$prefix}body-color) !important;
+        }
+      }
+    }
+  }
+
+  :is([data-layout="semibox"][data-bs-theme="dark"][data-sidebar-color="light"]) {
+    .#{$customPrefix}-app-sidebar-logo {
+      .logo-main {
+        h3 {
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+  :is([data-sidebar="icon-hover"][data-sidebar-color="light"]) {
+    .icon-hover-btn {
+      color: var(--#{$prefix}black) !important;
+    }
+  }
+}
+
+:is([data-topbar-theme="dark"]) {
+  .app-header {
+    .header-menu-btn {
+      color: var(--#{$prefix}gray-400) !important;
+
+      &:hover,
+      &:active,
+      &:focus-visible {
+        background-color: #ced4da28 !important;
+      }
+
+      .icon-dot {
+        border-color: $light-border-subtle-dark;
+      }
+    }
+
+    .header-search-input {
+      background-color: rgba(var(--#{$prefix}white-rgb), 0.2) !important;
+      border-color: rgba(var(--#{$prefix}white-rgb), 0.2) !important;
+      &::placeholder {
+        color: $body-secondary-color-dark !important;
+      }
+    }
+
+    .header-search-btn {
+      i {
+        color: $body-secondary-color-dark !important;
+      }
+    }
+  }
+}

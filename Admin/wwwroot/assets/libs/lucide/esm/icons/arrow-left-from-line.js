@@ -1,0 +1,2 @@
+/*! For license information please see arrow-left-from-line.js.LICENSE.txt */
+const ArrowLeftFromLine=[["path",{d:"m9 6-6 6 6 6"}],["path",{d:"M3 12h14"}],["path",{d:"M21 19V5"}]];export{ArrowLeftFromLine as default};

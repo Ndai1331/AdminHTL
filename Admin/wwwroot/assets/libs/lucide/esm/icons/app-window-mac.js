@@ -1,0 +1,2 @@
+/*! For license information please see app-window-mac.js.LICENSE.txt */
+const AppWindowMac=[["rect",{width:"20",height:"16",x:"2",y:"4",rx:"2"}],["path",{d:"M6 8h.01"}],["path",{d:"M10 8h.01"}],["path",{d:"M14 8h.01"}]];export{AppWindowMac as default};

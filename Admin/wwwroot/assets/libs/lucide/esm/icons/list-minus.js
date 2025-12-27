@@ -1,0 +1,2 @@
+/*! For license information please see list-minus.js.LICENSE.txt */
+const ListMinus=[["path",{d:"M11 12H3"}],["path",{d:"M16 6H3"}],["path",{d:"M16 18H3"}],["path",{d:"M21 12h-6"}]];export{ListMinus as default};

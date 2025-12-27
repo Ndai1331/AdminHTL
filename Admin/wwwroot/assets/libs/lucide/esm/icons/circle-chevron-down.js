@@ -1,0 +1,2 @@
+/*! For license information please see circle-chevron-down.js.LICENSE.txt */
+const CircleChevronDown=[["circle",{cx:"12",cy:"12",r:"10"}],["path",{d:"m16 10-4 4-4-4"}]];export{CircleChevronDown as default};

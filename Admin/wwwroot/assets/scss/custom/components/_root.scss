@@ -1,0 +1,81 @@
+//
+// root.scss
+//
+
+@import "./mixin/primary-color";
+@import "./mixin/sidebar-color";
+
+:root,
+[data-bs-theme="light"] {
+  // sidebar
+  --#{$prefix}app-sidebar-width: #{$app-sidebar-base-width};
+  --#{$prefix}app-sidebar-sm-width: #{$app-sidebar-sm-width};
+  --#{$prefix}app-sidebar-medium-width: #{$app-sidebar-medium-width};
+  --#{$prefix}app-sidebar-bg: #{$app-sidebar-bg};
+  --#{$prefix}app-sidebar-border-color: #{$app-sidebar-border-color};
+  --#{$prefix}app-sidebar-caption-color: #{$app-sidebar-caption-color};
+  --#{$prefix}app-sidebar-color: #{$app-sidebar-color};
+  --#{$prefix}app-sidebar-menu-item-color: #{$app-sidebar-menu-item-color};
+  --#{$prefix}app-sidebar-menu-item-color-hover: #{$app-sidebar-menu-item-color-hover};
+  --#{$prefix}app-sidebar-menu-item-color-active: #{$app-sidebar-menu-item-color-active};
+
+  //header
+  --#{$prefix}app-header-height: #{$app-header-base-height};
+  --#{$prefix}app-header-bg: #{$app-header-bg};
+  --#{$prefix}app-header-border-color: #{$app-header-border-color};
+
+  // Footer
+  --#{$prefix}app-footer-height: #{$app-footer-height};
+
+  // Semibox
+  --#{$prefix}semibox-width: #{$semibox-width};
+
+  // Boxed
+  --#{$prefix}boxed-width: #{$boxed-width};
+  --#{$prefix}boxed-width-sm: #{$boxed-width-sm};
+
+  // Loop through each color variation and create CSS variables for data-colors attributes
+  // PRIMARY COLOR APPLICATION
+  @each $name, $color-variation in $color-variations {
+    $primary: map-get($color-variation, primary);
+
+    &[data-theme-colors="#{$name}"] {
+      --#{$prefix}primary: #{$primary};
+      --#{$prefix}primary-rgb: #{hex-to-rgb($primary)};
+      --#{$prefix}primary-text-emphasis: #{darken-text($primary)};
+      --#{$prefix}primary-bg-subtle: rgba(#{hex-to-rgb($primary)}, 0.1);
+      --#{$prefix}primary-border-subtle: rgba(#{hex-to-rgb($primary)}, 0.5);
+      --#{$prefix}link-color-rgb: #{hex-to-rgb($primary)};
+      --#{$prefix}link-hover-color-rgb: #{hex-to-rgb(darken($primary, 9%))};
+    }
+  }
+
+  // SIDEBAR COLOR APPLICATION
+  @each $name, $color-variation in $sidebar-color-variations {
+    $primary: map-get($color-variation, primary);
+
+    &[data-sidebar-color="#{$name}"] {
+      --#{$prefix}app-sidebar-bg: #{$primary};
+      --#{$prefix}sidebar-text: #{if(
+          lightness($primary) > 60%,
+          #212529,
+          #ffffff
+        )};
+      --#{$prefix}sidebar-border: #{rgba($primary, 0.2)};
+      --#{$prefix}sidebar-hover-bg: #{rgba(#000, 0.05)};
+      --#{$prefix}sidebar-active-bg: #{rgba(#000, 0.15)};
+    }
+  }
+}
+.btn-light {
+  --#{$prefix}btn-hover-bg: #ececef;
+  --#{$prefix}btn-hover-border-color: #ececef;
+  --#{$prefix}btn-active-bg: #ececef;
+  --#{$prefix}btn-active-border-color: #ececef;
+}
+.btn-dark {
+  --#{$prefix}btn-hover-bg: #2d3036;
+  --#{$prefix}btn-hover-border-color: #2d3036;
+  --#{$prefix}btn-active-bg: #2d3036;
+  --#{$prefix}btn-active-border-color: #2d3036;
+}

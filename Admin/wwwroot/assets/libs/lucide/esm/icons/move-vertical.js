@@ -1,0 +1,2 @@
+/*! For license information please see move-vertical.js.LICENSE.txt */
+const MoveVertical=[["path",{d:"M12 2v20"}],["path",{d:"m8 18 4 4 4-4"}],["path",{d:"m8 6 4-4 4 4"}]];export{MoveVertical as default};

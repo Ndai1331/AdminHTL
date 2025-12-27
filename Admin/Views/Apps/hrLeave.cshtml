@@ -1,0 +1,354 @@
+﻿
+@{
+    ViewBag.Title = "hrLeave";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div>
+                        <h4 class="mb-1">70</h4>
+                        <p class="text-muted mb-0">Total Leave Requests</p>
+                    </div>
+                    <div class="avatar-item avatar-lg rounded avatar-title bg-light-subtle text-body fs-5">
+                        <i class="ri-calendar-2-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div>
+                        <h4 class="mb-1">45</h4>
+                        <p class="text-muted mb-0">Approved Leaves</p>
+                    </div>
+                    <div class="avatar-item avatar-lg rounded avatar-title bg-light-subtle text-body fs-5">
+                        <i class="ri-check-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div>
+                        <h4 class="mb-1">23</h4>
+                        <p class="text-muted mb-0">Pending Leaves</p>
+                    </div>
+                    <div class="avatar-item avatar-lg rounded avatar-title bg-light-subtle text-body fs-5">
+                        <i class="ri-time-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div>
+                        <h4 class="mb-1">7</h4>
+                        <p class="text-muted mb-0">Rejected Leaves</p>
+                    </div>
+                    <div class="avatar-item avatar-lg rounded avatar-title bg-light-subtle text-body fs-5">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Leave List</h5>
+        <div class="d-flex align-items-center gap-2">
+            <div class="form-icon right">
+                <input type="text" class="form-control form-control-icon" id="iconSearch" placeholder="Type to search ...">
+                <i class="ri-search-2-line text-muted"></i>
+            </div>
+            <div class="dropdown">
+                <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-outline-light dropdown-toggle">Leave Type</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="javascript:void(0)">Casual Leave</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Medical Leave</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Annual Leave</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Sick Leave</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Emergency Leave</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Maternity Leave</a></li>
+                </ul>
+            </div>
+            <a href="/apps/hraddleave" class="btn btn-primary"><i class="ri-add-line me-1"></i>Add Leave</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-box">
+            <table class="table align-middle text-nowrap">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Employee</th>
+                        <th scope="col">Leave Type</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Reason</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Days</th>
+                        <th scope="col" class="text-end">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-1.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">John Doe</a>
+                                    <p class="text-muted fs-12 mb-0">Marketing</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Annual Leave</td>
+                        <td class="text-muted">20 May, 2025</td>
+                        <td class="text-muted">25 May, 2025</td>
+                        <td>Family vacation</td>
+                        <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                        <td>6</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-2.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Emily Clark</a>
+                                    <p class="text-muted fs-12 mb-0">HR</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Sick Leave</td>
+                        <td class="text-muted">18 May, 2025</td>
+                        <td class="text-muted">20 May, 2025</td>
+                        <td>Fever & cold</td>
+                        <td><span class="badge bg-success-subtle text-success">Approved</span></td>
+                        <td>3</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-3.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Michael Lee</a>
+                                    <p class="text-muted fs-12 mb-0">IT</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Casual Leave</td>
+                        <td class="text-muted">10 May, 2025</td>
+                        <td class="text-muted">11 May, 2025</td>
+                        <td>Personal work</td>
+                        <td><span class="badge bg-danger-subtle text-danger">Rejected</span></td>
+                        <td>2</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-4.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Sara Ahmed</a>
+                                    <p class="text-muted fs-12 mb-0">Finance</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Maternity Leave</td>
+                        <td class="text-muted">01 Mar, 2025</td>
+                        <td class="text-muted">04 Mar, 2025</td>
+                        <td>Maternity care</td>
+                        <td><span class="badge bg-success-subtle text-success">Approved</span></td>
+                        <td>4</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-5.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">David Kim</a>
+                                    <p class="text-muted fs-12 mb-0">Operations</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Emergency Leave</td>
+                        <td class="text-muted">27 May, 2025</td>
+                        <td class="text-muted">28 May, 2025</td>
+                        <td>Medical emergency</td>
+                        <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                        <td>2</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-6.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Linda Reyes</a>
+                                    <p class="text-muted fs-12 mb-0">Customer Support</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Annual Leave</td>
+                        <td class="text-muted">15 Jun, 2025</td>
+                        <td class="text-muted">22 Jun, 2025</td>
+                        <td>Visiting family</td>
+                        <td><span class="badge bg-success-subtle text-success">Approved</span></td>
+                        <td>8</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-7.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Thomas Allen</a>
+                                    <p class="text-muted fs-12 mb-0">Logistics</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Casual Leave</td>
+                        <td class="text-muted">05 Jul, 2025</td>
+                        <td class="text-muted">07 Jul, 2025</td>
+                        <td>House shifting</td>
+                        <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                        <td>3</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-8.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Robert Paul</a>
+                                    <p class="text-muted fs-12 mb-0">Admin</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Study Leave</td>
+                        <td class="text-muted">20 Feb, 2025</td>
+                        <td class="text-muted">28 Feb, 2025</td>
+                        <td>Certification program</td>
+                        <td><span class="badge bg-danger-subtle text-danger">Rejected</span></td>
+                        <td>9</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="~/assets/images/avatar/avatar-9.jpg" alt="Avatar" class="avatar-md rounded-circle">
+                                <div>
+                                    <a href="#!" class="mb-1 text-body fw-semibold">Sophie Turner</a>
+                                    <p class="text-muted fs-12 mb-0">Finance</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Sick Leave</td>
+                        <td class="text-muted">10 Mar, 2025</td>
+                        <td class="text-muted">13 Mar, 2025</td>
+                        <td>Medical rest</td>
+                        <td><span class="badge bg-success-subtle text-success">Approved</span></td>
+                        <td>4</td>
+                        <td class="text-end">
+                            <button type="button" class="btn icon-btn-sm btn-light-success" aria-label="View"><i class="ri-eye-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-primary" aria-label="Edit"><i class="ri-edit-box-line"></i></button>
+                            <button type="button" class="btn icon-btn-sm btn-light-danger" aria-label="Delete"><i class="ri-delete-bin-2-line"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex flex-wrap gap-4 align-items-center mt-6">
+            <p class="fw-medium mb-0"> Showing 1 - 10 of 14 Entries</p>
+            <div class="ms-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-primary mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous page">
+                                <i class="ri-arrow-left-double-line"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="javascript:voide(0)">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next page">
+                                <i class="ri-arrow-right-double-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Init js -->
+    <script type="module" src="~/assets/js/ui/countup.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+}

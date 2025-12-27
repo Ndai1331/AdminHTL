@@ -1,0 +1,33 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: custom variable scss
+*/
+
+//sidebar variables
+$app-sidebar-base-width:                                    16rem;
+$app-sidebar-medium-width:                                  11rem;
+$app-sidebar-sm-width:                                      5.3rem;
+$app-sidebar-bg:                                            #fff;
+$app-sidebar-color:                                         #adaeb9;
+$app-sidebar-border-color:                                  $border-color;
+$app-sidebar-caption-color:                                 $text-muted;
+$app-sidebar-menu-item-color:                               $app-sidebar-color;
+$app-sidebar-menu-item-color-hover:                         $white;
+$app-sidebar-menu-item-color-active:                        $white;
+
+//header Variables
+$app-header-base-height:                                    74px;
+$app-header-bg:                                             $body-secondary-bg;
+$app-header-border-color:                                   #e2e8f0;
+
+
+//footer Variables
+$app-footer-height:                                         60px;
+
+//semibox layout
+$semibox-width:               1rem;
+
+$boxed-width:                 7.5rem;
+$boxed-width-sm:              1.5rem;

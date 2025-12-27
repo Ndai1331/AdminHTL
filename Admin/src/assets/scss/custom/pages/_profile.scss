@@ -1,0 +1,29 @@
+//
+// Profile
+//
+
+[data-layout="vertical"],
+[data-layout="semibox"] {
+  .pages-profile {
+    .main-breadcrumb {
+      display: none !important;
+    }
+  }
+}
+
+.main-profile-bg {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  .profile-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 260px;
+  }
+}
+
+.edit-btn {
+  padding: 130px 0 24px 0;
+}

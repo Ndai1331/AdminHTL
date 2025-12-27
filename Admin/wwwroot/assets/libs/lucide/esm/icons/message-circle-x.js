@@ -1,0 +1,2 @@
+/*! For license information please see message-circle-x.js.LICENSE.txt */
+const MessageCircleX=[["path",{d:"M7.9 20A9 9 0 1 0 4 16.1L2 22Z"}],["path",{d:"m15 9-6 6"}],["path",{d:"m9 9 6 6"}]];export{MessageCircleX as default};

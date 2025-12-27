@@ -1,0 +1,2 @@
+/*! For license information please see circle-arrow-down.js.LICENSE.txt */
+const CircleArrowDown=[["circle",{cx:"12",cy:"12",r:"10"}],["path",{d:"M12 8v8"}],["path",{d:"m8 12 4 4 4-4"}]];export{CircleArrowDown as default};

@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "timeline";
+    ViewBag.pTitle = "Other Pages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Basic Timeline</h5>
+            </div>
+            <div class="card-body">
+                <div class="timeline2">
+                    <ul>
+                        <li class="box">
+                            <span></span>
+                            <a href="#!" class="title d-block text-body">Q1 Financial Review – March 2024</a>
+                            <div class="sub-title"><span>Annual budget reports were reviewed and submitted for approval by the finance team.</span></div>
+                        </li>
+                        <li class="box">
+                            <span></span>
+                            <a href="#!" class="title d-block text-body">Data Archival Completed – April 2024</a>
+                            <div class="sub-title"><span>All key project files were archived and uploaded to the secure document storage system.</span></div>
+                        </li>
+                        <li class="box">
+                            <span></span>
+                            <a href="#!" class="title d-block text-body">Feature Rollout & UI Upgrades – June 2024</a>
+                            <div class="p-3 border rounded shadow-sm text-muted sub-title">
+                                <span>The platform has been updated to improve user accessibility and streamline navigation. Enhancements were also made to backend services for better efficiency and overall system responsiveness and minor interface tweaks for a more intuitive user experience.</span>
+                            </div>
+                        </li>
+                        <li class="box">
+                            <span></span>
+                            <a href="#!" class="title d-block text-body">Infrastructure Optimization – May 2024</a>
+                            <div class="sub-title"><span>Routine infrastructure maintenance was carried out, with system checks and performance tuning.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-h-100">
+            <div class="card-header">
+                <h5 class="card-title">Icon Timeline</h5>
+            </div>
+            <div class="card-body">
+                <div class="timeline2 icon-timeline">
+                    <ul>
+                        <li class="box">
+                            <span>
+                                <img src="~/assets/images/avatar/avatar-3.jpg" alt="Avatar" class="img-fluid">
+                            </span>
+                            <a href="#!" class="title d-block text-body">Q1 Financial Review – March 2024</a>
+                            <div class="sub-title"><span>Annual budget reports were reviewed and submitted for approval by the finance team.</span></div>
+                        </li>
+                        <li class="box">
+                            <span>
+                                <i class="ri-upload-cloud-line"></i>
+                            </span>
+                            <a href="#!" class="title d-block text-body">Data Archival Completed – April 2024</a>
+                            <div class="sub-title"><span>All key project files were archived and uploaded to the secure document storage system.</span></div>
+                        </li>
+                        <li class="box">
+                            <span>
+                                <i class="ri-settings-3-line"></i>
+                            </span>
+                            <a href="#!" class="title d-block text-body">Infrastructure Optimization – May 2024</a>
+                            <div class="sub-title"><span>Routine infrastructure maintenance was carried out, with system checks and performance tuning.</span></div>
+                        </li>
+                        <li class="box">
+                            <span class="bg-primary text-white">
+                                <i class="ri-message-2-fill"></i>
+                            </span>
+                            <a href="#!" class="title d-block text-body">Feature Rollout & UI Upgrades – June 2024</a>
+                            <div class="p-3 border rounded shadow-sm text-muted sub-title">
+                                <span>The platform has been updated to improve user accessibility and streamline navigation. Enhancements were also made to backend services for better efficiency and overall system responsiveness and minor interface tweaks for a more intuitive user experience.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Advance Timeline</h5>
+            </div>
+            <div class="card-body">
+                <ul class="timeline">
+                    <li>
+                        <div class="card direction-l border-0 shadow-lg">
+                            <div class="card-body text-center flag">
+                                <h4 class="mb-1">April 2024</h4>
+                                <p class="desc text-muted">WooCommerce integration, release of Point of Sale system</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card direction-r border-0 shadow-lg">
+                            <div class="card-body text-center flag">
+                                <h4 class="mb-1">March 2024</h4>
+                                <p class="desc text-muted">WooCommerce integration, release of Point of Sale system</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card direction-l border-0 shadow-lg">
+                            <div class="card-body text-center flag xl">
+                                <h4 class="mb-1">May 2024 </h4>
+                                <p class="desc text-muted">WooCommerce integration, release of Point of Sale system</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card direction-r border-0 shadow-lg">
+                            <div class="card-body text-center flag">
+                                <h4 class="mb-1">June 2024</h4>
+                                <p class="desc text-muted">Shopify integration, Cometa Token private sale for early investors and ICO</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card direction-l border-0 shadow-lg">
+                            <div class="card-body text-center flag">
+                                <h4 class="mb-1">July</h4>
+                                <div class="desc text-muted"><span>Shopify integration, Cometa Token private sale for early investors and ICO</span></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+}

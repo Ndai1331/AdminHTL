@@ -1,0 +1,1 @@
+var swiper=new Swiper(".music-list",{loop:!0,slidesPerView:1,spaceBetween:25,pagination:{el:".swiper-pagination",clickable:!0},autoplay:{delay:1500,disableOnInteraction:!1},breakpoints:{768:{slidesPerView:4},1025:{slidesPerView:5},1441:{slidesPerView:7}}});

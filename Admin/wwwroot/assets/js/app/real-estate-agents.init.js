@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){document.getElementById("ActiveagentStatus")&&new Choices("#ActiveagentStatus",{placeholderValue:"Select Style",searchPlaceholderValue:"Search...",removeItemButton:!0,itemSelectText:"Press to select"})}));

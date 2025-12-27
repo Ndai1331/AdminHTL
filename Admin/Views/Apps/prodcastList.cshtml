@@ -1,0 +1,426 @@
+﻿
+@{
+    ViewBag.Title = "prodcastList";
+    ViewBag.pTitle = "Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <!-- air-datepicker -->
+    <link rel="stylesheet" href="~/assets/libs/air-datepicker/air-datepicker.css">
+}
+
+<div class="row">
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body position-relative">
+                <div class="avatar-item avatar-lg rounded avatar-title bg-primary-subtle text-primary float-end">
+                    <i class="ri-mic-line fs-20"></i>
+                </div>
+                <h4 class="fw-semibold mb-2">24</h4>
+                <p class="text-muted fs-13 mb-6">Active Podcasts</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fs-13 fw-medium">
+                        <i class="ri-arrow-up-line align-middle me-1"></i>+70%
+                    </span>
+                    <span class="text-muted fs-12">Growth Edit</span>
+                </div>
+                <div class="progress progress-xs mt-2" role="progressbar" aria-label="Podcast growth" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped bg-primary" style="width: 70%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body position-relative">
+                <div class="avatar-item avatar-lg rounded avatar-title bg-info-subtle text-info float-end">
+                    <i class="ri-play-list-line fs-20"></i>
+                </div>
+                <h4 class="fw-semibold mb-2">156</h4>
+                <p class="text-muted fs-13 mb-6">Total Episodes</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fs-13 fw-medium">
+                        <i class="ri-arrow-up-line align-middle me-1"></i>+25%
+                    </span>
+                    <span class="text-muted fs-12">Since Last Month</span>
+                </div>
+                <div class="progress progress-xs mt-2" role="progressbar" aria-label="Episode count" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped bg-primary" style="width: 45%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body position-relative">
+                <div class="avatar-item avatar-lg rounded avatar-title bg-warning-subtle text-warning float-end">
+                    <i class="ri-user-voice-line fs-20"></i>
+                </div>
+                <h4 class="fw-semibold mb-2">2.5K</h4>
+                <p class="text-muted fs-13 mb-6">Subscribers</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fs-13 fw-medium">
+                        <i class="ri-arrow-up-line align-middle me-1"></i>+65%
+                    </span>
+                    <span class="text-muted fs-12">This Quarter</span>
+                </div>
+                <div class="progress progress-xs mt-2" role="progressbar" aria-label="Subscriber growth" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped bg-primary" style="width: 65%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body position-relative">
+                <div class="avatar-item avatar-lg rounded avatar-title bg-danger-subtle text-danger float-end">
+                    <i class="ri-bar-chart-2-line fs-20"></i>
+                </div>
+                <h4 class="fw-semibold mb-2">2.2K</h4>
+                <p class="text-muted fs-13 mb-6">Monthly Plays</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fs-13 fw-medium">
+                        <i class="ri-arrow-up-line align-middle me-1"></i>+33%
+                    </span>
+                    <span class="text-muted fs-12">Compared to April</span>
+                </div>
+                <div class="progress progress-xs mt-2" role="progressbar" aria-label="Plays growth" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped bg-primary" style="width: 33%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="card-title">Recently Played</h5>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addSongModal">
+            <i class="ri-add-line me-1"></i> Add Song
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-box">
+            <table class="table align-middle text-nowrap">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Artist</th>
+                        <th>Song</th>
+                        <th>Album</th>
+                        <th>Last Played</th>
+                        <th>Duration</th>
+                        <th>Genre</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-3.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Dua Lipa</a>
+                            </div>
+                        </td>
+                        <td>Levitating</td>
+                        <td>Future Nostalgia</td>
+                        <td class="text-muted">2025-05-21 | 09:45 am</td>
+                        <td>3:23</td>
+                        <td>Dance-Pop</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-4.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">The Weeknd</a>
+                            </div>
+                        </td>
+                        <td>Blinding Lights</td>
+                        <td>After Hours</td>
+                        <td class="text-muted">2025-05-20 | 08:30 pm</td>
+                        <td>3:20</td>
+                        <td>Synthwave</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-5.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Ed Sheeran</a>
+                            </div>
+                        </td>
+                        <td>Shape of You</td>
+                        <td>Divide</td>
+                        <td class="text-muted">2025-05-19 | 04:10 pm</td>
+                        <td>4:24</td>
+                        <td>Pop</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-6.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Lil Nas X</a>
+                            </div>
+                        </td>
+                        <td>Montero (Call Me By Your Name)</td>
+                        <td>Montero</td>
+                        <td class="text-muted">2025-05-18 | 10:20 am</td>
+                        <td>2:18</td>
+                        <td>Hip-Hop</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-7.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Justin Bieber</a>
+                            </div>
+                        </td>
+                        <td>Peaches</td>
+                        <td>Justice</td>
+                        <td class="text-muted">2025-05-17 | 06:55 pm</td>
+                        <td>3:18</td>
+                        <td>R&B</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-8.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Ariana Grande</a>
+                            </div>
+                        </td>
+                        <td>Positions</td>
+                        <td>Positions</td>
+                        <td class="text-muted">2025-05-17 | 11:30 am</td>
+                        <td>2:52</td>
+                        <td>Pop</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-9.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Billie Eilish</a>
+                            </div>
+                        </td>
+                        <td>Happier Than Ever</td>
+                        <td>Happier Than Ever</td>
+                        <td class="text-muted">2025-05-16 | 09:05 am</td>
+                        <td>4:58</td>
+                        <td>Indie Pop</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-item">
+                                    <img class="img-fluid avatar-md" src="~/assets/images/avatar/avatar-10.jpg" alt="avatar image">
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Olivia Rodrigo</a>
+                            </div>
+                        </td>
+                        <td>Good 4 U</td>
+                        <td>SOUR</td>
+                        <td class="text-muted">2025-05-15 | 07:45 pm</td>
+                        <td>2:58</td>
+                        <td>Alt-Rock</td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="javascript:void(0)">View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex flex-wrap gap-4 align-items-center mt-6">
+            <p class="fw-medium mb-0"> Showing 1 - 10 of 18 Entries</p>
+            <div class="ms-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-primary mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                <i class="ri-arrow-left-double-line"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">1</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="javascript:voide(0)">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:voide(0)">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                <i class="ri-arrow-right-double-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add New Song Modal -->
+<div class="modal fade" id="addSongModal" tabindex="-1" aria-labelledby="addSongModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addSongModalLabel">Add New Song</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="songForm">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="artistName" class="form-label">Artist</label>
+                                <input type="text" class="form-control" id="artistName" name="artistName" placeholder="Enter artist name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="songTitle" class="form-label">Song Title</label>
+                                <input type="text" class="form-control" id="songTitle" name="songTitle" placeholder="Enter song title" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="albumName" class="form-label">Album</label>
+                                <input type="text" class="form-control" id="albumName" name="albumName" placeholder="Enter album name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="duration" class="form-label">Duration</label>
+                                <input type="text" class="form-control" id="duration" name="duration" placeholder="e.g. 3:45" pattern="^\d{1,2}:\d{2}$" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastPlayed" class="form-label">Last Played</label>
+                                <input type="text" class="form-control" id="lastPlayed" name="lastPlayed" placeholder="Timepicker">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Song</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <!-- Picker Js -->
+    <script src="~/assets/libs/air-datepicker/air-datepicker.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/app/prodcast-list.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+}

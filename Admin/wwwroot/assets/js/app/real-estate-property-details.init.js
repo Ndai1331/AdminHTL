@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){document.getElementById("propertyType")&&new Choices("#propertyType",{placeholderValue:"Select Style",searchPlaceholderValue:"Search...",removeItemButton:!0,itemSelectText:"Press to select"})}));var map=new GMaps({el:"#basic_gmap",lat:-12.043333,lng:-77.028333});

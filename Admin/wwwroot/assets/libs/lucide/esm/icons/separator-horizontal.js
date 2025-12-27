@@ -1,0 +1,2 @@
+/*! For license information please see separator-horizontal.js.LICENSE.txt */
+const SeparatorHorizontal=[["path",{d:"m16 16-4 4-4-4"}],["path",{d:"M3 12h18"}],["path",{d:"m8 8 4-4 4 4"}]];export{SeparatorHorizontal as default};

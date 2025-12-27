@@ -1,0 +1,2 @@
+/*! For license information please see square-radical.js.LICENSE.txt */
+const SquareRadical=[["path",{d:"M7 12h2l2 5 2-10h4"}],["rect",{x:"3",y:"3",width:"18",height:"18",rx:"2"}]];export{SquareRadical as default};

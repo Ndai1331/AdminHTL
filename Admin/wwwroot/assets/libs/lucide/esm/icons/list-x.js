@@ -1,0 +1,2 @@
+/*! For license information please see list-x.js.LICENSE.txt */
+const ListX=[["path",{d:"M11 12H3"}],["path",{d:"M16 6H3"}],["path",{d:"M16 18H3"}],["path",{d:"m19 10-4 4"}],["path",{d:"m15 10 4 4"}]];export{ListX as default};

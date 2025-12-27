@@ -1,0 +1,2 @@
+/*! For license information please see chevrons-left-right-ellipsis.js.LICENSE.txt */
+const ChevronsLeftRightEllipsis=[["path",{d:"M12 12h.01"}],["path",{d:"M16 12h.01"}],["path",{d:"m17 7 5 5-5 5"}],["path",{d:"m7 7-5 5 5 5"}],["path",{d:"M8 12h.01"}]];export{ChevronsLeftRightEllipsis as default};

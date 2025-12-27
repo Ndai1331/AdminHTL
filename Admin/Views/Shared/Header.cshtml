@@ -1,0 +1,497 @@
+﻿<!-- Begin Header -->
+<header class="app-header" id="appHeader">
+    <div class="container-fluid w-100">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-inline-flex align-items-center gap-2">
+                <a href="/" class="align-items-center logo-main d-none me-5 gap-2">
+                    <img height="35" width="35" class="logo-dark" alt="Dark Logo" src="assets/images/logo-md.png">
+                    <h3 class="text-white text-uppercase mb-0">Menilo</h3>
+                </a>
+                <button type="button" class="vertical-toggle btn btn-text-light text-muted icon-btn" id="toggleSidebar" aria-label="Toggle Sidebar">
+                    <i class="ri-arrow-left-double-line fs-4 toggle-left-arrow"></i>
+                    <i class="ri-arrow-right-double-line fs-4 toggle-right-arrow d-none"></i>
+                </button>
+                <button type="button" class="horizontal-toggle btn btn-text-light text-muted icon-btn fs-5 header-btn d-none header-menu-btn" id="toggleHorizontal" aria-label="Toggle Menu">
+                    <i class="ri-menu-2-line"></i>
+                </button>
+                <div class="form-icon right d-none d-md-block" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <input type="text" class="form-control form-control-icon header-search-input min-w-320px" id="Search" placeholder="Search" required>
+                    <div class="header-search-btn">
+                        <div><i class="ri-search-line text-muted fs-16"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-shrink-0 d-flex align-items-center gap-1 gap-md-2">
+                <div class="dropdown pe-dropdown-mega">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                        <i class="ri-translate"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-mega-xs header-dropdown-menu pe-noti-dropdown-menu p-0">
+                        <div class="noti-item gap-2">
+                            <img src="assets/images/flag/uy.svg" alt="English" height="16">English
+                        </div>
+                        <div class="noti-item gap-2">
+                            <img src="assets/images/flag/fr.svg" alt="French" height="16">Français
+                        </div>
+                        <div class="noti-item gap-2">
+                            <img src="assets/images/flag/es.svg" alt="Spanish" height="16">Español
+                        </div>
+                        <div class="noti-item gap-2">
+                            <img src="assets/images/flag/de.svg" alt="German" height="16">Deutsch
+                        </div>
+                        <div class="noti-item gap-2">
+                            <img src="assets/images/flag/it.svg" alt="Italian" height="16">Italiano
+                        </div>
+
+                    </div>
+                </div>
+                <div id="toggleMode">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn" id="lightModeBtn" type="button" aria-label="Switch to light mode">
+                        <i class="ri-sun-line"></i>
+                    </button>
+                </div>
+                <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn d-none d-md-block" type="button" id="toggleFullscreen" aria-label="Toggle fullscreen">
+                    <i class="ri-fullscreen-line"></i>
+                </button>
+                <div class="dropdown pe-dropdown-mega">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                        <i class="ri-notification-4-line"></i>
+                        <div class="icon-dot"></div>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-clickable dropdown-mega-lg header-dropdown-menu shadow-none border p-0">
+                        <div class="card mb-0 border-0">
+                            <div class="card-header">
+                                <h5 class="card-title">Notifications</h5>
+                                <div class="dropdown">
+                                    <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false"> <i class="bi bi-three-dots-vertical"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="javascript:void(0)">View Contact</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Mute Chat</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Block</a>
+                                        <a class="dropdown-item" href="javascript:void(0)" id="clearChat">Clear Chat</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Report</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="nav nav-pills nav-pill-white nav-justified" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#inbox" role="tab" aria-selected="false" tabindex="-1">
+                                            <span>Inbox</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#teams" role="tab" aria-selected="true">
+                                            <span>Teams</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#mentions" role="tab" aria-selected="false" tabindex="-1">
+                                            <span>Mentions</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#invites" role="tab" aria-selected="false" tabindex="-1">
+                                            <span>Invites</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-5" id="notificationTabContent">
+                                    <div class="tab-pane fade show active" id="inbox" role="tabpanel">
+                                        <div class="d-flex align-items-start py-4 px-5 bg-light-subtle rounded-2 gap-3 cursor-pointer position-relative mb-3">
+                                            <img src="assets/images/avatar/avatar-6.jpg" alt="Aiden Carter" height="40" width="40" class="rounded-circle">
+                                            <div>
+                                                <div class="mb-1">
+                                                    <strong>Aiden Carter</strong> wants to edit Brand Guidelines
+                                                </div>
+                                                <div class="text-muted fs-12">5 minutes ago</div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                </div>
+                                            </div>
+                                            <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
+                                        </div>
+                                        <div class="d-flex align-items-start py-4 px-5 bg-light-subtle rounded-2 gap-3 cursor-pointer position-relative mb-3">
+                                            <img src="assets/images/avatar/avatar-7.jpg" alt="Aiden Carter" height="40" width="40" class="rounded-circle">
+                                            <div>
+                                                <div class="mb-1">
+                                                    <strong>Zephyr Bennett</strong> has joined workplace
+                                                </div>
+                                                <div class="text-muted fs-12">2 hours ago</div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                </div>
+                                            </div>
+                                            <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
+                                        </div>
+                                        <div class="d-flex align-items-start py-4 px-5 border rounded-2 gap-3 position-relative cursor-pointer">
+                                            <div class="avatar-item h-40px w-40px flex-shrink-0 border-0 avatar-title text-primary bg-primary-subtle">
+                                                PR
+                                            </div>
+                                            <div>
+                                                <div class="mb-1">
+                                                    <strong>Cynthia Yorke</strong> commented on your chart
+                                                </div>
+                                                <div class="text-muted fs-12">10:12 PM</div>
+                                                <div class="px-4 py-3 mt-4 rounded-2 bg-light-subtle lh-sm">
+                                                    Project timeline's looking good, but let's not tempt fate – steady
+                                                    progress beats.
+                                                </div>
+                                                <div class="py-1 px-3 rounded-pill fs-12 border d-inline-block mt-2">
+                                                    <i class="ri-folder-open-line text-muted me-1"></i> Brand Milestones
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="teams" role="tabpanel">
+                                        <div class="d-flex align-items-start py-4 px-5 bg-light-subtle rounded-2 gap-3 cursor-pointer position-relative mb-3">
+                                            <div class="avatar-item h-40px w-40px flex-shrink-0 border-0 avatar-title text-info bg-info-subtle">
+                                                DS
+                                            </div>
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>Design Squad</strong> team
+                                                    created new project
+                                                </div>
+                                                <div class="text-muted fs-12">30 minutes ago</div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                </div>
+                                            </div>
+                                            <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
+                                        </div>
+                                        <div class="d-flex align-items-start py-4 px-5 bg-light-subtle rounded-2 gap-3 cursor-pointer position-relative mb-3">
+                                            <img src="assets/images/avatar/avatar-9.jpg" alt="Marketing Team" height="40" width="40" class="rounded-circle">
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>Dev Team</strong> completed
+                                                    sprint review
+                                                </div>
+                                                <div class="text-muted fs-12">1 day ago</div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                </div>
+                                                <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start py-4 px-5 border rounded-2 gap-3 position-relative cursor-pointer">
+                                            <img src="assets/images/avatar/avatar-8.jpg" alt="Marketing Team" height="40" width="40" class="rounded-circle">
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>Marketing Team</strong>
+                                                    scheduled weekly
+                                                    standup
+                                                </div>
+                                                <div class="text-muted fs-12">2 hours ago</div>
+                                                <div class="px-4 py-3 mt-4 rounded-2 bg-light-subtle lh-sm">
+                                                    Weekly standup meeting scheduled for Friday 10:00 AM. Please
+                                                    prepare.
+                                                </div>
+                                                <div class="py-1 px-3 rounded-pill fs-12 border d-inline-block mt-2">
+                                                    <i class="ri-terminal-box-line me-1 text-muted"></i> Sprint 24 -
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="mentions" role="tabpanel">
+                                        <div class="d-flex align-items-start py-4 px-5 bg-light-subtle rounded-2 gap-3 cursor-pointer position-relative mb-3">
+                                            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" alt="Alex Rodriguez" height="40" width="40" class="rounded-circle">
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>Robert Chen</strong> invited
+                                                    you to collaborate on repository
+                                                </div>
+                                                <div class="text-muted fs-12">3 days ago</div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                </div>
+                                            </div>
+                                            <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
+                                        </div>
+
+                                        <div class="d-flex align-items-start py-4 px-5 border rounded-2 gap-3 position-relative cursor-pointer">
+                                            <div class="avatar-item h-40px w-40px flex-shrink-0 border-0 avatar-title text-danger bg-danger-subtle">
+                                                MK
+                                            </div>
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>Maria Kim</strong> mentioned
+                                                    you in task
+                                                </div>
+                                                <div class="text-muted fs-12">3 hours ago</div>
+                                                <div class="px-4 py-3 mt-4 rounded-2 bg-light-subtle lh-sm">
+                                                    @("@")john.doe assigned as reviewer for the new dashboard wireframes.
+                                                    Priority: High
+                                                </div>
+                                                <div class="py-1 px-3 rounded-pill fs-12 border d-inline-block mt-2">
+                                                    <i class="ri-list-check-3 me-1 text-muted"></i> Dashboard Wireframes
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="invites" role="tabpanel">
+                                        <div class="d-flex align-items-start py-4 px-5 bg-light-subtle rounded-2 gap-3 cursor-pointer position-relative mb-3">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Jennifer Lopez" height="40" width="40" class="rounded-circle">
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>Jennifer Lopez</strong>
+                                                    invited you to join
+                                                    "E-commerce Platform" project
+                                                </div>
+                                                <div class="text-muted fs-12">1 hour ago</div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept Invite</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Decline</button>
+                                                </div>
+                                            </div>
+                                            <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
+                                        </div>
+                                        <div class="d-flex align-items-start py-4 px-5 border rounded-2 gap-3 position-relative cursor-pointer mb-3">
+                                            <div class="avatar-item h-40px w-40px flex-shrink-0 border-0 avatar-title text-secondary bg-secondary-subtle">
+                                                TC
+                                            </div>
+                                            <div>
+                                                <div class="mb-1 lh-sm max-w-320px">
+                                                    <strong>
+                                                        Tech Conference
+                                                        2024
+                                                    </strong> invited you to
+                                                    speak
+                                                </div>
+                                                <div class="text-muted fs-12">2 days ago</div>
+                                                <div class="px-4 py-3 mt-4 mb-3 rounded-2 bg-light-subtle lh-sm">
+                                                    We'd love to have you speak about "Modern Web Development" at our
+                                                    upcoming conference. The event is scheduled.
+                                                </div>
+                                                <div class="mt-3 d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">
+                                                        Maybe
+                                                        Later
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown pe-dropdown-mega">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Messages">
+                        <i class="ri-shopping-cart-line"></i>
+                        <div class="icon-dot"></div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-clickable dropdown-mega-md header-dropdown-menu shadow-none border p-0">
+                        <div class="card mb-0 border-0">
+                            <div class="card-header">
+                                <h5 class="card-title">Cart Items</h5>
+                                <span class="badge text-primary bg-primary-subtle">4</span>
+                            </div>
+                            <div class="pt-4">
+                                <ul class="list-unstyled list-none mb-0" id="header-cart-items-scroll">
+                                    <li class="cart-item">
+                                        <div class="d-flex items-start cart-dropdown-item">
+                                            <a href="http://localhost:3000/assets/images/cart/cart-1.jpg">
+                                                <img src="assets/images/cart/cart-1.jpg" class="avatar-md me-4 rounded object-fit-cover" alt="House">
+                                            </a>
+                                            <div class="flex-grow-1">
+                                                <div>
+                                                    <h6 class="mb-1">
+                                                        <a href="#!" class="text-reset">
+                                                            Modern Family
+                                                            House
+                                                        </a>
+                                                    </h6>
+                                                    <p class="mb-0 fs-12 text-muted">929 Hart St, Brooklyn, NY</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                <h6 class="m-0 fw-normal">
+                                                    $<span class="cart-item-price">375,000</span>
+                                                </h6>
+                                            </div>
+                                            <div class="ps-2 d-flex">
+                                                <button type="button" class="btn btn-sm">
+                                                    <i class="ri-delete-bin-6-line fs-16 text-danger"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="cart-item">
+                                        <div class="d-flex items-start cart-dropdown-item">
+                                            <a href="http://localhost:3000/assets/images/cart/cart-2.jpg">
+                                                <img src="assets/images/cart/cart-2.jpg" class="avatar-md me-4 rounded object-fit-cover" alt="House">
+                                            </a>
+                                            <div class="flex-grow-1">
+                                                <div>
+                                                    <h6 class="mb-1">
+                                                        <a href="#!" class="text-reset">
+                                                            Cozy Studio
+                                                            Apartment
+                                                        </a>
+                                                    </h6>
+                                                    <p class="mb-0 fs-12 text-muted">3811 Ditmars Blvd, Astoria, NY</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                <h6 class="m-0 fw-normal">
+                                                    $<span class="cart-item-price">1,890</span>
+                                                </h6>
+                                            </div>
+                                            <div class="ps-2 d-flex">
+                                                <button type="button" class="btn btn-sm">
+                                                    <i class="ri-delete-bin-6-line fs-16 text-danger"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="cart-item">
+                                        <div class="d-flex items-start cart-dropdown-item">
+                                            <a href="http://localhost:3000/assets/images/cart/cart-3.jpg">
+                                                <img src="assets/images/cart/cart-3.jpg" class="avatar-md me-4 rounded object-fit-cover" alt="House">
+                                            </a>
+                                            <div class="flex-grow-1">
+                                                <div>
+                                                    <h6 class="mb-1">
+                                                        <a href="#!" class="text-reset">
+                                                            Downtown
+                                                            Office Space
+                                                        </a>
+                                                    </h6>
+                                                    <p class="mb-0 fs-12 text-muted">100 Main St, Manhattan, NY</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                <h6 class="m-0 fw-normal">
+                                                    $<span class="cart-item-price">2,200</span>
+                                                </h6>
+                                            </div>
+                                            <div class="ps-2 d-flex">
+                                                <button type="button" class="btn btn-sm">
+                                                    <i class="ri-delete-bin-6-line fs-16 text-danger"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="cart-item">
+                                        <div class="d-flex items-start cart-dropdown-item">
+                                            <a href="http://localhost:3000/assets/images/cart/cart-4.jpg">
+                                                <img src="assets/images/cart/cart-4.jpg" class="avatar-md me-4 rounded object-fit-cover" alt="House">
+                                            </a>
+                                            <div class="flex-grow-1">
+                                                <div>
+                                                    <h6 class="mb-1">
+                                                        <a href="#!" class="text-reset">
+                                                            Luxury
+                                                            Beachfront Villa
+                                                        </a>
+                                                    </h6>
+                                                    <p class="mb-0 fs-12 text-muted">Malibu, California</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center px-2">
+                                                <h6 class="m-0 fw-normal">$<span class="cart-item-price">1,250,000</span></h6>
+                                            </div>
+                                            <div class="ps-2 d-flex">
+                                                <button type="button" class="btn btn-sm">
+                                                    <i class="ri-delete-bin-6-line fs-16 text-danger"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="py-4 px-5 d-flex gap-2">
+                                    <button type="button" class="btn btn-primary w-100">Checkout</button>
+                                    <button type="button" class="btn btn-primary w-100">View Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <button class="btn btn-text-light text-muted icon-btn header-menu-btn d-inline-flex d-md-none" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="ri-search-line fs-5"></i>
+                </button>
+                <button class="btn btn-text-light text-muted icon-btn header-menu-btn d-none d-md-inline-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Settings">
+                    <i class="ri-settings-line fs-5"></i>
+                </button>
+                <div class="dropdown pe-dropdown-mega">
+                    <button class="btn icon-btn gap-1 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="position-relative avatar-md">
+                            <img src="assets/images/avatar/15.jpg" alt="Avatar Image" class="img-fluid rounded-circle avatar-md">
+                        </span>
+                    </button>
+                    <div class="dropdown-menu dropdown-mega-sm header-dropdown-menu p-4 shadow-none border">
+                        <div class="border-bottom pb-3 mb-1 d-flex align-items-center gap-3">
+                            <img src="assets/images/avatar/15.jpg" alt="Avatar Image" height="40" width="40" class="rounded-circle">
+                            <div>
+                                <a href="/otherpages/profile" class="text-body fw-medium">Alex Morgan</a>
+                                <p class="mb-0 fs-13 mt-1 text-muted">alexmorgan@gmail.com</p>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled mb-1 border-bottom pb-1">
+                            <li>
+                                <a class="dropdown-item p-2" href="/otherpages/profile">
+                                    <i class="ri-user-3-line me-2"></i> My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-2" href="/otherpages/profile">
+                                    <i class="ri-settings-3-line me-2"></i> Account Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-2" href="/otherpages/billingsubscription">
+                                    <i class="ri-database-2-line me-2"></i> System Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-2" href="javascript:void(0)">
+                                    <i class="ri-time-line me-2"></i> Activity Log
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-2" href="javascript:void(0)">
+                                    <i class="ri-question-line me-2"></i> Help & Support
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="dropdown-item bg-transparent p-2 text-danger" href="/auth/signout"><i data-lucide="log-out" class="h-16px w-16px me-2"></i> Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- END Header -->
+<!-- Search Modal -->
+<div class="modal fade search-modal" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-block">
+                <div class="form-icon">
+                    <input type="text" class="form-control form-control-icon" id="searchInputInModal" placeholder="Search" required>
+                    <div class="header-search-btn w-44px">
+                        <i class="ri-search-line text-muted fs-16"></i>
+                    </div>
+                    <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle-y d-inline-block m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body" data-simplebar id="list-items">
+                <ul class="list-unstyled mb-0" id="searchList"></ul>
+            </div>
+        </div>
+    </div>
+</div>

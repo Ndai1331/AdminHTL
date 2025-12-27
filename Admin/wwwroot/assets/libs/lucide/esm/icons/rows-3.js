@@ -1,0 +1,2 @@
+/*! For license information please see rows-3.js.LICENSE.txt */
+const Rows3=[["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2"}],["path",{d:"M21 9H3"}],["path",{d:"M21 15H3"}]];export{Rows3 as default};

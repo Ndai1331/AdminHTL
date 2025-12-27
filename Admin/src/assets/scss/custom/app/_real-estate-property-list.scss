@@ -1,0 +1,14 @@
+/*
+Template Name: Menilo - Admin & Dashboard Template
+Author: Pixeleyez
+Website: https://pixeleyez.com/
+File: real estate property list scss
+*/
+
+.property-card {
+  transition: $transition-base;
+  &:hover{
+	  transform: translateY(-4px);
+	  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}

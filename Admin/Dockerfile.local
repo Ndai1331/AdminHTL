@@ -1,0 +1,25 @@
+# Dockerfile for local development on macOS
+# This uses volume mounts for live code changes
+FROM mcr.microsoft.com/dotnet/sdk:9.0
+
+# Install Node.js 22
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g yarn && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Install .NET tools if needed (uncomment if needed)
+# RUN dotnet tool install --global dotnet-ef
+
+# Expose port (HTTP only for Docker, HTTPS can be handled by reverse proxy in production)
+EXPOSE 5188
+
+# Set environment
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS=http://+:5188
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+
+# Default command - will be overridden by docker-compose or docker run
+CMD ["bash"]

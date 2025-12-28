@@ -101,7 +101,7 @@ namespace Menilo.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> SignOut()
+        public async Task<IActionResult> Logout()
         {
             try
             {

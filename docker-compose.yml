@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # Local development service (macOS)
+  admin-local:
+    build:
+      context: ./Admin
+      dockerfile: Dockerfile.local
+    container_name: menilo-admin-local
+    ports:
+      - "5188:5188"
+    volumes:
+      # Mount source code for live reload
+      - ./Admin:/app
+      # Persist node_modules
+      - node_modules:/app/node_modules
+      # Persist .NET restore cache
+      - dotnet_restore:/root/.nuget/packages
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5188
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+    command: >
+      bash -c "
+        cd /app &&
+        if [ ! -d 'node_modules' ]; then
+          echo 'Installing Node.js dependencies...' &&
+          yarn install
+        fi &&
+        if [ ! -d 'wwwroot/assets' ] || [ -z \"\$(ls -A wwwroot/assets 2>/dev/null)\" ]; then
+          echo 'Building frontend assets...' &&
+          yarn run build
+        fi &&
+        echo 'Starting .NET application...' &&
+        dotnet watch run --urls 'http://0.0.0.0:5188'
+      "
+    networks:
+      - menilo-network
+
+  # Production service (Linux/amd64)
+  admin-prod:
+    build:
+      context: ./Admin
+      dockerfile: Dockerfile
+      platform: linux/amd64
+    container_name: menilo-admin-prod
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+    restart: unless-stopped
+    networks:
+      - menilo-network
+    profiles:
+      - production
+
+volumes:
+  node_modules:
+  dotnet_restore:
+
+networks:
+  menilo-network:
+    driver: bridge
+

@@ -224,9 +224,13 @@ namespace Menilo.Services.Http
 
             try
             {
-                _logger.LogInformation("POST request to: {Url}", url);
+                // Log full URL for debugging
+                var fullUrl = _httpClient.BaseAddress != null 
+                    ? new Uri(_httpClient.BaseAddress, url).ToString()
+                    : url;
+                _logger.LogInformation("POST request to: {Url} (Full URL: {FullUrl})", url, fullUrl);
 
-                if (url.Contains("/auth/login", StringComparison.OrdinalIgnoreCase))
+                if (url.Contains("/auth/login", StringComparison.OrdinalIgnoreCase) || url.Contains("auth/login", StringComparison.OrdinalIgnoreCase))
                 {
                     RemoveToken();
                 }
@@ -273,9 +277,13 @@ namespace Menilo.Services.Http
 
             try
             {
-                _logger.LogInformation("POST request to: {Url}", url);
+                // Log full URL for debugging
+                var fullUrl = _httpClient.BaseAddress != null 
+                    ? new Uri(_httpClient.BaseAddress, url).ToString()
+                    : url;
+                _logger.LogInformation("POST request to: {Url} (Full URL: {FullUrl})", url, fullUrl);
 
-                if (url.Contains("/auth/login", StringComparison.OrdinalIgnoreCase))
+                if (url.Contains("/auth/login", StringComparison.OrdinalIgnoreCase) || url.Contains("auth/login", StringComparison.OrdinalIgnoreCase))
                 {
                     RemoveToken();
                 }

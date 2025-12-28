@@ -1,0 +1,5 @@
+# Add to existing .gitignore if exists, or create new
+# Docker volumes
+node_modules/
+*.log
+

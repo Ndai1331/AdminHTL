@@ -127,7 +127,7 @@ namespace Menilo.Services.Auth
         /// <summary>
         /// Logout current user
         /// </summary>
-        public async Task LogoutAsync()
+        public Task LogoutAsync()
         {
             try
             {
@@ -141,6 +141,7 @@ namespace Menilo.Services.Auth
                 _httpClientService.RemoveToken();
 
                 _logger.LogInformation("Logout successful for email: {Email}", email);
+                return Task.CompletedTask;
             }
             catch (Exception ex)
             {

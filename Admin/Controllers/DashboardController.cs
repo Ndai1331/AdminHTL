@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Menilo.Filters;
 
 namespace Menilo.Controllers
 {
+    [Authorize]
     public class DashboardController : Controller
     {
         // GET: Dashboard

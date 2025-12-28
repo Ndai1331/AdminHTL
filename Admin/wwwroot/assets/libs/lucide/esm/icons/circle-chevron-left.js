@@ -1,2 +1,0 @@
-/*! For license information please see circle-chevron-left.js.LICENSE.txt */
-const CircleChevronLeft=[["circle",{cx:"12",cy:"12",r:"10"}],["path",{d:"m14 16-4-4 4-4"}]];export{CircleChevronLeft as default};

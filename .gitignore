@@ -1,5 +1,6 @@
 # Add to existing .gitignore if exists, or create new
 # Docker volumes
-node_modules/
+*Admin/node_modules/
+*Admin/wwwroot/assets/
 *.log
 

@@ -99,7 +99,7 @@ namespace Menilo.Controllers
         /// Handle logout via GET request (redirects to SignIn)
         /// </summary>
         [HttpGet]
-        public async Task<IActionResult> SignOut()
+        public new async Task<IActionResult> SignOut()
         {
             try
             {

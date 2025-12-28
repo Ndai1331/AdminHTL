@@ -1,2 +1,0 @@
-/*! For license information please see circle-minus.js.LICENSE.txt */
-const CircleMinus=[["circle",{cx:"12",cy:"12",r:"10"}],["path",{d:"M8 12h8"}]];export{CircleMinus as default};

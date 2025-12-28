@@ -1,2 +1,0 @@
-/*! For license information please see separator-vertical.js.LICENSE.txt */
-const SeparatorVertical=[["path",{d:"M12 3v18"}],["path",{d:"m16 16 4-4-4-4"}],["path",{d:"m8 8-4 4 4 4"}]];export{SeparatorVertical as default};

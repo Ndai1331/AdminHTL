@@ -1,0 +1,19 @@
+services:
+  # Production service với Chiseled image (nhẹ và bảo mật nhất)
+  htl-admin-chiseled:
+    image: longnguyen1331/admin-htl:production
+    container_name: htl-admin-chiseled
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - DirectusApi__BaseUrl=https://axis.benhvien199.vn/
+    restart: unless-stopped
+    networks:
+      - htl-network
+
+networks:
+  htl-network:
+    driver: bridge
+

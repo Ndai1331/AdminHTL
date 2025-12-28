@@ -1,5 +1,5 @@
 /**
- * simplebar - v6.3.0
+ * simplebar - v6.3.3
  * Scrollbars, simpler.
  * https://grsmto.github.io/simplebar/
  *

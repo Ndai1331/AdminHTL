@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Menilo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3b450db1fb7cc568eb7134c0e2da618bd821eca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9daab9d5ddc288dde93d881d7692035016be630")]
 [assembly: System.Reflection.AssemblyProductAttribute("Menilo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Menilo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

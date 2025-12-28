@@ -3,9 +3,9 @@
 # Stage 1: Build Node.js assets
 FROM node:22-alpine AS node-builder
 WORKDIR /src
-COPY Admin/package.json Admin/yarn.lock Admin/package-copy.json Admin/preload.js ./
-COPY Admin/webpack.config.js ./
-COPY Admin/src ./src
+COPY package.json yarn.lock package-copy.json preload.js ./
+COPY webpack.config.js ./
+COPY src ./src
 
 # Install dependencies
 RUN yarn install --frozen-lockfile
@@ -18,11 +18,11 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS dotnet-builder
 WORKDIR /src
 
 # Copy csproj and restore dependencies
-COPY Admin/Menilo.csproj ./
+COPY Menilo.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
-COPY Admin/ ./
+COPY . ./
 COPY --from=node-builder /src/wwwroot/assets ./wwwroot/assets
 
 # Build the application

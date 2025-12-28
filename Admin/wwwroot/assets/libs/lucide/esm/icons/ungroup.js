@@ -1,2 +1,0 @@
-/*! For license information please see ungroup.js.LICENSE.txt */
-const Ungroup=[["rect",{width:"8",height:"6",x:"5",y:"4",rx:"1"}],["rect",{width:"8",height:"6",x:"11",y:"14",rx:"1"}]];export{Ungroup as default};

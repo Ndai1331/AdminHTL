@@ -1,2 +1,0 @@
-/*! For license information please see toggle-left.js.LICENSE.txt */
-const ToggleLeft=[["circle",{cx:"9",cy:"12",r:"3"}],["rect",{width:"20",height:"14",x:"2",y:"5",rx:"7"}]];export{ToggleLeft as default};

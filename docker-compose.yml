@@ -4,7 +4,7 @@ services:
     build:
       context: ./Admin
       dockerfile: Dockerfile.local
-    container_name: menilo-admin-local
+    container_name: htl-admin-local
     ports:
       - "5188:5188"
     volumes:

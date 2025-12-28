@@ -28,20 +28,15 @@ COPY --from=node-builder /src/wwwroot/assets ./wwwroot/assets
 RUN dotnet build -c Release --no-restore
 RUN dotnet publish -c Release --no-build -o /app/publish
 
-# Stage 3: Runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+# Stage 3: Runtime image (Alpine - nhẹ hơn ~100MB so với Debian)
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-alpine AS runtime
 WORKDIR /app
-
-# Install required packages
-RUN apt-get update && apt-get install -y \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
 
 # Copy published app
 COPY --from=dotnet-builder /app/publish .
 
-# Create non-root user
-RUN groupadd -r appuser && useradd -r -g appuser appuser
+# Create non-root user (Alpine sử dụng addgroup/adduser)
+RUN addgroup -S appuser && adduser -S appuser -G appuser
 RUN chown -R appuser:appuser /app
 USER appuser
 
@@ -50,9 +45,10 @@ EXPOSE 8080
 ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
 
-# Health check (remove if health endpoint doesn't exist)
+# Health check (nếu cần thì cài wget hoặc curl)
+# Với Alpine, có thể dùng wget: apk add --no-cache wget
 # HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-#     CMD curl -f http://localhost:8080/health || exit 1
+#     CMD wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1
 
 # Entry point
 ENTRYPOINT ["dotnet", "Menilo.dll"]

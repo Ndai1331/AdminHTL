@@ -1,20 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    @Html.Partial("~/Views/Shared/TitleMeta.cshtml")
+    <partial name="~/Views/Shared/TitleMeta.cshtml" />
     @RenderSection("styles", false)
-    @Html.Partial("~/Views/Shared/HeadCSS.cshtml")
+    <partial name="~/Views/Shared/HeadCSS.cshtml" />
 </head>
 <body>
 
 
-        @Html.Partial("~/Views/Shared/authBackground.cshtml")
+        <partial name="~/Views/Shared/authBackground.cshtml" />
 
-        @Html.Partial("~/Views/Shared/authHeader.cshtml")
+        <partial name="~/Views/Shared/authHeader.cshtml" />
 
                 @RenderBody()
 
-    @Html.Partial("~/Views/Shared/vendorscripts.cshtml")
+    <partial name="~/Views/Shared/vendorscripts.cshtml" />
 
     @RenderSection("scripts", required: false)
 </body>

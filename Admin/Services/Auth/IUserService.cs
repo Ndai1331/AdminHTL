@@ -17,6 +17,11 @@ namespace Menilo.Services.Auth
         /// Logout current user
         /// </summary>
         Task LogoutAsync();
+
+        /// <summary>
+        /// Get current user information from API
+        /// </summary>
+        Task<RequestHttpResponse<UserInfoResponse>> GetCurrentUserInfoAsync();
     }
 }
 

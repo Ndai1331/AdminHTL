@@ -1,7 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    ViewBag.pTitle = "Dashboard";
+    ViewBag.Title = "Trang chủ";
+    ViewBag.pTitle = "Tổng quan";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -18,17 +18,17 @@
         <div class="card">
             <div class="card-header">
                 <div>
-                    <h5 class="card-title mb-1">Company Performance</h5>
-                    <p class="text-muted mb-0">Company monthly analyzed performance</p>
+                    <h5 class="card-title mb-1">Hiệu suất công ty</h5>
+                    <p class="text-muted mb-0">Phân tích hiệu suất hàng tháng của công ty</p>
                 </div>
                 <div class="dropdown">
-                    <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
+                    <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="Thêm tùy chọn">
                         <i class="bi bi-three-dots-vertical"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tuần</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tháng</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng năm</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,12 +44,12 @@
                                         <span class="d-flex align-items-start gap-4">
                                             <span class="flex-grow-1">
                                                 <span class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="fw-medium mb-1 fs-16">Creating:</span>
+                                                    <span class="fw-medium mb-1 fs-16">Đang tạo:</span>
                                                     <a href="#" class="btn btn-primary icon-btn-sm">
                                                         <i class="ri-arrow-right-line"></i>
                                                     </a>
                                                 </span>
-                                                <span class="text-muted mb-0">Moev all finance files to new directory for backup.</span>
+                                                <span class="text-muted mb-0">Di chuyển tất cả file tài chính vào thư mục mới để sao lưu.</span>
                                             </span>
                                         </span>
                                     </label>
@@ -64,12 +64,12 @@
                                         <span class="d-flex align-items-start gap-4">
                                             <span class="flex-grow-1">
                                                 <span class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="fw-medium mb-1 fs-16">Planning:</span>
+                                                    <span class="fw-medium mb-1 fs-16">Đang lập kế hoạch:</span>
                                                     <a href="#" class="btn btn-primary icon-btn-sm">
                                                         <i class="ri-arrow-right-line"></i>
                                                     </a>
                                                 </span>
-                                                <span class="text-muted mb-0">Set up meeting with design team for next week.</span>
+                                                <span class="text-muted mb-0">Sắp xếp cuộc họp với nhóm thiết kế cho tuần tới.</span>
                                             </span>
                                         </span>
                                     </label>
@@ -84,12 +84,12 @@
                                         <span class="d-flex align-items-start gap-4">
                                             <span class="flex-grow-1">
                                                 <span class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="fw-medium mb-1 fs-16">Reviewing:</span>
+                                                    <span class="fw-medium mb-1 fs-16">Đang xem xét:</span>
                                                     <a href="#" class="btn btn-primary icon-btn-sm">
                                                         <i class="ri-arrow-right-line"></i>
                                                     </a>
                                                 </span>
-                                                <span class="text-muted mb-0">Evaluate team KPIs for last quarter for month.</span>
+                                                <span class="text-muted mb-0">Đánh giá KPI của nhóm cho quý cuối cùng của tháng.</span>
                                             </span>
                                         </span>
                                     </label>
@@ -97,8 +97,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next" aria-label="Next Slide"></div>
-                    <div class="swiper-button-prev" aria-label="Previous Slide"></div>
+                    <div class="swiper-button-next" aria-label="Slide tiếp theo"></div>
+                    <div class="swiper-button-prev" aria-label="Slide trước"></div>
                 </div>
             </div>
         </div>
@@ -107,16 +107,16 @@
         <div class="card card-h-100">
             <div class="card-header">
                 <div>
-                    <h5 class="card-title">Average Team KPI</h5>
+                    <h5 class="card-title">KPI trung bình của nhóm</h5>
                 </div>
                 <div class="dropdown">
                     <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
                         <i class="bi bi-three-dots-vertical"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tuần</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tháng</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng năm</a></li>
                     </ul>
                 </div>
             </div>
@@ -127,28 +127,28 @@
                         <div class="h-20px w-20px rounded bg-primary"></div>
                         <div>
                             <h5>60</h5>
-                            <p class="text-muted mb-0">Budget Variance</p>
+                            <p class="text-muted mb-0">Chênh lệch ngân sách</p>
                         </div>
                     </div>
                     <div class="d-flex gap-3">
                         <div class="h-20px w-20px rounded bg-primary bg-opacity-60"></div>
                         <div>
                             <h5>75</h5>
-                            <p class="text-muted mb-0">Net Profit Margin</p>
+                            <p class="text-muted mb-0">Tỷ suất lợi nhuận ròng</p>
                         </div>
                     </div>
                     <div class="d-flex gap-3">
                         <div class="h-20px w-20px rounded bg-primary bg-opacity-40"></div>
                         <div>
                             <h5>65</h5>
-                            <p class="text-muted mb-0">Operating Margin</p>
+                            <p class="text-muted mb-0">Tỷ suất hoạt động</p>
                         </div>
                     </div>
                     <div class="d-flex gap-3">
                         <div class="h-20px w-20px rounded bg-primary bg-opacity-20"></div>
                         <div>
                             <h5>80</h5>
-                            <p class="text-muted mb-0">Sales Growth Rate</p>
+                            <p class="text-muted mb-0">Tỷ lệ tăng trưởng doanh số</p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Attendance Rate</h5>
+                        <h5 class="card-title">Tỷ lệ chấm công</h5>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center my-5">
@@ -197,7 +197,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Total Employee</h5>
+                        <h5 class="card-title">Tổng nhân viên</h5>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -230,7 +230,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Job Overview</h5>
+                        <h5 class="card-title">Tổng quan công việc</h5>
                     </div>
                     <div class="card-body">
                         <div class="d-flex flex-md-nowrap flex-wrap justify-content-between align-items-center">
@@ -241,7 +241,7 @@
                                 </li>
                                 <li class="d-flex align-items-center mb-4 gap-2">
                                     <i class="h-8px w-20px rounded-pill bg-warning"></i>
-                                    <p class="text-muted mb-0 text-truncate">In reviews Jobs</p>
+                                    <p class="text-muted mb-0 text-truncate">Công việc đang xem xét</p>
                                 </li>
                                 <li class="d-flex align-items-center gap-2">
                                     <i class="h-8px w-20px rounded-pill bg-danger"></i>
@@ -266,7 +266,7 @@
                 </div>
                 <div>
                     <a href="#!" class="btn btn-light"><i class="ri-filter-3-line"></i> Filters</a>
-                    <a href="#!" class="btn btn-primary">See All</a>
+                    <a href="#!" class="btn btn-primary">Xem tất cả</a>
                 </div>
             </div>
             <div class="card-body">
@@ -382,9 +382,9 @@
                         <i class="bi bi-three-dots-vertical"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tuần</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tháng</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng năm</a></li>
                     </ul>
                 </div>
             </div>
@@ -538,9 +538,9 @@
                         <i class="bi bi-three-dots-vertical"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tuần</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tháng</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng năm</a></li>
                     </ul>
                 </div>
             </div>
@@ -758,18 +758,18 @@
         <div class="card">
             <div class="card-header">
                 <div>
-                    <h5 class="card-title mb-1">Employer Satisfaction</h5>
-                    <p class="text-muted mb-0">Track how your employer feels based on feedback</p>
+                    <h5 class="card-title mb-1">Sự hài lòng của nhà tuyển dụng</h5>
+                    <p class="text-muted mb-0">Theo dõi cảm nhận của nhà tuyển dụng dựa trên phản hồi</p>
                 </div>
                 <ul class="nav nav-pills nav-pill-white nav-justified" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link py-2 active" data-bs-toggle="tab" href="#inbox" role="tab" aria-selected="false" tabindex="-1">
-                            <span>Monthly</span>
+                            <span>Hàng tháng</span>
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link py-2" data-bs-toggle="tab" href="#teams" role="tab" aria-selected="true">
-                            <span>Yearly</span>
+                            <span>Hàng năm</span>
                         </a>
                     </li>
                 </ul>
@@ -783,17 +783,17 @@
         <div class="card">
             <div class="card-header">
                 <div>
-                    <h5 class="card-title mb-1">Company Expense</h5>
-                    <p class="text-muted mb-0">Company monthly analyzed</p>
+                    <h5 class="card-title mb-1">Chi phí công ty</h5>
+                    <p class="text-muted mb-0">Phân tích chi phí công ty hàng tháng</p>
                 </div>
                 <div class="dropdown">
                     <a href="javascript:void(0)" data-bs-toggle="dropdown" class="text-body" aria-label="More options">
                         <i class="bi bi-three-dots-vertical"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Weekly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Monthly</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Yearly</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tuần</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng tháng</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Hàng năm</a></li>
                     </ul>
                 </div>
             </div>

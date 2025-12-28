@@ -96,7 +96,42 @@ namespace Menilo.Controllers
         }
 
         /// <summary>
-        /// Handle logout
+        /// Handle logout via GET request (redirects to SignIn)
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> SignOut()
+        {
+            try
+            {
+                // Only logout if user is authenticated
+                if (_authService.IsAuthenticated())
+                {
+                    var userInfo = _authService.GetCurrentUser();
+                    var email = userInfo?.Email ?? "Unknown";
+
+                    _logger.LogInformation("SignOut GET request for email: {Email}", email);
+
+                    await _userService.LogoutAsync();
+
+                    _logger.LogInformation("SignOut successful for email: {Email}", email);
+                }
+                else
+                {
+                    _logger.LogInformation("SignOut called but user is not authenticated");
+                }
+
+                // Always redirect to SignIn
+                return RedirectToAction("SignIn");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during SignOut");
+                return RedirectToAction("SignIn");
+            }
+        }
+
+        /// <summary>
+        /// Handle logout via POST request (with CSRF token)
         /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -108,7 +143,7 @@ namespace Menilo.Controllers
                 var userInfo = _authService.GetCurrentUser();
                 var email = userInfo?.Email ?? "Unknown";
 
-                _logger.LogInformation("Logout request for email: {Email}", email);
+                _logger.LogInformation("Logout POST request for email: {Email}", email);
 
                 await _userService.LogoutAsync();
 

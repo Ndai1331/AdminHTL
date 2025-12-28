@@ -5,7 +5,7 @@ const htmlElement = document.documentElement;
 
 // List of all settings to check
 const settings = [
-  { attribute: "data-layout", defaultValue: "vertical" },
+  { attribute: "data-layout", defaultValue: "horizontal" }, //"vertical"
   { attribute: "data-bs-theme", defaultValue: "light" },
   { attribute: "data-content-width", defaultValue: "default" },
   { attribute: "dir", defaultValue: "ltr" },

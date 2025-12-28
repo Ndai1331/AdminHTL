@@ -8,25 +8,24 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/admin/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/admin/Documents/Projects/AdminHTL/Admin/Menilo.csproj",
+      "projectUniqueName": "/app/Menilo.csproj",
       "projectName": "Menilo",
-      "projectPath": "/Users/admin/Documents/Projects/AdminHTL/Admin/Menilo.csproj",
-      "packagesPath": "/Users/admin/.nuget/packages/",
-      "outputPath": "/Users/admin/Documents/Projects/AdminHTL/Admin/obj/",
+      "projectPath": "/app/Menilo.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/app/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/admin/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -45,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -69,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

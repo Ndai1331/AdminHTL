@@ -133,6 +133,60 @@ If you encounter permission issues, ensure the user in the container has proper 
 docker-compose exec admin-local chown -R $(id -u):$(id -g) /app
 ```
 
+## Build and Push to Docker Hub
+
+### Using the provided script (Recommended)
+
+```bash
+# Build and push with latest tag
+./docker-build-push.sh
+
+# Build and push with custom tag/version
+./docker-build-push.sh v1.0.0
+./docker-build-push.sh 2024.12.28
+```
+
+The script will:
+1. Check Docker installation and login status
+2. Build the production image for linux/amd64
+3. Tag it as `longnguyen1331/admin-htl:latest` (or your custom tag)
+4. Push to Docker Hub (with confirmation)
+
+### Manual Build and Push
+
+```bash
+# Build only
+./docker-build.sh
+
+# Or build manually
+docker buildx build \
+  --platform linux/amd64 \
+  -f Admin/Dockerfile \
+  -t longnguyen1331/admin-htl:latest \
+  --load \
+  ./Admin
+
+# Push only (if image already built)
+./docker-push.sh
+
+# Or push manually
+docker push longnguyen1331/admin-htl:latest
+```
+
+### Pull and Run the Image
+
+```bash
+# Pull from Docker Hub
+docker pull longnguyen1331/admin-htl:latest
+
+# Run the container
+docker run -d \
+  --name admin-htl \
+  -p 8080:8080 \
+  -e ASPNETCORE_ENVIRONMENT=Production \
+  longnguyen1331/admin-htl:latest
+```
+
 ## Multi-Architecture Build
 
 For building on different architectures:
@@ -145,8 +199,8 @@ docker buildx create --use
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
   -f Admin/Dockerfile \
-  -t menilo-admin:latest \
-  --load \
+  -t longnguyen1331/admin-htl:latest \
+  --push \
   ./Admin
 ```
 

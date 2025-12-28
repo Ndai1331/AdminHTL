@@ -70,23 +70,50 @@ namespace Menilo.Services.Auth
                         // Calculate expiration time (expires is usually in seconds)
                         var expiresAt = DateTime.UtcNow.AddSeconds(loginResponse.Expires);
 
-                        // Store user info in session
-                        var userInfo = new UserInfo
-                        {
-                            Email = request.Email,
-                            AccessToken = loginResponse.AccessToken,
-                            RefreshToken = loginResponse.RefreshToken,
-                            ExpiresAt = expiresAt,
-                            IsAuthenticated = true
-                        };
-
-                        _authService.SetUser(userInfo);
-
                         // Attach token to HTTP client for future requests
                         _httpClientService.AttachToken(loginResponse.AccessToken);
 
-                        _logger.LogInformation("Login successful for email: {Email}, Expires at: {ExpiresAt}",
-                            request.Email, expiresAt);
+                        // Get user info from API
+                        var userInfoResponse = await GetCurrentUserInfoAsync();
+                        if (userInfoResponse.IsSuccess && userInfoResponse.Data != null)
+                        {
+                            var userData = userInfoResponse.Data;
+                            var userInfo = new UserInfo
+                            {
+                                Id = userData.Id,
+                                Email = userData.Email ?? request.Email,
+                                FirstName = userData.FirstName,
+                                LastName = userData.LastName,
+                                Avatar = userData.Avatar,
+                                RoleName = userData.Role?.Name,
+                                AccessToken = loginResponse.AccessToken,
+                                RefreshToken = loginResponse.RefreshToken,
+                                ExpiresAt = expiresAt,
+                                IsAuthenticated = true
+                            };
+
+                            _authService.SetUser(userInfo);
+
+                            _logger.LogInformation("Login successful for user: {Email}, Name: {FullName}, Expires at: {ExpiresAt}",
+                                userInfo.Email, userInfo.GetFullName(), expiresAt);
+                        }
+                        else
+                        {
+                            // If get user info fails, still store basic info with token
+                            var userInfo = new UserInfo
+                            {
+                                Email = request.Email,
+                                AccessToken = loginResponse.AccessToken,
+                                RefreshToken = loginResponse.RefreshToken,
+                                ExpiresAt = expiresAt,
+                                IsAuthenticated = true
+                            };
+
+                            _authService.SetUser(userInfo);
+
+                            _logger.LogWarning("Login successful but failed to get user info for email: {Email}, Expires at: {ExpiresAt}",
+                                request.Email, expiresAt);
+                        }
 
                         return new RequestHttpResponse<LoginResponse>
                         {
@@ -118,6 +145,49 @@ namespace Menilo.Services.Auth
                         {
                             Message = $"Login failed: {ex.Message}",
                             Code = "LOGIN_ERROR"
+                        }
+                    }
+                };
+            }
+        }
+
+        /// <summary>
+        /// Get current user information from API
+        /// </summary>
+        public async Task<RequestHttpResponse<UserInfoResponse>> GetCurrentUserInfoAsync()
+        {
+            try
+            {
+                _logger.LogInformation("Fetching current user info from API");
+
+                // Call /users/me endpoint with fields parameter
+                var url = "users/me?fields[]=*&fields[]=role.id,role.name";
+                var response = await _httpClientService.GetAsync<UserInfoResponse>(url);
+
+                if (response.IsSuccess && response.Data != null)
+                {
+                    _logger.LogInformation("Successfully fetched user info: {Email}", response.Data.Email);
+                }
+                else
+                {
+                    _logger.LogWarning("Failed to fetch user info. Errors: {Errors}",
+                        string.Join(", ", response.Errors.Select(e => e.Message)));
+                }
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error fetching current user info");
+                return new RequestHttpResponse<UserInfoResponse>
+                {
+                    StatusCode = System.Net.HttpStatusCode.InternalServerError,
+                    Errors = new List<ErrorResponse>
+                    {
+                        new ErrorResponse
+                        {
+                            Message = $"Failed to fetch user info: {ex.Message}",
+                            Code = "FETCH_USER_INFO_ERROR"
                         }
                     }
                 };

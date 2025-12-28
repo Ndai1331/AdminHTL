@@ -61,12 +61,13 @@ app.UseSession();
 
 app.UseAuthorization();
 
+// MapStaticAssets() and WithStaticAssets() are extension methods from Microsoft.AspNetCore.StaticFiles
+// Comment out if causing issues
 app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Dashboard}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();

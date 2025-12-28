@@ -21,7 +21,15 @@ function initPasswordToggle() {
       const targetId = this.getAttribute("data-target");
       if (!targetId) return;
 
-      const targetInput = document.getElementById(targetId);
+      // Try to find by ID first, then by name attribute
+      let targetInput = document.getElementById(targetId);
+      if (!targetInput) {
+        targetInput = document.querySelector(`[name="${targetId}"]`);
+      }
+      if (!targetInput) {
+        // Try case-insensitive name search as fallback
+        targetInput = document.querySelector(`[name^="${targetId}" i], [name*="${targetId}" i]`);
+      }
       if (!targetInput) return;
 
       const icon = this.querySelector("i");

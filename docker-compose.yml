@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # Local development service (macOS)
   admin-local:
@@ -32,7 +30,7 @@ services:
           yarn run build
         fi &&
         echo 'Starting .NET application...' &&
-        dotnet watch run --urls 'http://0.0.0.0:5188'
+        dotnet watch run --urls 'http://0.0.0.0:5188' --no-launch-profile
       "
     networks:
       - menilo-network
@@ -42,7 +40,7 @@ services:
     build:
       context: ./Admin
       dockerfile: Dockerfile
-      platform: linux/amd64
+    platform: linux/amd64
     container_name: menilo-admin-prod
     ports:
       - "8080:8080"

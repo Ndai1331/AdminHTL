@@ -152,12 +152,16 @@ function initializeAppFeatures() {
       horizontalMenus.querySelectorAll("nav > ul > li > a");
     horizontalMenuItems.forEach((item) => {
       item.addEventListener("click", (e) => {
-        e.preventDefault();
-        setTimeout(() => {
-          item.setAttribute("aria-expanded", "false");
-          item.classList.remove("collapsed");
-          item.nextElementSibling.classList.remove("show");
-        }, 300);
+        // Only prevent default if there's a dropdown (nextElementSibling exists)
+        if (item.nextElementSibling) {
+          e.preventDefault();
+          setTimeout(() => {
+            item.setAttribute("aria-expanded", "false");
+            item.classList.remove("collapsed");
+            item.nextElementSibling.classList.remove("show");
+          }, 300);
+        }
+        // If no dropdown, allow default navigation behavior
       });
     });
   }

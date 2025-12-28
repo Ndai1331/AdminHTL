@@ -4,6 +4,8 @@ using System.Text;
 using System.Text.Json;
 using Menilo.Models.RequestHttps;
 using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Menilo.Services.Http
 {
@@ -17,6 +19,7 @@ namespace Menilo.Services.Http
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ILogger<HttpClientService> _logger;
         private readonly IConfiguration _configuration;
+        private readonly HashSet<string> _publicEndpoints;
         private const string TokenSessionKey = "AccessToken";
         private const string RefreshTokenSessionKey = "RefreshToken";
 
@@ -30,6 +33,14 @@ namespace Menilo.Services.Http
             _httpContextAccessor = httpContextAccessor ?? throw new ArgumentNullException(nameof(httpContextAccessor));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+
+            // Load public endpoints from configuration
+            var publicEndpoints = _configuration.GetSection("DirectusApi:PublicEndpoints").Get<List<string>>() 
+                ?? new List<string>();
+            _publicEndpoints = new HashSet<string>(publicEndpoints, StringComparer.OrdinalIgnoreCase);
+            
+            _logger.LogInformation("Loaded {Count} public endpoints: {Endpoints}", 
+                _publicEndpoints.Count, string.Join(", ", _publicEndpoints));
 
             // Configure base address from appsettings
             // BaseAddress and headers are configured in Program.cs via AddHttpClient
@@ -47,6 +58,23 @@ namespace Menilo.Services.Http
                     _logger.LogInformation("HttpClientService initialized with BaseAddress: {BaseAddress}", baseUrl);
                 }
             }
+        }
+
+        /// <summary>
+        /// Check if an endpoint is public (doesn't require authentication)
+        /// </summary>
+        private bool IsPublicEndpoint(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+                return false;
+
+            // Remove leading slash if present for comparison
+            var normalizedUrl = url.TrimStart('/');
+            
+            // Check if any public endpoint matches (supports partial matching for nested paths)
+            return _publicEndpoints.Any(publicEndpoint => 
+                normalizedUrl.Equals(publicEndpoint, StringComparison.OrdinalIgnoreCase) ||
+                normalizedUrl.StartsWith(publicEndpoint + "/", StringComparison.OrdinalIgnoreCase));
         }
 
         /// <summary>
@@ -153,8 +181,17 @@ namespace Menilo.Services.Http
 
             try
             {
-                _logger.LogInformation("GET request to: {Url}", url);
-                await EnsureTokenAttachedAsync();
+                var isPublic = IsPublicEndpoint(url);
+                _logger.LogInformation("GET request to: {Url} (Public: {IsPublic})", url, isPublic);
+                
+                if (isPublic)
+                {
+                    RemoveToken();
+                }
+                else
+                {
+                    await EnsureTokenAttachedAsync();
+                }
 
                 var response = await _httpClient.GetAsync(url);
                 var result = await ProcessResponseAsync<T>(response, url, "GET");
@@ -228,9 +265,12 @@ namespace Menilo.Services.Http
                 var fullUrl = _httpClient.BaseAddress != null 
                     ? new Uri(_httpClient.BaseAddress, url).ToString()
                     : url;
-                _logger.LogInformation("POST request to: {Url} (Full URL: {FullUrl})", url, fullUrl);
+                
+                var isPublic = IsPublicEndpoint(url);
+                _logger.LogInformation("POST request to: {Url} (Full URL: {FullUrl}, Public: {IsPublic})", 
+                    url, fullUrl, isPublic);
 
-                if (url.Contains("/auth/login", StringComparison.OrdinalIgnoreCase) || url.Contains("auth/login", StringComparison.OrdinalIgnoreCase))
+                if (isPublic)
                 {
                     RemoveToken();
                 }
@@ -281,9 +321,12 @@ namespace Menilo.Services.Http
                 var fullUrl = _httpClient.BaseAddress != null 
                     ? new Uri(_httpClient.BaseAddress, url).ToString()
                     : url;
-                _logger.LogInformation("POST request to: {Url} (Full URL: {FullUrl})", url, fullUrl);
+                
+                var isPublic = IsPublicEndpoint(url);
+                _logger.LogInformation("POST request to: {Url} (Full URL: {FullUrl}, Public: {IsPublic})", 
+                    url, fullUrl, isPublic);
 
-                if (url.Contains("/auth/login", StringComparison.OrdinalIgnoreCase) || url.Contains("auth/login", StringComparison.OrdinalIgnoreCase))
+                if (isPublic)
                 {
                     RemoveToken();
                 }

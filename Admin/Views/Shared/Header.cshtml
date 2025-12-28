@@ -1,28 +1,37 @@
-﻿<!-- Begin Header -->
+﻿@inject Menilo.Services.Auth.IAuthService AuthService
+@{
+    var currentUser = AuthService.GetCurrentUser();
+    var displayName = currentUser?.GetFullName() ?? "User";
+    var displayEmail = currentUser?.Email ?? "";
+    var avatarUrl = !string.IsNullOrEmpty(currentUser?.Avatar) 
+        ? currentUser.Avatar 
+        : "~/assets/images/avatar/15.jpg";
+}
+<!-- Begin Header -->
 <header class="app-header" id="appHeader">
     <div class="container-fluid w-100">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-inline-flex align-items-center gap-2">
                 <a href="/" class="align-items-center logo-main d-none me-5 gap-2">
                     <img height="35" width="35" class="logo-dark" alt="Dark Logo" src="assets/images/logo-md.png">
-                    <h3 class="text-white text-uppercase mb-0">Menilo</h3>
+                    <h3 class="text-white text-uppercase mb-0">AXIS</h3>
                 </a>
-                <button type="button" class="vertical-toggle btn btn-text-light text-muted icon-btn" id="toggleSidebar" aria-label="Toggle Sidebar">
+                <button type="button" class="vertical-toggle btn btn-text-light text-muted icon-btn" id="toggleSidebar" aria-label="Chuyển đổi Sidebar">
                     <i class="ri-arrow-left-double-line fs-4 toggle-left-arrow"></i>
                     <i class="ri-arrow-right-double-line fs-4 toggle-right-arrow d-none"></i>
                 </button>
-                <button type="button" class="horizontal-toggle btn btn-text-light text-muted icon-btn fs-5 header-btn d-none header-menu-btn" id="toggleHorizontal" aria-label="Toggle Menu">
+                <button type="button" class="horizontal-toggle btn btn-text-light text-muted icon-btn fs-5 header-btn d-none header-menu-btn" id="toggleHorizontal" aria-label="Chuyển đổi Menu">
                     <i class="ri-menu-2-line"></i>
                 </button>
                 <div class="form-icon right d-none d-md-block" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <input type="text" class="form-control form-control-icon header-search-input min-w-320px" id="Search" placeholder="Search" required>
+                    <input type="text" class="form-control form-control-icon header-search-input min-w-320px" id="Search" placeholder="Tìm kiếm" required>
                     <div class="header-search-btn">
                         <div><i class="ri-search-line text-muted fs-16"></i></div>
                     </div>
                 </div>
             </div>
             <div class="flex-shrink-0 d-flex align-items-center gap-1 gap-md-2">
-                <div class="dropdown pe-dropdown-mega">
+                @* <div class="dropdown pe-dropdown-mega">
                     <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
                         <i class="ri-translate"></i>
                     </button>
@@ -44,24 +53,24 @@
                         </div>
 
                     </div>
-                </div>
+                </div> *@
                 <div id="toggleMode">
-                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn" id="lightModeBtn" type="button" aria-label="Switch to light mode">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn" id="lightModeBtn" type="button" aria-label="Chuyển sang chế độ sáng">
                         <i class="ri-sun-line"></i>
                     </button>
                 </div>
-                <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn d-none d-md-block" type="button" id="toggleFullscreen" aria-label="Toggle fullscreen">
+                <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn d-none d-md-block" type="button" id="toggleFullscreen" aria-label="Chuyển đổi toàn màn hình">
                     <i class="ri-fullscreen-line"></i>
                 </button>
                 <div class="dropdown pe-dropdown-mega">
-                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Thông báo">
                         <i class="ri-notification-4-line"></i>
                         <div class="icon-dot"></div>
                     </button>
                     <div class="dropdown-menu dropdown-menu-clickable dropdown-mega-lg header-dropdown-menu shadow-none border p-0">
                         <div class="card mb-0 border-0">
                             <div class="card-header">
-                                <h5 class="card-title">Notifications</h5>
+                                <h5 class="card-title">Thông báo</h5>
                                 <div class="dropdown">
                                     <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false"> <i class="bi bi-three-dots-vertical"></i></a>
                                     <div class="dropdown-menu dropdown-menu-end">
@@ -77,22 +86,22 @@
                                 <ul class="nav nav-pills nav-pill-white nav-justified" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link active" data-bs-toggle="tab" href="#inbox" role="tab" aria-selected="false" tabindex="-1">
-                                            <span>Inbox</span>
+                                            <span>Hộp thư đến</span>
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link" data-bs-toggle="tab" href="#teams" role="tab" aria-selected="true">
-                                            <span>Teams</span>
+                                            <span>Nhóm</span>
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link" data-bs-toggle="tab" href="#mentions" role="tab" aria-selected="false" tabindex="-1">
-                                            <span>Mentions</span>
+                                            <span>Đề cập</span>
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link" data-bs-toggle="tab" href="#invites" role="tab" aria-selected="false" tabindex="-1">
-                                            <span>Invites</span>
+                                            <span>Lời mời</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -106,8 +115,8 @@
                                                 </div>
                                                 <div class="text-muted fs-12">5 minutes ago</div>
                                                 <div class="mt-3 d-flex align-items-center gap-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
-                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">Chấp nhận</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Từ chối</button>
                                                 </div>
                                             </div>
                                             <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
@@ -120,8 +129,8 @@
                                                 </div>
                                                 <div class="text-muted fs-12">2 hours ago</div>
                                                 <div class="mt-3 d-flex align-items-center gap-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
-                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">Chấp nhận</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Từ chối</button>
                                                 </div>
                                             </div>
                                             <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
@@ -157,8 +166,8 @@
                                                 </div>
                                                 <div class="text-muted fs-12">30 minutes ago</div>
                                                 <div class="mt-3 d-flex align-items-center gap-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
-                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">Chấp nhận</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Từ chối</button>
                                                 </div>
                                             </div>
                                             <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
@@ -172,8 +181,8 @@
                                                 </div>
                                                 <div class="text-muted fs-12">1 day ago</div>
                                                 <div class="mt-3 d-flex align-items-center gap-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
-                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">Chấp nhận</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Từ chối</button>
                                                 </div>
                                                 <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
                                             </div>
@@ -208,8 +217,8 @@
                                                 </div>
                                                 <div class="text-muted fs-12">3 days ago</div>
                                                 <div class="mt-3 d-flex align-items-center gap-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">Accept</button>
-                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Deny</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">Chấp nhận</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Từ chối</button>
                                                 </div>
                                             </div>
                                             <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
@@ -246,8 +255,8 @@
                                                 </div>
                                                 <div class="text-muted fs-12">1 hour ago</div>
                                                 <div class="mt-3 d-flex align-items-center gap-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">Accept Invite</button>
-                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Decline</button>
+                                                    <button type="button" class="btn btn-primary btn-sm">Chấp nhận lời mời</button>
+                                                    <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">Từ chối</button>
                                                 </div>
                                             </div>
                                             <div class="bullet position-absolute top-0 end-0 mt-4 me-4"></div>
@@ -272,8 +281,8 @@
                                                 <div class="mt-3 d-flex align-items-center gap-2">
                                                     <button type="button" class="btn btn-primary btn-sm">Accept</button>
                                                     <button type="button" class="btn btn-outline-light bg-body-secondary shadow-sm btn-sm">
-                                                        Maybe
-                                                        Later
+                                                        Có thể
+                                                        sau
                                                     </button>
                                                 </div>
                                             </div>
@@ -284,15 +293,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="dropdown pe-dropdown-mega">
-                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Messages">
+                @* <div class="dropdown pe-dropdown-mega">
+                    <button class="btn btn-text-light text-muted icon-btn fs-5 header-menu-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Tin nhắn">
                         <i class="ri-shopping-cart-line"></i>
                         <div class="icon-dot"></div>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-clickable dropdown-mega-md header-dropdown-menu shadow-none border p-0">
                         <div class="card mb-0 border-0">
                             <div class="card-header">
-                                <h5 class="card-title">Cart Items</h5>
+                                <h5 class="card-title">Giỏ hàng</h5>
                                 <span class="badge text-primary bg-primary-subtle">4</span>
                             </div>
                             <div class="pt-4">
@@ -418,56 +427,56 @@
                             </div>
                         </div>
                     </ul>
-                </div>
+                </div> *@
                 <button class="btn btn-text-light text-muted icon-btn header-menu-btn d-inline-flex d-md-none" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
                     <i class="ri-search-line fs-5"></i>
                 </button>
-                <button class="btn btn-text-light text-muted icon-btn header-menu-btn d-none d-md-inline-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Settings">
+                <button class="btn btn-text-light text-muted icon-btn header-menu-btn d-none d-md-inline-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Cài đặt">
                     <i class="ri-settings-line fs-5"></i>
                 </button>
                 <div class="dropdown pe-dropdown-mega">
                     <button class="btn icon-btn gap-1 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="position-relative avatar-md">
-                            <img src="assets/images/avatar/15.jpg" alt="Avatar Image" class="img-fluid rounded-circle avatar-md">
+                            <img src="@Url.Content(avatarUrl)" alt="Ảnh đại diện" class="img-fluid rounded-circle avatar-md">
                         </span>
                     </button>
                     <div class="dropdown-menu dropdown-mega-sm header-dropdown-menu p-4 shadow-none border">
                         <div class="border-bottom pb-3 mb-1 d-flex align-items-center gap-3">
-                            <img src="assets/images/avatar/15.jpg" alt="Avatar Image" height="40" width="40" class="rounded-circle">
+                            <img src="@Url.Content(avatarUrl)" alt="Ảnh đại diện" height="40" width="40" class="rounded-circle">
                             <div>
-                                <a href="/otherpages/profile" class="text-body fw-medium">Alex Morgan</a>
-                                <p class="mb-0 fs-13 mt-1 text-muted">alexmorgan@gmail.com</p>
+                                <a href="/otherpages/profile" class="text-body fw-medium">@displayName</a>
+                                <p class="mb-0 fs-13 mt-1 text-muted">@displayEmail</p>
                             </div>
                         </div>
                         <ul class="list-unstyled mb-1 border-bottom pb-1">
                             <li>
                                 <a class="dropdown-item p-2" href="/otherpages/profile">
-                                    <i class="ri-user-3-line me-2"></i> My Profile
+                                    <i class="ri-user-3-line me-2"></i> Hồ sơ của tôi
                                 </a>
                             </li>
-                            <li>
+                            @* <li>
                                 <a class="dropdown-item p-2" href="/otherpages/profile">
-                                    <i class="ri-settings-3-line me-2"></i> Account Settings
+                                    <i class="ri-settings-3-line me-2"></i> Cài đặt tài khoản
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item p-2" href="/otherpages/billingsubscription">
-                                    <i class="ri-database-2-line me-2"></i> System Settings
+                                    <i class="ri-database-2-line me-2"></i> Cài đặt hệ thống
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item p-2" href="javascript:void(0)">
-                                    <i class="ri-time-line me-2"></i> Activity Log
+                                    <i class="ri-time-line me-2"></i> Nhật ký hoạt động
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item p-2" href="javascript:void(0)">
-                                    <i class="ri-question-line me-2"></i> Help & Support
+                                    <i class="ri-question-line me-2"></i> Trợ giúp & Hỗ trợ
                                 </a>
-                            </li>
+                            </li> *@
                         </ul>
                         <ul class="list-unstyled mb-0">
-                            <li><a class="dropdown-item bg-transparent p-2 text-danger" href="/auth/signout"><i data-lucide="log-out" class="h-16px w-16px me-2"></i> Sign Out</a></li>
+                            <li><a class="dropdown-item bg-transparent p-2 text-danger" href="/auth/signout"><i data-lucide="log-out" class="h-16px w-16px me-2"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -482,11 +491,11 @@
         <div class="modal-content">
             <div class="modal-header d-block">
                 <div class="form-icon">
-                    <input type="text" class="form-control form-control-icon" id="searchInputInModal" placeholder="Search" required>
+                    <input type="text" class="form-control form-control-icon" id="searchInputInModal" placeholder="Tìm kiếm" required>
                     <div class="header-search-btn w-44px">
                         <i class="ri-search-line text-muted fs-16"></i>
                     </div>
-                    <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle-y d-inline-block m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle-y d-inline-block m-0" data-bs-dismiss="modal" aria-label="Đóng"></button>
                 </div>
             </div>
             <div class="modal-body" data-simplebar id="list-items">

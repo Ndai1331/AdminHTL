@@ -1,19 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    @Html.Partial("~/Views/Shared/TitleMeta.cshtml")
+    <partial name="~/Views/Shared/TitleMeta.cshtml" />
     @RenderSection("styles", false)
-    @Html.Partial("~/Views/Shared/HeadCSS.cshtml")
+    <partial name="~/Views/Shared/HeadCSS.cshtml" />
 </head>
 <body>
 
     <div id="layout-wrapper">
 
-        @Html.Partial("~/Views/Shared/header.cshtml")
+        <partial name="~/Views/Shared/header.cshtml" />
 
-        @Html.Partial("~/Views/Shared/sidebar.cshtml")
+        <partial name="~/Views/Shared/sidebar.cshtml" />
 
-        @Html.Partial("~/Views/Shared/horizontal.cshtml")
+        <partial name="~/Views/Shared/horizontal.cshtml" />
 
         <main class="app-wrapper">
             <div class="container-fluid">
@@ -21,13 +21,13 @@
                 @RenderBody()
             </div><!--End container-fluid-->
         </main><!--End app-wrapper-->
-        @Html.Partial("~/Views/Shared/switcher.cshtml")
-        @Html.Partial("~/Views/Shared/scrolltotop.cshtml")
-        @Html.Partial("~/Views/Shared/footer.cshtml")
+        <partial name="~/Views/Shared/switcher.cshtml" />
+        <partial name="~/Views/Shared/scrolltotop.cshtml" />
+        <partial name="~/Views/Shared/footer.cshtml" />
 
     </div>
 
-    @Html.Partial("~/Views/Shared/vendorscripts.cshtml")
+    <partial name="~/Views/Shared/vendorscripts.cshtml" />
 
     @RenderSection("scripts", required: false)
 </body>
